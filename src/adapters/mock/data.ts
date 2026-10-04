@@ -430,3 +430,26 @@ export const mockPermissions: Permission[] = [
   { id: "audit.read", resourceAr: "سجل الحقيقة", resourceEn: "Truth Log", actionAr: "قراءة", actionEn: "Read", groupAr: "التدقيق", groupEn: "Audit" },
   { id: "security.read", resourceAr: "الأمن", resourceEn: "Security", actionAr: "قراءة", actionEn: "Read", groupAr: "الأمن", groupEn: "Security" },
 ];
+
+import type { AIProvider, AIJob } from "../../domain/types";
+
+export const mockProviders: AIProvider[] = [
+  { id: "p-gemini", name: "Gemini", capabilitiesAr: ["تلخيص", "ترجمة", "تصنيف"], capabilitiesEn: ["Summarization", "Translation", "Classification"], status: "healthy", latencyMs: 820, successRate: 98.4, keyAlias: "gemini-prod-01", keyStatus: "active", keyLastVerifiedAt: "2026-10-04T06:00:00", jobsToday: 142, costTodayUsd: 3.82 },
+  { id: "p-openai", name: "OpenAI", capabilitiesAr: ["تلخيص", "ترجمة", "إثراء"], capabilitiesEn: ["Summarization", "Translation", "Enrichment"], status: "healthy", latencyMs: 640, successRate: 99.1, keyAlias: "openai-prod-01", keyStatus: "active", keyLastVerifiedAt: "2026-10-04T06:00:00", jobsToday: 58, costTodayUsd: 4.21 },
+  { id: "p-anthropic", name: "Anthropic", capabilitiesAr: ["تحليل طويل"], capabilitiesEn: ["Long context analysis"], status: "degraded", latencyMs: 2400, successRate: 92.5, keyAlias: "anthropic-prod-01", keyStatus: "rotating", keyLastVerifiedAt: "2026-10-03T22:00:00", jobsToday: 3, costTodayUsd: 0.42 },
+  { id: "p-whisper", name: "Whisper", capabilitiesAr: ["تفريغ صوتي"], capabilitiesEn: ["Transcription"], status: "healthy", latencyMs: 3200, successRate: 96.8, keyAlias: "whisper-prod-01", keyStatus: "active", keyLastVerifiedAt: "2026-10-04T06:00:00", jobsToday: 27, costTodayUsd: 1.15 },
+  { id: "p-local", name: "Local", capabilitiesAr: ["تجارب", "كشف"], capabilitiesEn: ["Experiments", "Detection"], status: "down", latencyMs: 0, successRate: 0, keyAlias: "local-no-key", keyStatus: "disabled", keyLastVerifiedAt: "2026-09-28T12:00:00", jobsToday: 0, costTodayUsd: 0 },
+];
+
+export const mockAIJobs: AIJob[] = [
+  { id: "job-1", type: "transcription", provider: "Whisper", model: "whisper-large-v3", status: "succeeded", attempt: 1, targetId: "sum-1", createdAt: "2026-10-04T07:30:00", startedAt: "2026-10-04T07:30:05", finishedAt: "2026-10-04T07:32:15", traceId: "tr-w1a2b3" },
+  { id: "job-2", type: "summarization", provider: "Gemini", model: "gemini-1.5-pro", status: "succeeded", attempt: 1, targetId: "sum-1", createdAt: "2026-10-04T07:33:00", startedAt: "2026-10-04T07:33:02", finishedAt: "2026-10-04T07:33:28", traceId: "tr-x4y5z6" },
+  { id: "job-3", type: "summarization", provider: "Gemini", model: "gemini-1.5-pro", status: "running", attempt: 1, targetId: "sum-2", createdAt: "2026-10-04T09:50:00", startedAt: "2026-10-04T09:50:04", traceId: "tr-a7b8c9" },
+  { id: "job-4", type: "ocr", provider: "OpenAI", model: "gpt-4o-vision", status: "succeeded", attempt: 1, targetId: "doc-2", createdAt: "2026-10-04T08:15:00", startedAt: "2026-10-04T08:15:10", finishedAt: "2026-10-04T08:16:02", traceId: "tr-d1e2f3" },
+  { id: "job-5", type: "translation", provider: "OpenAI", model: "gpt-4o", status: "failed", attempt: 3, targetId: "sum-3", createdAt: "2026-10-04T06:00:00", startedAt: "2026-10-04T06:01:00", finishedAt: "2026-10-04T06:02:45", errorAr: "انتهت المهلة من المزوّد", errorEn: "Provider timeout", traceId: "tr-g4h5i6" },
+  { id: "job-6", type: "document-generation", provider: "Local", model: "manar-docgen-v2", status: "retrying", attempt: 2, targetId: "doc-2", createdAt: "2026-10-04T09:40:00", startedAt: "2026-10-04T09:41:00", errorAr: "قيد إعادة المحاولة", errorEn: "Retry in progress", traceId: "tr-j7k8l9" },
+  { id: "job-7", type: "classification", provider: "Gemini", model: "gemini-1.5-flash", status: "succeeded", attempt: 1, targetId: "sum-2", createdAt: "2026-10-04T07:35:00", startedAt: "2026-10-04T07:35:01", finishedAt: "2026-10-04T07:35:08", traceId: "tr-m1n2o3" },
+  { id: "job-8", type: "enrichment", provider: "Anthropic", model: "claude-3-5-sonnet", status: "queued", attempt: 0, targetId: "sum-3", createdAt: "2026-10-04T09:55:00", traceId: "tr-p4q5r6" },
+  { id: "job-9", type: "transcription", provider: "Whisper", model: "whisper-large-v3", status: "succeeded", attempt: 1, targetId: "sum-2", createdAt: "2026-10-04T05:10:00", startedAt: "2026-10-04T05:10:04", finishedAt: "2026-10-04T05:14:20", traceId: "tr-s7t8u9" },
+  { id: "job-10", type: "summarization", provider: "OpenAI", model: "gpt-4o-mini", status: "cancelled", attempt: 1, targetId: "sum-3", createdAt: "2026-10-04T04:00:00", startedAt: "2026-10-04T04:00:02", finishedAt: "2026-10-04T04:00:40", errorAr: "أُلغيت بواسطة المالك", errorEn: "Cancelled by owner", traceId: "tr-v1w2x3" },
+];

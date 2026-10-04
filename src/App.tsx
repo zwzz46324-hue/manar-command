@@ -13,6 +13,7 @@ import { DocumentDetail } from "./features/documents/DocumentDetail";
 import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
+import { AIOperations } from "./features/ai/AIOperations";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />
+        <Route path="/ai" element={<AIOperations />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

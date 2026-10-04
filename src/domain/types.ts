@@ -204,3 +204,40 @@ export type Permission = {
   groupAr: string;
   groupEn: string;
 };
+
+export type AIProviderName = "Gemini" | "OpenAI" | "Anthropic" | "Local" | "Whisper";
+
+export type AIProvider = {
+  id: string;
+  name: AIProviderName;
+  capabilitiesAr: string[];
+  capabilitiesEn: string[];
+  status: "healthy" | "degraded" | "down";
+  latencyMs: number;
+  successRate: number;
+  keyAlias: string;
+  keyStatus: "active" | "rotating" | "disabled";
+  keyLastVerifiedAt: string;
+  jobsToday: number;
+  costTodayUsd: number;
+};
+
+export type AIJobType = "transcription" | "summarization" | "translation" | "ocr" | "classification" | "enrichment" | "document-generation";
+
+export type AIJobStatus = "queued" | "running" | "succeeded" | "failed" | "retrying" | "cancelled";
+
+export type AIJob = {
+  id: string;
+  type: AIJobType;
+  provider: AIProviderName;
+  model: string;
+  status: AIJobStatus;
+  attempt: number;
+  targetId: string;
+  createdAt: string;
+  startedAt?: string;
+  finishedAt?: string;
+  errorAr?: string;
+  errorEn?: string;
+  traceId: string;
+};

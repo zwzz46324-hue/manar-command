@@ -18,6 +18,9 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "مركز الأمن" || item === "Security Center") return "/security";
   if (item === "المستخدمون" || item === "Users") return "/people";
   if (item === "الصلاحيات" || item === "Permissions") return "/people";
+  if (item === "مشغّل الذكاء" || item === "AI Operator") return "/ai";
+  if (item === "المزوّدون" || item === "Providers") return "/ai";
+  if (item === "المهام" || item === "Jobs") return "/ai";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

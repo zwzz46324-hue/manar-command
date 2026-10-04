@@ -74,3 +74,11 @@ export const peopleRepo = {
   async listRoles(): Promise<RoleDefinition[]> { return mockRoles; },
   async listPermissions(): Promise<Permission[]> { return mockPermissions; },
 };
+
+import { mockProviders, mockAIJobs } from "./data";
+import type { AIProvider, AIJob } from "../../domain/types";
+
+export const aiRepo = {
+  async listProviders(): Promise<AIProvider[]> { return mockProviders; },
+  async listJobs(): Promise<AIJob[]> { return mockAIJobs; },
+};
