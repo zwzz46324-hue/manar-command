@@ -82,3 +82,11 @@ export const aiRepo = {
   async listProviders(): Promise<AIProvider[]> { return mockProviders; },
   async listJobs(): Promise<AIJob[]> { return mockAIJobs; },
 };
+
+import { mockBots, mockBotMessages } from "./data";
+import type { ManarBot, BotMessage } from "../../domain/types";
+
+export const botsRepo = {
+  async listBots(): Promise<ManarBot[]> { return mockBots; },
+  async listMessages(): Promise<BotMessage[]> { return mockBotMessages; },
+};

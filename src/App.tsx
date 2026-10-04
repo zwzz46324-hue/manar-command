@@ -14,6 +14,7 @@ import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
 import { AIOperations } from "./features/ai/AIOperations";
+import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />
         <Route path="/ai" element={<AIOperations />} />
+        <Route path="/bots" element={<BotCommandCenter />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

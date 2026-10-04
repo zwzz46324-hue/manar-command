@@ -453,3 +453,21 @@ export const mockAIJobs: AIJob[] = [
   { id: "job-9", type: "transcription", provider: "Whisper", model: "whisper-large-v3", status: "succeeded", attempt: 1, targetId: "sum-2", createdAt: "2026-10-04T05:10:00", startedAt: "2026-10-04T05:10:04", finishedAt: "2026-10-04T05:14:20", traceId: "tr-s7t8u9" },
   { id: "job-10", type: "summarization", provider: "OpenAI", model: "gpt-4o-mini", status: "cancelled", attempt: 1, targetId: "sum-3", createdAt: "2026-10-04T04:00:00", startedAt: "2026-10-04T04:00:02", finishedAt: "2026-10-04T04:00:40", errorAr: "أُلغيت بواسطة المالك", errorEn: "Cancelled by owner", traceId: "tr-v1w2x3" },
 ];
+
+import type { ManarBot, BotMessage } from "../../domain/types";
+
+export const mockBots: ManarBot[] = [
+  { id: "bot-1", channel: "telegram", displayNameAr: "بوت منار على تلجرام", displayNameEn: "MANAR Telegram Bot", username: "@ManarDataBot", status: "connected", uptimeHours: 842, messagesToday: 1240, commandsCount: 24, subscribersCount: 3820 },
+  { id: "bot-2", channel: "whatsapp", displayNameAr: "بوت منار على واتساب", displayNameEn: "MANAR WhatsApp Bot", username: "+967-XXX-XXXX", status: "connecting", uptimeHours: 0, messagesToday: 0, commandsCount: 12, subscribersCount: 0, lastErrorAt: "2026-10-04T09:30:00", lastErrorAr: "جارٍ الاتصال بالخدمة", lastErrorEn: "Connecting to service" },
+];
+
+export const mockBotMessages: BotMessage[] = [
+  { id: "msg-1", channel: "telegram", direction: "out", recipientId: "user-12", textAr: "تم اعتماد ملخص هياكل البيانات", textEn: "Data Structures summary approved", status: "read", at: "2026-10-04T09:41:00" },
+  { id: "msg-2", channel: "telegram", direction: "in", recipientId: "user-12", textAr: "/start", textEn: "/start", status: "read", at: "2026-10-04T09:35:00" },
+  { id: "msg-3", channel: "telegram", direction: "out", recipientId: "user-15", textAr: "المستند جاهز للتحميل", textEn: "Document ready for download", status: "delivered", at: "2026-10-04T09:20:00" },
+  { id: "msg-4", channel: "telegram", direction: "in", recipientId: "user-15", textAr: "شكرًا", textEn: "Thank you", status: "read", at: "2026-10-04T09:21:00" },
+  { id: "msg-5", channel: "telegram", direction: "out", recipientId: "user-99", textAr: "نشر جديد: خوارزميات", textEn: "New publication: Algorithms", status: "sent", at: "2026-10-04T09:15:00" },
+  { id: "msg-6", channel: "telegram", direction: "out", recipientId: "user-88", textAr: "تنبيه: تحديث مقرر", textEn: "Alert: Course update", status: "failed", at: "2026-10-04T09:10:00" },
+  { id: "msg-7", channel: "telegram", direction: "out", recipientId: "user-77", textAr: "ملخص جديد متاح", textEn: "New summary available", status: "queued", at: "2026-10-04T09:05:00" },
+  { id: "msg-8", channel: "telegram", direction: "in", recipientId: "user-77", textAr: "/courses", textEn: "/courses", status: "read", at: "2026-10-04T09:06:00" },
+];

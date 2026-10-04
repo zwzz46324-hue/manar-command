@@ -241,3 +241,36 @@ export type AIJob = {
   errorEn?: string;
   traceId: string;
 };
+
+export type BotChannel = "telegram" | "whatsapp";
+
+export type BotStatus = "connected" | "connecting" | "disconnected" | "error";
+
+export type ManarBot = {
+  id: string;
+  channel: BotChannel;
+  displayNameAr: string;
+  displayNameEn: string;
+  username: string;
+  status: BotStatus;
+  uptimeHours: number;
+  messagesToday: number;
+  commandsCount: number;
+  subscribersCount: number;
+  lastErrorAt?: string;
+  lastErrorAr?: string;
+  lastErrorEn?: string;
+};
+
+export type BotMessageStatus = "queued" | "sent" | "delivered" | "read" | "failed";
+
+export type BotMessage = {
+  id: string;
+  channel: BotChannel;
+  direction: "in" | "out";
+  recipientId: string;
+  textAr: string;
+  textEn: string;
+  status: BotMessageStatus;
+  at: string;
+};

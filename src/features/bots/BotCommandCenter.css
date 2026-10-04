@@ -1,0 +1,44 @@
+﻿
+.bot-page { max-width: 1200px; }
+.bots-section, .messages-section { margin-bottom: 32px; }
+.section-h { font-size: 11px; letter-spacing: 2px; color: var(--manar-text-dim); margin: 0 0 12px; font-weight: 600; }
+.bots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 12px; }
+.bot-card { padding: 18px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 10px; }
+.bot-card.bs-connected { border-color: rgba(45,212,191,0.35); }
+.bot-card.bs-connecting { border-color: rgba(245,158,11,0.35); }
+.bot-card.bs-error, .bot-card.bs-disconnected { border-color: rgba(244,63,94,0.35); }
+.bot-head { display: flex; justify-content: space-between; align-items: center; }
+.channel-chip { font-size: 10px; letter-spacing: 1.4px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--manar-border); text-transform: uppercase; }
+.ch-telegram { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.ch-whatsapp { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.bot-status { font-size: 10px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--manar-border); display: inline-flex; align-items: center; gap: 6px; }
+.bot-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.st-connected { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.st-connecting { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.st-disconnected, .st-error { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.bot-name { font-size: 15px; font-weight: 600; margin: 0; color: var(--manar-text); }
+.bot-user { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-faint); margin: 0; }
+.bot-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0; }
+.bot-stats > div { display: flex; justify-content: space-between; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 6px; }
+.bot-stats dt { font-size: 10px; color: var(--manar-faint); }
+.bot-stats dd { font-size: 12px; color: var(--manar-text); margin: 0; font-family: var(--manar-font-mono); }
+.bot-error { display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.35); border-radius: 6px; font-size: 11px; color: var(--manar-warning); }
+.bot-err-icon { width: 16px; height: 16px; border-radius: 50%; background: var(--manar-warning); color: var(--manar-bg-0); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
+.msg-list { display: flex; flex-direction: column; gap: 6px; }
+.msg-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 8px; font-size: 12px; }
+.msg-item:hover { background: var(--manar-surface-hover); }
+.dir-chip { font-size: 9px; letter-spacing: 1.2px; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
+.dir-in { color: var(--manar-info); border: 1px solid rgba(96,165,250,0.35); }
+.dir-out { color: var(--manar-purple); border: 1px solid rgba(168,85,247,0.35); }
+.msg-text { flex: 1; color: var(--manar-text-dim); }
+.msg-recipient { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); }
+.msg-status { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--manar-border); }
+.ms-queued { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.ms-sent { color: var(--manar-muted); }
+.ms-delivered { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.ms-read { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.ms-failed { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.msg-time { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }
