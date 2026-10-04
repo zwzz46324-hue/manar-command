@@ -1,0 +1,105 @@
+﻿:root {
+  /* MANAR Brand — from official logo */
+  --manar-violet: #8b5cf6;
+  --manar-purple: #a855f7;
+  --manar-burgundy: #6b2f3a;
+
+  /* Layered near-black surfaces (dark mode primary) */
+  --manar-bg-0: #0a0810;
+  --manar-bg-1: #100c18;
+  --manar-bg-2: #171224;
+  --manar-bg-3: #1f1830;
+  --manar-surface: rgba(255, 255, 255, 0.035);
+  --manar-surface-hover: rgba(255, 255, 255, 0.06);
+  --manar-border: rgba(255, 255, 255, 0.075);
+  --manar-border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Text */
+  --manar-text: #f4f1fa;
+  --manar-text-dim: #c8c2d6;
+  --manar-muted: #8f889f;
+  --manar-faint: #5f5a70;
+
+  /* Identity accents */
+  --manar-accent: var(--manar-violet);
+  --manar-accent-soft: rgba(139, 92, 246, 0.14);
+  --manar-accent-line: rgba(139, 92, 246, 0.35);
+
+  /* State colors — semantic */
+  --manar-success: #2dd4bf;
+  --manar-warning: #f59e0b;
+  --manar-danger: #f43f5e;
+  --manar-info: #60a5fa;
+
+  /* Geometry */
+  --manar-radius-sm: 8px;
+  --manar-radius: 12px;
+  --manar-radius-lg: 18px;
+
+  /* Typography */
+  --manar-font-ar: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", system-ui, sans-serif;
+  --manar-font-mono: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+
+  /* Elevation */
+  --manar-shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  --manar-shadow-panel: 0 12px 40px -20px rgba(0, 0, 0, 0.6);
+
+  /* Motion */
+  --manar-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --manar-dur-fast: 120ms;
+  --manar-dur: 200ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--manar-bg-0);
+  color: var(--manar-text);
+  font-family: var(--manar-font-ar);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+code,
+pre {
+  font-family: var(--manar-font-mono);
+}
+
+::selection {
+  background: var(--manar-accent-soft);
+  color: var(--manar-text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

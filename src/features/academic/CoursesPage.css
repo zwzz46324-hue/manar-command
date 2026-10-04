@@ -1,0 +1,18 @@
+﻿
+.courses-page { max-width: 1100px; }
+.courses-toolbar { display: flex; gap: 10px; margin-bottom: 16px; }
+.courses-search { flex: 1; padding: 9px 12px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 8px; color: var(--manar-text); font-family: inherit; font-size: 13px; outline: none; }
+.courses-search:focus { border-color: var(--manar-accent-line); }
+.courses-select { padding: 9px 12px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 8px; color: var(--manar-text); font-family: inherit; font-size: 13px; outline: none; min-width: 180px; }
+.courses-table-wrap { border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; background: var(--manar-surface); }
+.courses-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.courses-table thead th { padding: 10px 12px; text-align: start; font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); font-weight: 600; border-bottom: 1px solid var(--manar-border); background: rgba(255,255,255,0.015); }
+.courses-table tbody td { padding: 10px 12px; color: var(--manar-text-dim); border-bottom: 1px solid var(--manar-border); }
+.courses-table tbody tr:last-child td { border-bottom: none; }
+.courses-row { cursor: pointer; transition: background 120ms; }
+.courses-row:hover { background: var(--manar-surface-hover); }
+.mono { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-faint); }
+.muted { color: var(--manar-faint); }
+.pill { font-size: 10px; padding: 2px 6px; border-radius: 4px; }
+.pill.warn { color: var(--manar-warning); border: 1px solid rgba(245,158,11,0.35); }
+.courses-empty { padding: 24px; text-align: center; color: var(--manar-muted); }

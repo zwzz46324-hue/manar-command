@@ -1,0 +1,58 @@
+﻿
+.constellation-wrap {
+  width: 100%;
+  background: radial-gradient(800px 400px at 50% 50%, rgba(139, 92, 246, 0.05), transparent 70%);
+  border: 1px solid var(--manar-border);
+  border-radius: var(--manar-radius);
+  overflow: hidden;
+}
+
+.constellation-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.const-node {
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.const-node circle {
+  fill: var(--manar-bg-2);
+  stroke: var(--manar-violet);
+  stroke-width: 1.5;
+  transition: all 200ms ease;
+}
+
+.const-node.kind-content circle { stroke: var(--manar-info); }
+.const-node.kind-review circle { stroke: var(--manar-warning); }
+.const-node.kind-document circle { stroke: var(--manar-purple); }
+.const-node.kind-publish circle { stroke: var(--manar-success); }
+
+.const-node:hover circle {
+  r: 8;
+  stroke-width: 2;
+}
+
+.const-node.selected circle {
+  fill: var(--manar-accent-soft);
+  stroke-width: 2.5;
+}
+
+.const-node.dim {
+  opacity: 0.25;
+}
+
+.const-label {
+  font-size: 11px;
+  fill: var(--manar-text-dim);
+  font-family: var(--manar-font-ar);
+  pointer-events: none;
+  user-select: none;
+}
+
+.const-node.selected .const-label {
+  fill: var(--manar-text);
+  font-weight: 600;
+}

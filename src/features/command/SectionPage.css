@@ -1,0 +1,6 @@
+﻿.section-page { max-width: 900px; }
+.section-page .page-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
+.empty-block { padding: 40px 20px; border: 1px dashed var(--manar-border); border-radius: var(--manar-radius); text-align: center; }
+.muted-line { font-size: 13px; color: var(--manar-muted); margin: 0; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 48px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

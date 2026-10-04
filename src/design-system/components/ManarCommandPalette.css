@@ -1,0 +1,15 @@
+﻿
+.palette-overlay { position: fixed; inset: 0; background: rgba(5,3,10,0.65); backdrop-filter: blur(6px); display: flex; align-items: flex-start; justify-content: center; padding-top: 12vh; z-index: 999; }
+.palette-panel { width: min(560px, 92vw); background: var(--manar-bg-1); border: 1px solid var(--manar-border-strong); border-radius: 14px; box-shadow: 0 30px 80px -30px rgba(0,0,0,0.85); overflow: hidden; }
+.palette-search { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--manar-border); }
+.palette-input { flex: 1; background: transparent; border: none; outline: none; color: var(--manar-text); font-size: 15px; font-family: inherit; }
+.palette-input::placeholder { color: var(--manar-faint); }
+.palette-search kbd { font-size: 10px; padding: 3px 6px; border: 1px solid var(--manar-border); border-radius: 4px; color: var(--manar-faint); }
+.palette-list { list-style: none; padding: 6px; margin: 0; max-height: 52vh; overflow-y: auto; }
+.palette-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 8px; cursor: pointer; }
+.palette-item.active { background: var(--manar-accent-soft); }
+.palette-group { font-size: 9px; letter-spacing: 1.6px; color: var(--manar-faint); min-width: 90px; }
+.palette-label { font-size: 13px; color: var(--manar-text-dim); }
+.palette-item.active .palette-label { color: var(--manar-text); }
+.palette-empty { padding: 20px; text-align: center; color: var(--manar-muted); font-size: 12px; }
+.palette-foot { display: flex; gap: 16px; padding: 10px 16px; border-top: 1px solid var(--manar-border); font-size: 10px; color: var(--manar-faint); letter-spacing: 1px; }

@@ -1,0 +1,21 @@
+﻿
+.academic-page { max-width: 900px; }
+.tree { border: 1px solid var(--manar-border); border-radius: var(--manar-radius); padding: 10px; background: var(--manar-surface); }
+.tree-node { margin: 2px 0; }
+.tree-row { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; background: transparent; border: none; color: var(--manar-text-dim); font-family: inherit; font-size: 13px; text-align: start; cursor: pointer; border-radius: 6px; }
+.tree-row:hover { background: var(--manar-surface-hover); color: var(--manar-text); }
+.tree-row.leaf { cursor: default; color: var(--manar-muted); padding-inline-start: 30px; }
+.tree-caret { width: 14px; color: var(--manar-faint); font-size: 10px; font-family: var(--manar-font-mono); }
+.tree-code { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); letter-spacing: 1px; min-width: 44px; }
+.tree-label { font-size: 13px; }
+.tree-children { padding-inline-start: 20px; border-inline-start: 1px solid var(--manar-border); margin-inline-start: 6px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+
+.uni-filters { display: flex; gap: 8px; margin-bottom: 16px; }
+.uni-filter { padding: 6px 12px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 12px; cursor: pointer; }
+.uni-filter:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.uni-filter.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.tree-city { font-size: 10px; color: var(--manar-faint); margin-inline-start: auto; }
+.tree-sector { font-size: 9px; letter-spacing: 1.4px; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--manar-border); }
+.tree-sector.sector-public { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.tree-sector.sector-private { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }

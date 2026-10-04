@@ -1,0 +1,54 @@
+﻿.command-page { max-width: 900px; }
+.page-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
+.page-eyebrow { font-size: 10px; letter-spacing: 2.4px; color: var(--manar-faint); margin: 0 0 6px; }
+.page-title { font-size: 26px; font-weight: 600; letter-spacing: 1px; margin: 0; color: var(--manar-text); }
+.page-sub { font-size: 13px; color: var(--manar-muted); margin: 6px 0 0; }
+.page-meta { font-size: 12px; color: var(--manar-muted); }
+.page-date { padding: 4px 10px; border: 1px solid var(--manar-border); border-radius: 999px; }
+.section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.section-head h2 { font-size: 11px; letter-spacing: 2.2px; color: var(--manar-text-dim); margin: 0; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--manar-faint); letter-spacing: 1px; }
+.attention-field { margin-bottom: 40px; }
+.attention-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  background: var(--manar-surface);
+  border: 1px solid var(--manar-border);
+  border-radius: var(--manar-radius);
+  margin-bottom: 8px;
+}
+.attention-item:hover { border-color: var(--manar-border-strong); }
+.attention-marker { width: 3px; height: 32px; border-radius: 3px; background: var(--manar-info); }
+.attention-marker.warn { background: var(--manar-warning); }
+.attention-body { flex: 1; }
+.attention-body h3 { font-size: 13px; font-weight: 600; margin: 0 0 3px; color: var(--manar-text); }
+.attention-body p { font-size: 12px; color: var(--manar-muted); margin: 0; }
+.attention-state { font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); padding: 3px 8px; border: 1px solid var(--manar-border); border-radius: 4px; }
+.activity-river { margin-bottom: 40px; }
+.river-list { list-style: none; padding: 0; margin: 0; border-right: 1px solid var(--manar-border); }
+.river-list li { display: flex; gap: 16px; padding: 10px 16px 10px 0; position: relative; }
+.river-list li::before {
+  content: ""; position: absolute; right: -3.5px; top: 18px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--manar-bg-0);
+  border: 1.5px solid var(--manar-accent);
+}
+.river-time { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-muted); min-width: 42px; }
+.river-text { font-size: 13px; color: var(--manar-text-dim); }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 48px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }
+.muted-line { font-size: 12px; color: var(--manar-muted); margin: 8px 0; }
+.river-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--manar-accent); flex-shrink: 0; }
+.river-dot.success { background: var(--manar-success); }
+.river-dot.warning { background: var(--manar-warning); }
+.river-dot.failure { background: var(--manar-danger); }
+.river-dot.info { background: var(--manar-info); }
+.river-list li { align-items: center; }
+.attention-item.warn .attention-state { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.attention-item.danger .attention-state { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.attention-marker.info { background: var(--manar-info); }
+.attention-marker.warn { background: var(--manar-warning); }
+.attention-marker.danger { background: var(--manar-danger); }
+
+.constellation-section { margin-bottom: 40px; }
+.constellation-caption { font-size: 12px; color: var(--manar-muted); margin: 10px 0 0; text-align: center; }
