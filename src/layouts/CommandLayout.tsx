@@ -16,6 +16,8 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "استوديو المستندات" || item === "Document Studio") return "/documents";
   if (item === "سجل الحقيقة" || item === "Truth Log") return "/audit";
   if (item === "مركز الأمن" || item === "Security Center") return "/security";
+  if (item === "المستخدمون" || item === "Users") return "/people";
+  if (item === "الصلاحيات" || item === "Permissions") return "/people";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

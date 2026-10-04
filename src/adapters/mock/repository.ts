@@ -65,3 +65,12 @@ export const securityRepo = {
   async listEvents(): Promise<SecurityEvent[]> { return mockSecurityEvents; },
   async listSessions(): Promise<ActiveSession[]> { return mockSessions; },
 };
+
+import { mockUsers, mockRoles, mockPermissions } from "./data";
+import type { ManarUser, RoleDefinition, Permission } from "../../domain/types";
+
+export const peopleRepo = {
+  async listUsers(): Promise<ManarUser[]> { return mockUsers; },
+  async listRoles(): Promise<RoleDefinition[]> { return mockRoles; },
+  async listPermissions(): Promise<Permission[]> { return mockPermissions; },
+};

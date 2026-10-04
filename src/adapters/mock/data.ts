@@ -389,3 +389,44 @@ export const mockSessions: ActiveSession[] = [
   { id: "sess-3", userId: "user-5", device: "Safari / macOS", ipAddress: "192.168.1.55", location: "عدن، اليمن", startedAt: "2026-10-04T06:00:00", lastSeenAt: "2026-10-04T06:30:00", current: false },
   { id: "sess-4", userId: "user-9", device: "Firefox / Windows", ipAddress: "192.168.1.72", location: "صنعاء، اليمن", startedAt: "2026-10-04T07:00:00", lastSeenAt: "2026-10-04T09:50:00", current: false },
 ];
+
+import type { ManarUser, RoleDefinition, Permission } from "../../domain/types";
+
+export const mockUsers: ManarUser[] = [
+  { id: "user-1", username: "owner", displayNameAr: "مالك المنظومة", displayNameEn: "System Owner", email: "owner@manardata.com", role: "OWNER", status: "active", scope: "all", lastSeenAt: "2026-10-04T09:50:00", createdAt: "2025-01-01", assignedCourses: 0 },
+  { id: "user-2", username: "ahmed.summarizer", displayNameAr: "أحمد الصبري", displayNameEn: "Ahmed Al-Sabri", email: "ahmed@manardata.com", role: "SUMMARIZER", status: "active", scope: "Faculty of Computing & IT", lastSeenAt: "2026-10-04T09:12:00", createdAt: "2025-03-15", assignedCourses: 12 },
+  { id: "user-3", username: "fatima.summarizer", displayNameAr: "فاطمة العزي", displayNameEn: "Fatima Al-Ezzi", email: "fatima@manardata.com", role: "SUMMARIZER", status: "active", scope: "Faculty of Medicine", lastSeenAt: "2026-10-04T08:42:00", createdAt: "2025-05-20", assignedCourses: 8 },
+  { id: "user-5", username: "khaled.reviewer", displayNameAr: "خالد المقطري", displayNameEn: "Khaled Al-Maqtari", email: "khaled@manardata.com", role: "REVIEWER", status: "active", scope: "Faculty of Computing & IT", lastSeenAt: "2026-10-04T06:30:00", createdAt: "2025-02-10", assignedCourses: 0 },
+  { id: "user-7", username: "suspended.user", displayNameAr: "مستخدم موقوف", displayNameEn: "Suspended User", email: "susp@manardata.com", role: "STUDENT", status: "suspended", scope: "none", lastSeenAt: "2026-09-15T11:20:00", createdAt: "2026-08-01", assignedCourses: 0 },
+  { id: "user-9", username: "mona.supervisor", displayNameAr: "منى الحكيمي", displayNameEn: "Mona Al-Hakimi", email: "mona@manardata.com", role: "SUPERVISOR", status: "active", scope: "Sanaa University", lastSeenAt: "2026-10-04T09:50:00", createdAt: "2025-01-20", assignedCourses: 0 },
+  { id: "user-12", username: "student.ali", displayNameAr: "علي محمد", displayNameEn: "Ali Mohammed", email: "ali@student.manardata.com", role: "STUDENT", status: "active", scope: "Sanaa University", lastSeenAt: "2026-10-04T07:45:00", createdAt: "2026-09-01", assignedCourses: 0 },
+  { id: "user-15", username: "pending.user", displayNameAr: "بانتظار التفعيل", displayNameEn: "Pending User", email: "pending@manardata.com", role: "SUMMARIZER", status: "pending", scope: "none", lastSeenAt: "2026-10-01T12:00:00", createdAt: "2026-10-01", assignedCourses: 0 },
+];
+
+export const mockRoles: RoleDefinition[] = [
+  { name: "OWNER", labelAr: "المالك", labelEn: "Owner", descriptionAr: "تحكم كامل على المنظومة", descriptionEn: "Full control of the ecosystem", userCount: 1, permissions: ["*"], system: true },
+  { name: "SUPER_ADMIN", labelAr: "مدير أعلى", labelEn: "Super Admin", descriptionAr: "إدارة تقنية شاملة", descriptionEn: "Comprehensive technical administration", userCount: 0, permissions: ["users.manage", "roles.manage", "config.manage", "audit.read"], system: true },
+  { name: "SUPERVISOR", labelAr: "مشرف", labelEn: "Supervisor", descriptionAr: "اعتماد الملخصات والمستندات", descriptionEn: "Approve summaries and documents", userCount: 1, permissions: ["summary.read", "summary.approve", "summary.reject", "document.approve"], system: true },
+  { name: "SUMMARIZER", labelAr: "ملخّص", labelEn: "Summarizer", descriptionAr: "إنشاء وتحرير الملخصات", descriptionEn: "Create and edit summaries", userCount: 3, permissions: ["summary.create", "summary.edit", "transcript.edit"], system: true },
+  { name: "REVIEWER", labelAr: "مراجع", labelEn: "Reviewer", descriptionAr: "مراجعة الملخصات", descriptionEn: "Review summaries", userCount: 1, permissions: ["summary.read", "summary.review"], system: true },
+  { name: "STUDENT", labelAr: "طالب", labelEn: "Student", descriptionAr: "الوصول للمحتوى المنشور", descriptionEn: "Access to published content", userCount: 2, permissions: ["content.read"], system: true },
+];
+
+export const mockPermissions: Permission[] = [
+  { id: "users.manage", resourceAr: "المستخدمون", resourceEn: "Users", actionAr: "إدارة", actionEn: "Manage", groupAr: "الأشخاص", groupEn: "People" },
+  { id: "users.read", resourceAr: "المستخدمون", resourceEn: "Users", actionAr: "قراءة", actionEn: "Read", groupAr: "الأشخاص", groupEn: "People" },
+  { id: "roles.manage", resourceAr: "الأدوار", resourceEn: "Roles", actionAr: "إدارة", actionEn: "Manage", groupAr: "الأشخاص", groupEn: "People" },
+  { id: "summary.read", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "قراءة", actionEn: "Read", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "summary.create", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "إنشاء", actionEn: "Create", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "summary.edit", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "تعديل", actionEn: "Edit", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "summary.review", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "مراجعة", actionEn: "Review", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "summary.approve", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "اعتماد", actionEn: "Approve", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "summary.reject", resourceAr: "الملخصات", resourceEn: "Summaries", actionAr: "رفض", actionEn: "Reject", groupAr: "الملخصات", groupEn: "Summaries" },
+  { id: "transcript.edit", resourceAr: "النص الأصلي", resourceEn: "Transcript", actionAr: "تعديل", actionEn: "Edit", groupAr: "المحتوى", groupEn: "Content" },
+  { id: "document.approve", resourceAr: "المستندات", resourceEn: "Documents", actionAr: "اعتماد", actionEn: "Approve", groupAr: "المستندات", groupEn: "Documents" },
+  { id: "document.publish", resourceAr: "المستندات", resourceEn: "Documents", actionAr: "نشر", actionEn: "Publish", groupAr: "المستندات", groupEn: "Documents" },
+  { id: "content.read", resourceAr: "المحتوى", resourceEn: "Content", actionAr: "قراءة", actionEn: "Read", groupAr: "المحتوى", groupEn: "Content" },
+  { id: "config.manage", resourceAr: "الإعدادات", resourceEn: "Config", actionAr: "إدارة", actionEn: "Manage", groupAr: "النظام", groupEn: "System" },
+  { id: "audit.read", resourceAr: "سجل الحقيقة", resourceEn: "Truth Log", actionAr: "قراءة", actionEn: "Read", groupAr: "التدقيق", groupEn: "Audit" },
+  { id: "security.read", resourceAr: "الأمن", resourceEn: "Security", actionAr: "قراءة", actionEn: "Read", groupAr: "الأمن", groupEn: "Security" },
+];

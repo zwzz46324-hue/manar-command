@@ -165,3 +165,42 @@ export type ActiveSession = {
   lastSeenAt: string;
   current: boolean;
 };
+
+export type RoleName = "SUPER_ADMIN" | "OWNER" | "SUPERVISOR" | "SUMMARIZER" | "REVIEWER" | "STUDENT";
+
+export type UserStatus = "active" | "suspended" | "pending" | "archived";
+
+export type ManarUser = {
+  id: string;
+  username: string;
+  displayNameAr: string;
+  displayNameEn: string;
+  email: string;
+  role: RoleName;
+  status: UserStatus;
+  scope: string;
+  lastSeenAt: string;
+  createdAt: string;
+  assignedCourses: number;
+};
+
+export type RoleDefinition = {
+  name: RoleName;
+  labelAr: string;
+  labelEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  userCount: number;
+  permissions: string[];
+  system: boolean;
+};
+
+export type Permission = {
+  id: string;
+  resourceAr: string;
+  resourceEn: string;
+  actionAr: string;
+  actionEn: string;
+  groupAr: string;
+  groupEn: string;
+};

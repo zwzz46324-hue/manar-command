@@ -12,6 +12,7 @@ import { DocumentStudio } from "./features/documents/DocumentStudio";
 import { DocumentDetail } from "./features/documents/DocumentDetail";
 import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
+import { PeopleUniverse } from "./features/people/PeopleUniverse";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/documents/:id" element={<DocumentDetail />} />
         <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
+        <Route path="/people" element={<PeopleUniverse />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>
