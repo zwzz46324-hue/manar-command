@@ -11,6 +11,10 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "القيادة" || item === "Command") return "/";
   if (item === "الكون الأكاديمي" || item === "Academic Universe") return "/academic";
   if (item === "المقررات" || item === "Courses") return "/courses";
+  if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
+  if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";
+  if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
+  if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

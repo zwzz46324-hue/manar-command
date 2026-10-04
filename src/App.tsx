@@ -6,6 +6,8 @@ import { SectionPage } from "./features/command/SectionPage";
 import { AcademicUniverse } from "./features/academic/AcademicUniverse";
 import { CoursesPage } from "./features/academic/CoursesPage";
 import { CourseCommandView } from "./features/academic/CourseCommandView";
+import { ReviewQueue } from "./features/review/ReviewQueue";
+import { ReviewTheater } from "./features/review/ReviewTheater";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="/academic" element={<AcademicUniverse />} />
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/courses/:id" element={<CourseCommandView />} />
+        <Route path="/review" element={<ReviewQueue />} />
+        <Route path="/review/:id" element={<ReviewTheater />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

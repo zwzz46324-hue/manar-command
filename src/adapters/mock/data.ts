@@ -226,3 +226,79 @@ mockDepartments.forEach((d) => {
     });
   });
 });
+
+import type { Summary, Decision } from "../../domain/types";
+
+export const mockSummaries: Summary[] = [
+  {
+    id: "sum-1",
+    courseId: "crs-cs101",
+    courseCode: "CS101",
+    courseTitleAr: "مقدمة في البرمجة",
+    courseTitleEn: "Introduction to Programming",
+    titleAr: "المحاضرة الأولى — مقدمة المفاهيم",
+    titleEn: "Lecture 1 — Concepts Introduction",
+    sourceType: "audio",
+    sourceDurationMin: 48,
+    transcriptAr: "في محاضرة اليوم سنتناول مقدمة عن البرمجة...\nأولًا: تعريف البرمجة...\nثانيًا: لغات البرمجة..." ,
+    summaryAr: "ملخص المحاضرة الأولى يعرض تعريف البرمجة، وأنواع لغات البرمجة، وأمثلة عملية.",
+    status: "pending",
+    authorId: "user-1",
+    version: 1,
+    createdAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    priority: "high",
+  },
+  {
+    id: "sum-2",
+    courseId: "crs-cs202",
+    courseCode: "CS202",
+    courseTitleAr: "هياكل البيانات",
+    courseTitleEn: "Data Structures",
+    titleAr: "المحاضرة الرابعة — القوائم المترابطة",
+    titleEn: "Lecture 4 — Linked Lists",
+    sourceType: "video",
+    sourceDurationMin: 62,
+    transcriptAr: "نتناول اليوم القوائم المترابطة بأنواعها..." ,
+    summaryAr: "شرح القوائم المترابطة، أنواعها، عمليات الإدراج والحذف.",
+    status: "in-review",
+    authorId: "user-2",
+    reviewerId: "user-9",
+    version: 2,
+    createdAt: "2026-09-28",
+    updatedAt: "2026-10-02",
+    priority: "normal",
+  },
+  {
+    id: "sum-3",
+    courseId: "crs-med101",
+    courseCode: "MED101",
+    courseTitleAr: "علم التشريح",
+    courseTitleEn: "Anatomy",
+    titleAr: "المحاضرة الثانية — الهيكل العظمي",
+    titleEn: "Lecture 2 — Skeletal System",
+    sourceType: "slides",
+    sourceDurationMin: 0,
+    transcriptAr: "الهيكل العظمي يتكون من 206 عظمة..." ,
+    summaryAr: "مكونات الهيكل العظمي، وظائفه، وأهميته في الجسم.",
+    status: "needs-changes",
+    authorId: "user-3",
+    reviewerId: "user-9",
+    version: 3,
+    createdAt: "2026-09-25",
+    updatedAt: "2026-10-03",
+    priority: "urgent",
+  },
+];
+
+export const mockDecisions: Decision[] = [
+  {
+    id: "dec-1",
+    summaryId: "sum-2",
+    decision: "request-changes",
+    actorId: "user-9",
+    reasonAr: "يحتاج تفصيلًا أكثر في قسم الحذف.",
+    reasonEn: "Needs more detail in the deletion section.",
+    createdAt: "2026-10-02",
+  },
+];
