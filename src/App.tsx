@@ -8,6 +8,8 @@ import { CoursesPage } from "./features/academic/CoursesPage";
 import { CourseCommandView } from "./features/academic/CourseCommandView";
 import { ReviewQueue } from "./features/review/ReviewQueue";
 import { ReviewTheater } from "./features/review/ReviewTheater";
+import { DocumentStudio } from "./features/documents/DocumentStudio";
+import { DocumentDetail } from "./features/documents/DocumentDetail";
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
         <Route path="/courses/:id" element={<CourseCommandView />} />
         <Route path="/review" element={<ReviewQueue />} />
         <Route path="/review/:id" element={<ReviewTheater />} />
+        <Route path="/documents" element={<DocumentStudio />} />
+        <Route path="/documents/:id" element={<DocumentDetail />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

@@ -100,3 +100,22 @@ export type Decision = {
   reasonEn: string;
   createdAt: string;
 };
+
+export type DocumentStatus = "draft" | "queued" | "generating-docx" | "generating-pdf" | "protecting" | "ready" | "published" | "failed";
+
+export type ManarDocument = {
+  id: string;
+  summaryId: string;
+  courseCode: string;
+  titleAr: string;
+  titleEn: string;
+  status: DocumentStatus;
+  version: number;
+  pagesCount: number;
+  sizeKb: number;
+  hasWatermark: boolean;
+  isProtected: boolean;
+  createdAt: string;
+  updatedAt: string;
+  publishedChannels: ("telegram" | "whatsapp" | "site")[];
+};

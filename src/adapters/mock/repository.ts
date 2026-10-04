@@ -42,3 +42,11 @@ export const mockRepository: ManarRepository = {
     return item;
   },
 };
+
+import { mockDocuments } from "./data";
+import type { ManarDocument } from "../../domain/types";
+
+export const documentsRepo = {
+  async list(): Promise<ManarDocument[]> { return mockDocuments; },
+  async get(id: string): Promise<ManarDocument | undefined> { return mockDocuments.find((d) => d.id === id); },
+};

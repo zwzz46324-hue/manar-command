@@ -13,8 +13,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "المقررات" || item === "Courses") return "/courses";
   if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
   if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";
-  if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
-  if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";
+  if (item === "استوديو المستندات" || item === "Document Studio") return "/documents";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };
