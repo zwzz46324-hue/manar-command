@@ -50,3 +50,18 @@ export const documentsRepo = {
   async list(): Promise<ManarDocument[]> { return mockDocuments; },
   async get(id: string): Promise<ManarDocument | undefined> { return mockDocuments.find((d) => d.id === id); },
 };
+
+import { mockTruthEvents } from "./data";
+import type { TruthEvent } from "../../domain/types";
+
+export const truthRepo = {
+  async list(): Promise<TruthEvent[]> { return mockTruthEvents; },
+};
+
+import { mockSecurityEvents, mockSessions } from "./data";
+import type { SecurityEvent, ActiveSession } from "../../domain/types";
+
+export const securityRepo = {
+  async listEvents(): Promise<SecurityEvent[]> { return mockSecurityEvents; },
+  async listSessions(): Promise<ActiveSession[]> { return mockSessions; },
+};

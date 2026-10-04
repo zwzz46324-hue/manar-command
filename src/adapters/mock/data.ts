@@ -355,3 +355,37 @@ export const mockDocuments: ManarDocument[] = [
     publishedChannels: ["telegram", "site"],
   },
 ];
+import type { TruthEvent } from "../../domain/types";
+
+export const mockTruthEvents: TruthEvent[] = [
+  { id: "t-1", kind: "review", actorId: "user-9", actorRole: "SUPERVISOR", actionAr: "اعتمد الملخص", actionEn: "Approved summary", targetType: "summary", targetId: "sum-1", result: "success", traceId: "tr-a1b2c3", source: "ui", at: "2026-10-04T09:41:00" },
+  { id: "t-2", kind: "document", actorId: "system", actorRole: "SYSTEM", actionAr: "أنشأ PDF", actionEn: "Generated PDF", targetType: "document", targetId: "doc-2", result: "success", traceId: "tr-d4e5f6", source: "system", at: "2026-10-04T09:43:00" },
+  { id: "t-3", kind: "publish", actorId: "bot-telegram", actorRole: "BOT", actionAr: "نشر على تلجرام", actionEn: "Published to Telegram", targetType: "document", targetId: "doc-3", result: "success", traceId: "tr-g7h8i9", source: "bot", at: "2026-10-04T09:45:00" },
+  { id: "t-4", kind: "auth", actorId: "user-5", actorRole: "SUMMARIZER", actionAr: "تسجيل دخول", actionEn: "Signed in", targetType: "session", targetId: "sess-921", result: "success", traceId: "tr-j1k2l3", source: "ui", at: "2026-10-04T08:12:00" },
+  { id: "t-5", kind: "security", actorId: "user-7", actorRole: "UNKNOWN", actionAr: "فشل تسجيل الدخول", actionEn: "Failed sign in", targetType: "session", targetId: "sess-918", result: "failure", traceId: "tr-m4n5o6", source: "ui", at: "2026-10-04T07:58:00" },
+  { id: "t-6", kind: "ai", actorId: "ai-gemini", actorRole: "AI", actionAr: "أنتج ملخصًا", actionEn: "Produced summary", targetType: "summary", targetId: "sum-3", result: "success", traceId: "tr-p7q8r9", source: "ai", at: "2026-10-04T07:41:00" },
+  { id: "t-7", kind: "backup", actorId: "system", actorRole: "SYSTEM", actionAr: "أنشأ نسخة احتياطية", actionEn: "Created backup", targetType: "backup", targetId: "bk-2026-10-04", result: "success", traceId: "tr-s1t2u3", source: "system", at: "2026-10-04T03:00:00" },
+  { id: "t-8", kind: "permission", actorId: "user-1", actorRole: "OWNER", actionAr: "غيّر صلاحية", actionEn: "Changed permission", targetType: "role", targetId: "SUPERVISOR", before: "read", after: "write", result: "success", traceId: "tr-v4w5x6", source: "ui", at: "2026-10-03T22:15:00" },
+  { id: "t-9", kind: "config", actorId: "user-1", actorRole: "OWNER", actionAr: "فعّل ميزة", actionEn: "Enabled feature", targetType: "feature-flag", targetId: "new-summary-editor", before: "off", after: "on", result: "success", traceId: "tr-y7z8a9", source: "ui", at: "2026-10-03T21:00:00" },
+  { id: "t-10", kind: "course", actorId: "user-1", actorRole: "OWNER", actionAr: "أنشأ مقررًا", actionEn: "Created course", targetType: "course", targetId: "crs-new-1", result: "success", traceId: "tr-b1c2d3", source: "ui", at: "2026-10-03T20:42:00" },
+];
+
+import type { SecurityEvent, ActiveSession } from "../../domain/types";
+
+export const mockSecurityEvents: SecurityEvent[] = [
+  { id: "sec-1", type: "login-success", actorId: "user-1", ipAddress: "192.168.1.42", userAgent: "Chrome 131 / Windows", location: "صنعاء، اليمن", at: "2026-10-04T08:00:00", riskLevel: "low" },
+  { id: "sec-2", type: "login-failure", actorId: "unknown", ipAddress: "45.132.18.7", userAgent: "curl/8.0", location: "مجهول", at: "2026-10-04T07:58:00", riskLevel: "high" },
+  { id: "sec-3", type: "suspicious-activity", actorId: "user-7", ipAddress: "45.132.18.7", userAgent: "curl/8.0", location: "مجهول", at: "2026-10-04T07:57:00", riskLevel: "critical" },
+  { id: "sec-4", type: "permission-denied", actorId: "user-5", ipAddress: "192.168.1.55", userAgent: "Safari / macOS", location: "عدن، اليمن", at: "2026-10-04T06:22:00", riskLevel: "medium" },
+  { id: "sec-5", type: "session-expired", actorId: "user-3", ipAddress: "192.168.1.60", userAgent: "Firefox / Linux", location: "تعز، اليمن", at: "2026-10-04T05:15:00", riskLevel: "low" },
+  { id: "sec-6", type: "secret-rotated", actorId: "user-1", ipAddress: "192.168.1.42", userAgent: "Chrome 131 / Windows", location: "صنعاء، اليمن", at: "2026-10-03T23:42:00", riskLevel: "low" },
+  { id: "sec-7", type: "ip-blocked", actorId: "system", ipAddress: "45.132.18.7", userAgent: "system", location: "مجهول", at: "2026-10-03T23:10:00", riskLevel: "high" },
+  { id: "sec-8", type: "logout", actorId: "user-5", ipAddress: "192.168.1.55", userAgent: "Safari / macOS", location: "عدن، اليمن", at: "2026-10-03T22:40:00", riskLevel: "low" },
+];
+
+export const mockSessions: ActiveSession[] = [
+  { id: "sess-1", userId: "user-1", device: "Chrome 131 / Windows", ipAddress: "192.168.1.42", location: "صنعاء، اليمن", startedAt: "2026-10-04T08:00:00", lastSeenAt: "2026-10-04T09:45:00", current: true },
+  { id: "sess-2", userId: "user-1", device: "Safari / iPhone 15", ipAddress: "192.168.1.50", location: "صنعاء، اليمن", startedAt: "2026-10-03T18:20:00", lastSeenAt: "2026-10-04T07:30:00", current: false },
+  { id: "sess-3", userId: "user-5", device: "Safari / macOS", ipAddress: "192.168.1.55", location: "عدن، اليمن", startedAt: "2026-10-04T06:00:00", lastSeenAt: "2026-10-04T06:30:00", current: false },
+  { id: "sess-4", userId: "user-9", device: "Firefox / Windows", ipAddress: "192.168.1.72", location: "صنعاء، اليمن", startedAt: "2026-10-04T07:00:00", lastSeenAt: "2026-10-04T09:50:00", current: false },
+];

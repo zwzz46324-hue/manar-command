@@ -119,3 +119,49 @@ export type ManarDocument = {
   updatedAt: string;
   publishedChannels: ("telegram" | "whatsapp" | "site")[];
 };
+
+export type TruthEventKind =
+  | "auth" | "permission" | "course" | "content" | "summary"
+  | "review" | "document" | "publish" | "bot" | "ai"
+  | "backup" | "security" | "config" | "code" | "audit";
+
+export type TruthEvent = {
+  id: string;
+  kind: TruthEventKind;
+  actorId: string;
+  actorRole: string;
+  actionAr: string;
+  actionEn: string;
+  targetType: string;
+  targetId: string;
+  before?: string;
+  after?: string;
+  result: "success" | "warning" | "failure";
+  traceId: string;
+  source: "ui" | "bot" | "api" | "system" | "ai";
+  at: string;
+};
+
+export type SecurityEventType = "login-success" | "login-failure" | "logout" | "permission-denied" | "session-expired" | "suspicious-activity" | "secret-rotated" | "ip-blocked";
+
+export type SecurityEvent = {
+  id: string;
+  type: SecurityEventType;
+  actorId: string;
+  ipAddress: string;
+  userAgent: string;
+  location: string;
+  at: string;
+  riskLevel: "low" | "medium" | "high" | "critical";
+};
+
+export type ActiveSession = {
+  id: string;
+  userId: string;
+  device: string;
+  ipAddress: string;
+  location: string;
+  startedAt: string;
+  lastSeenAt: string;
+  current: boolean;
+};

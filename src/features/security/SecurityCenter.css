@@ -1,0 +1,44 @@
+﻿
+.security-center { max-width: 1200px; }
+.sec-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.sec-stat { padding: 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 4px; }
+.sec-val { font-size: 22px; font-weight: 600; color: var(--manar-text); font-family: var(--manar-font-mono); }
+.sec-val.danger { color: var(--manar-danger); }
+.sec-val.success { color: var(--manar-success); }
+.sec-lbl { font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); }
+.sec-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--manar-border); margin-bottom: 20px; }
+.sec-tab { padding: 10px 18px; background: transparent; border: none; color: var(--manar-muted); font-family: inherit; font-size: 13px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.sec-tab:hover { color: var(--manar-text-dim); }
+.sec-tab.active { color: var(--manar-text); border-bottom-color: var(--manar-accent); }
+.sec-table-wrap { border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; background: var(--manar-surface); }
+.sec-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.sec-table thead th { padding: 10px 12px; text-align: start; font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); font-weight: 600; border-bottom: 1px solid var(--manar-border); background: rgba(255,255,255,0.015); }
+.sec-table tbody td { padding: 10px 12px; color: var(--manar-text-dim); border-bottom: 1px solid var(--manar-border); }
+.sec-table tbody tr:last-child td { border-bottom: none; }
+.sec-table tbody tr:hover { background: var(--manar-surface-hover); }
+.mono { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-faint); }
+.event-type { font-size: 11px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); color: var(--manar-text-dim); }
+.type-login-success { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.type-login-failure { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.type-permission-denied { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.type-suspicious-activity { color: var(--manar-danger); border-color: rgba(244,63,94,0.5); background: rgba(244,63,94,0.08); }
+.type-secret-rotated { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.type-ip-blocked { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.risk-pill { font-size: 10px; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--manar-border); }
+.risk-low { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.risk-medium { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.risk-high { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.risk-critical { color: var(--manar-danger); border-color: rgba(244,63,94,0.5); background: rgba(244,63,94,0.1); }
+.sessions-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+.session-card { padding: 14px 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 8px; }
+.session-card.current { border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.session-head { display: flex; justify-content: space-between; align-items: center; }
+.session-device { font-size: 13px; color: var(--manar-text); }
+.session-current-badge { font-size: 9px; letter-spacing: 1.2px; padding: 2px 8px; border-radius: 999px; background: var(--manar-accent); color: white; }
+.session-meta { display: flex; gap: 10px; font-size: 11px; color: var(--manar-muted); font-family: var(--manar-font-mono); }
+.session-times { display: flex; gap: 12px; font-size: 11px; color: var(--manar-faint); }
+.session-revoke { align-self: flex-start; margin-top: 4px; padding: 5px 12px; font-size: 11px; background: transparent; border: 1px solid rgba(244,63,94,0.35); border-radius: 6px; color: var(--manar-danger); cursor: pointer; font-family: inherit; }
+.session-revoke:hover { background: rgba(244,63,94,0.1); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }
