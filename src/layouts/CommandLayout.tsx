@@ -25,6 +25,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
   if (item === "صحة النظام" || item === "System Health") return "/operations";
   if (item === "خزنة البيانات" || item === "Data Vault") return "/vault";
+  if (item === "النسخ الاحتياطي" || item === "Backups") return "/backup";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

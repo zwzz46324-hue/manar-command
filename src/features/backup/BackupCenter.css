@@ -1,0 +1,46 @@
+﻿.bk-page { max-width: 1300px; }
+.bk-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.bk-stat { padding: 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 4px; }
+.bstat-v { font-size: 22px; font-weight: 600; color: var(--manar-text); font-family: var(--manar-font-mono); }
+.bstat-v.success { color: var(--manar-success); }
+.bstat-v.warn { color: var(--manar-warning); }
+.bstat-v.danger { color: var(--manar-danger); }
+.bstat-k { font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); }
+.bk-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--manar-border); margin-bottom: 20px; }
+.bk-tab { padding: 10px 18px; background: transparent; border: none; color: var(--manar-muted); font-family: inherit; font-size: 13px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.bk-tab:hover { color: var(--manar-text-dim); }
+.bk-tab.active { color: var(--manar-text); border-bottom-color: var(--manar-accent); }
+.bk-table-wrap { border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; background: var(--manar-surface); }
+.bk-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.bk-table thead th { padding: 10px 12px; text-align: start; font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); font-weight: 600; border-bottom: 1px solid var(--manar-border); background: rgba(255,255,255,0.015); }
+.bk-table tbody td { padding: 10px 12px; color: var(--manar-text-dim); border-bottom: 1px solid var(--manar-border); }
+.bk-table tbody tr:last-child td { border-bottom: none; }
+.bk-table tbody tr:hover { background: var(--manar-surface-hover); }
+.mono { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-faint); }
+.kind-pill { font-size: 10px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); }
+.kp-manual { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.kp-scheduled { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.kp-snapshot { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.kp-incremental { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.bk-status { font-size: 10px; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--manar-border); }
+.st-running { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.st-completed { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.st-failed { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.st-verifying { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.st-restoring { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.ok-chip { color: var(--manar-success); font-weight: 700; font-family: var(--manar-font-mono); }
+.warn-chip { color: var(--manar-warning); font-weight: 700; font-family: var(--manar-font-mono); }
+.bk-empty { padding: 24px; text-align: center; color: var(--manar-muted); }
+.retention-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.retention-card { padding: 18px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 12px; }
+.retention-name { font-size: 14px; font-weight: 600; margin: 0; color: var(--manar-text); }
+.retention-days { display: flex; align-items: baseline; gap: 6px; padding-bottom: 10px; border-bottom: 1px dashed var(--manar-border); }
+.rd-val { font-size: 28px; font-weight: 600; color: var(--manar-accent); font-family: var(--manar-font-mono); }
+.rd-lbl { font-size: 11px; color: var(--manar-muted); }
+.retention-keeps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.retention-keeps > div { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px; background: rgba(255,255,255,0.02); border-radius: 6px; }
+.keep-lbl { font-size: 10px; color: var(--manar-faint); }
+.keep-val { font-size: 14px; color: var(--manar-text); font-family: var(--manar-font-mono); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

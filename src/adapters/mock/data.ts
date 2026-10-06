@@ -521,3 +521,20 @@ export const mockVaultFiles: VaultFile[] = [
   { id: "vf-7", nameAr: "ملاحظات المراجعة.txt", nameEn: "Review notes.txt", kind: "document", mimeType: "text/plain", sizeKb: 8, version: 3, ownerId: "user-9", tags: ["notes"], checksum: "sha256:s1t2u3", retentionDays: 365, archived: false, createdAt: "2026-10-01", updatedAt: "2026-10-04" },
   { id: "vf-8", nameAr: "الشعار الرسمي.svg", nameEn: "Official logo.svg", kind: "image", mimeType: "image/svg+xml", sizeKb: 3, version: 1, ownerId: "user-1", tags: ["brand"], checksum: "sha256:v4w5x6", retentionDays: 3650, archived: false, createdAt: "2025-01-01", updatedAt: "2025-01-01" },
 ];
+
+import type { Backup, RetentionPolicy } from "../../domain/types";
+
+export const mockBackups: Backup[] = [
+  { id: "bk-1", kind: "scheduled", status: "completed", sizeMb: 842, integrityOk: true, retentionDays: 30, createdBy: "system", createdAt: "2026-10-06T03:00:00", expiresAt: "2026-11-05" },
+  { id: "bk-2", kind: "scheduled", status: "completed", sizeMb: 838, integrityOk: true, retentionDays: 30, createdBy: "system", createdAt: "2026-10-05T03:00:00", expiresAt: "2026-11-04" },
+  { id: "bk-3", kind: "manual", status: "completed", sizeMb: 845, integrityOk: true, retentionDays: 90, createdBy: "user-1", createdAt: "2026-10-04T22:15:00", expiresAt: "2027-01-02", noteAr: "قبل تحديث قاعدة البيانات", noteEn: "Before DB migration" },
+  { id: "bk-4", kind: "scheduled", status: "completed", sizeMb: 830, integrityOk: true, retentionDays: 30, createdBy: "system", createdAt: "2026-10-04T03:00:00", expiresAt: "2026-11-03" },
+  { id: "bk-5", kind: "snapshot", status: "verifying", sizeMb: 850, integrityOk: false, retentionDays: 180, createdBy: "user-1", createdAt: "2026-10-06T08:30:00", expiresAt: "2027-04-04" },
+  { id: "bk-6", kind: "incremental", status: "failed", sizeMb: 42, integrityOk: false, retentionDays: 7, createdBy: "system", createdAt: "2026-10-03T03:00:00", expiresAt: "2026-10-10", noteAr: "انقطع الاتصال بالخادم", noteEn: "Lost connection to backend" },
+];
+
+export const mockRetentionPolicies: RetentionPolicy[] = [
+  { id: "rp-daily", kindAr: "نسخ يومية", kindEn: "Daily backups", retainDays: 30, keepDaily: 30, keepWeekly: 4, keepMonthly: 12 },
+  { id: "rp-weekly", kindAr: "نسخ أسبوعية", kindEn: "Weekly backups", retainDays: 90, keepDaily: 0, keepWeekly: 12, keepMonthly: 6 },
+  { id: "rp-snapshots", kindAr: "اللقطات اليدوية", kindEn: "Manual snapshots", retainDays: 180, keepDaily: 0, keepWeekly: 0, keepMonthly: 24 },
+];

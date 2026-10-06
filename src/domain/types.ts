@@ -346,3 +346,31 @@ export type VaultFile = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type BackupKind = "manual" | "scheduled" | "snapshot" | "incremental";
+
+export type BackupStatus = "running" | "completed" | "failed" | "verifying" | "restoring";
+
+export type Backup = {
+  id: string;
+  kind: BackupKind;
+  status: BackupStatus;
+  sizeMb: number;
+  integrityOk: boolean;
+  retentionDays: number;
+  createdBy: string;
+  createdAt: string;
+  expiresAt: string;
+  noteAr?: string;
+  noteEn?: string;
+};
+
+export type RetentionPolicy = {
+  id: string;
+  kindAr: string;
+  kindEn: string;
+  retainDays: number;
+  keepDaily: number;
+  keepWeekly: number;
+  keepMonthly: number;
+};

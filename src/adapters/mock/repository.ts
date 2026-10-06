@@ -86,3 +86,11 @@ export const vaultRepo = {
   async list(): Promise<VaultFile[]> { return mockVaultFiles; },
   async get(id: string): Promise<VaultFile | undefined> { return mockVaultFiles.find((f) => f.id === id); },
 };
+
+import { mockBackups, mockRetentionPolicies } from "./data";
+import type { Backup, RetentionPolicy } from "../../domain/types";
+
+export const backupRepo = {
+  async list(): Promise<Backup[]> { return mockBackups; },
+  async listPolicies(): Promise<RetentionPolicy[]> { return mockRetentionPolicies; },
+};
