@@ -1,6 +1,5 @@
-﻿
-import { mockActivity, mockAttention, mockCourses, mockUniversities, mockColleges, mockDepartments, mockSummaries, mockDecisions } from "./data";
-import type { ActivityEvent, AttentionItem, Course, University, College, Department, Summary, Decision } from "../../domain/types";
+﻿import { mockActivity, mockAttention, mockCourses, mockUniversities, mockColleges, mockDepartments, mockSummaries, mockDecisions, mockDocuments, mockTruthEvents, mockSecurityEvents, mockSessions, mockUsers, mockRoles, mockPermissions, mockProviders, mockAIJobs, mockBots, mockBotMessages, mockServices, mockQueues, mockWorkers, mockFeatureFlags } from "./data";
+import type { ActivityEvent, AttentionItem, Course, University, College, Department, Summary, Decision, ManarDocument, TruthEvent, SecurityEvent, ActiveSession, ManarUser, RoleDefinition, Permission, AIProvider, AIJob, ManarBot, BotMessage, ServiceHealth, QueueState, Worker, FeatureFlag } from "../../domain/types";
 
 export interface ManarRepository {
   listAttention(): Promise<AttentionItem[]>;
@@ -43,31 +42,19 @@ export const mockRepository: ManarRepository = {
   },
 };
 
-import { mockDocuments } from "./data";
-import type { ManarDocument } from "../../domain/types";
-
 export const documentsRepo = {
   async list(): Promise<ManarDocument[]> { return mockDocuments; },
   async get(id: string): Promise<ManarDocument | undefined> { return mockDocuments.find((d) => d.id === id); },
 };
 
-import { mockTruthEvents } from "./data";
-import type { TruthEvent } from "../../domain/types";
-
 export const truthRepo = {
   async list(): Promise<TruthEvent[]> { return mockTruthEvents; },
 };
-
-import { mockSecurityEvents, mockSessions } from "./data";
-import type { SecurityEvent, ActiveSession } from "../../domain/types";
 
 export const securityRepo = {
   async listEvents(): Promise<SecurityEvent[]> { return mockSecurityEvents; },
   async listSessions(): Promise<ActiveSession[]> { return mockSessions; },
 };
-
-import { mockUsers, mockRoles, mockPermissions } from "./data";
-import type { ManarUser, RoleDefinition, Permission } from "../../domain/types";
 
 export const peopleRepo = {
   async listUsers(): Promise<ManarUser[]> { return mockUsers; },
@@ -75,18 +62,19 @@ export const peopleRepo = {
   async listPermissions(): Promise<Permission[]> { return mockPermissions; },
 };
 
-import { mockProviders, mockAIJobs } from "./data";
-import type { AIProvider, AIJob } from "../../domain/types";
-
 export const aiRepo = {
   async listProviders(): Promise<AIProvider[]> { return mockProviders; },
   async listJobs(): Promise<AIJob[]> { return mockAIJobs; },
 };
 
-import { mockBots, mockBotMessages } from "./data";
-import type { ManarBot, BotMessage } from "../../domain/types";
-
 export const botsRepo = {
   async listBots(): Promise<ManarBot[]> { return mockBots; },
   async listMessages(): Promise<BotMessage[]> { return mockBotMessages; },
+};
+
+export const opsRepo = {
+  async listServices(): Promise<ServiceHealth[]> { return mockServices; },
+  async listQueues(): Promise<QueueState[]> { return mockQueues; },
+  async listWorkers(): Promise<Worker[]> { return mockWorkers; },
+  async listFlags(): Promise<FeatureFlag[]> { return mockFeatureFlags; },
 };

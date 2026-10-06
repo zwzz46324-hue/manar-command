@@ -23,6 +23,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "المهام" || item === "Jobs") return "/ai";
   if (item === "تلجرام" || item === "Telegram") return "/bots";
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
+  if (item === "صحة النظام" || item === "System Health") return "/operations";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

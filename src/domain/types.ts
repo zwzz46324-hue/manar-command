@@ -274,3 +274,55 @@ export type BotMessage = {
   status: BotMessageStatus;
   at: string;
 };
+
+export type ServiceHealthState = "healthy" | "degraded" | "blocked" | "failed" | "maintenance";
+
+export type ServiceKind = "backend" | "database" | "storage" | "queue" | "worker" | "bot" | "ai-provider" | "integration" | "cache";
+
+export type ServiceHealth = {
+  id: string;
+  kind: ServiceKind;
+  nameAr: string;
+  nameEn: string;
+  state: ServiceHealthState;
+  uptimePct: number;
+  latencyMs: number;
+  lastCheckedAt: string;
+  noteAr?: string;
+  noteEn?: string;
+};
+
+export type QueueState = {
+  id: string;
+  nameAr: string;
+  nameEn: string;
+  pending: number;
+  running: number;
+  failed: number;
+  deadLetter: number;
+  throughputPerMin: number;
+};
+
+export type Worker = {
+  id: string;
+  name: string;
+  region: string;
+  state: ServiceHealthState;
+  jobsActive: number;
+  jobsCompletedToday: number;
+  cpuPct: number;
+  memoryPct: number;
+};
+
+export type FeatureFlag = {
+  id: string;
+  key: string;
+  labelAr: string;
+  labelEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  enabled: boolean;
+  environment: "production" | "staging" | "development";
+  rolloutPct: number;
+  updatedAt: string;
+};

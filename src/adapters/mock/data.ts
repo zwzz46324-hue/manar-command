@@ -471,3 +471,40 @@ export const mockBotMessages: BotMessage[] = [
   { id: "msg-7", channel: "telegram", direction: "out", recipientId: "user-77", textAr: "ملخص جديد متاح", textEn: "New summary available", status: "queued", at: "2026-10-04T09:05:00" },
   { id: "msg-8", channel: "telegram", direction: "in", recipientId: "user-77", textAr: "/courses", textEn: "/courses", status: "read", at: "2026-10-04T09:06:00" },
 ];
+
+import type { ServiceHealth, QueueState, Worker, FeatureFlag } from "../../domain/types";
+
+export const mockServices: ServiceHealth[] = [
+  { id: "s-backend", kind: "backend", nameAr: "الخادم الخلفي", nameEn: "Backend API", state: "healthy", uptimePct: 99.98, latencyMs: 82, lastCheckedAt: "2026-10-06T09:00:00" },
+  { id: "s-db", kind: "database", nameAr: "قاعدة البيانات", nameEn: "Database", state: "healthy", uptimePct: 99.99, latencyMs: 12, lastCheckedAt: "2026-10-06T09:00:00" },
+  { id: "s-storage", kind: "storage", nameAr: "التخزين السحابي", nameEn: "Object Storage", state: "healthy", uptimePct: 99.95, latencyMs: 140, lastCheckedAt: "2026-10-06T09:00:00" },
+  { id: "s-cache", kind: "cache", nameAr: "الذاكرة المؤقتة", nameEn: "Cache", state: "degraded", uptimePct: 97.2, latencyMs: 380, lastCheckedAt: "2026-10-06T09:00:00", noteAr: "ارتفاع في زمن الاستجابة", noteEn: "Elevated latency" },
+  { id: "s-ai-gemini", kind: "ai-provider", nameAr: "مزوّد Gemini", nameEn: "Gemini Provider", state: "healthy", uptimePct: 99.4, latencyMs: 820, lastCheckedAt: "2026-10-06T09:00:00" },
+  { id: "s-ai-anthropic", kind: "ai-provider", nameAr: "مزوّد Anthropic", nameEn: "Anthropic Provider", state: "degraded", uptimePct: 92.5, latencyMs: 2400, lastCheckedAt: "2026-10-06T09:00:00", noteAr: "بطء ملحوظ", noteEn: "Slow responses" },
+  { id: "s-bot-telegram", kind: "bot", nameAr: "بوت تلجرام", nameEn: "Telegram Bot", state: "healthy", uptimePct: 99.9, latencyMs: 220, lastCheckedAt: "2026-10-06T09:00:00" },
+  { id: "s-bot-whatsapp", kind: "bot", nameAr: "بوت واتساب", nameEn: "WhatsApp Bot", state: "failed", uptimePct: 0, latencyMs: 0, lastCheckedAt: "2026-10-06T09:00:00", noteAr: "فشل الاتصال بالخدمة", noteEn: "Service connection failed" },
+  { id: "s-integration-payments", kind: "integration", nameAr: "بوابة الدفع", nameEn: "Payments Integration", state: "maintenance", uptimePct: 100, latencyMs: 0, lastCheckedAt: "2026-10-06T09:00:00", noteAr: "صيانة مجدولة", noteEn: "Scheduled maintenance" },
+];
+
+export const mockQueues: QueueState[] = [
+  { id: "q-transcription", nameAr: "طابور التفريغ الصوتي", nameEn: "Transcription Queue", pending: 12, running: 3, failed: 1, deadLetter: 0, throughputPerMin: 4 },
+  { id: "q-summarization", nameAr: "طابور التلخيص", nameEn: "Summarization Queue", pending: 28, running: 6, failed: 2, deadLetter: 1, throughputPerMin: 8 },
+  { id: "q-docgen", nameAr: "طابور توليد المستندات", nameEn: "Document Generation Queue", pending: 4, running: 2, failed: 0, deadLetter: 0, throughputPerMin: 3 },
+  { id: "q-publish", nameAr: "طابور النشر", nameEn: "Publishing Queue", pending: 9, running: 1, failed: 0, deadLetter: 0, throughputPerMin: 6 },
+  { id: "q-notifications", nameAr: "طابور الإشعارات", nameEn: "Notifications Queue", pending: 42, running: 8, failed: 5, deadLetter: 2, throughputPerMin: 22 },
+];
+
+export const mockWorkers: Worker[] = [
+  { id: "w-1", name: "manar-worker-01", region: "me-central-1", state: "healthy", jobsActive: 5, jobsCompletedToday: 342, cpuPct: 38, memoryPct: 52 },
+  { id: "w-2", name: "manar-worker-02", region: "me-central-1", state: "healthy", jobsActive: 3, jobsCompletedToday: 298, cpuPct: 42, memoryPct: 48 },
+  { id: "w-3", name: "manar-worker-03", region: "eu-west-1", state: "degraded", jobsActive: 8, jobsCompletedToday: 156, cpuPct: 87, memoryPct: 91, note: "" } as Worker,
+  { id: "w-4", name: "manar-worker-04", region: "eu-west-1", state: "maintenance", jobsActive: 0, jobsCompletedToday: 0, cpuPct: 0, memoryPct: 0 },
+];
+
+export const mockFeatureFlags: FeatureFlag[] = [
+  { id: "ff-1", key: "new-summary-editor", labelAr: "محرّر الملخصات الجديد", labelEn: "New Summary Editor", descriptionAr: "تفعيل المحرر الجديد للملخصات", descriptionEn: "Enable the new summary editor", enabled: true, environment: "production", rolloutPct: 100, updatedAt: "2026-10-03" },
+  { id: "ff-2", key: "ai-auto-translate", labelAr: "الترجمة التلقائية", labelEn: "AI Auto Translate", descriptionAr: "ترجمة الملخصات تلقائيًا", descriptionEn: "Auto-translate summaries", enabled: true, environment: "production", rolloutPct: 60, updatedAt: "2026-10-02" },
+  { id: "ff-3", key: "whatsapp-channel", labelAr: "قناة واتساب", labelEn: "WhatsApp Channel", descriptionAr: "تفعيل بوت واتساب", descriptionEn: "Enable WhatsApp bot", enabled: false, environment: "staging", rolloutPct: 0, updatedAt: "2026-10-05" },
+  { id: "ff-4", key: "document-watermark-v2", labelAr: "العلامة المائية v2", labelEn: "Document Watermark v2", descriptionAr: "نمط جديد للعلامة المائية", descriptionEn: "New watermark style", enabled: true, environment: "production", rolloutPct: 100, updatedAt: "2026-09-28" },
+  { id: "ff-5", key: "bulk-approve", labelAr: "الاعتماد الجماعي", labelEn: "Bulk Approve", descriptionAr: "اعتماد عدة ملخصات معًا", descriptionEn: "Approve many summaries at once", enabled: false, environment: "development", rolloutPct: 25, updatedAt: "2026-10-04" },
+];
