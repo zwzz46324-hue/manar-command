@@ -326,3 +326,23 @@ export type FeatureFlag = {
   rolloutPct: number;
   updatedAt: string;
 };
+
+export type VaultFileKind = "audio" | "video" | "image" | "document" | "archive" | "other";
+
+export type VaultFile = {
+  id: string;
+  nameAr: string;
+  nameEn: string;
+  kind: VaultFileKind;
+  mimeType: string;
+  sizeKb: number;
+  version: number;
+  ownerId: string;
+  linkedTo?: string;
+  tags: string[];
+  checksum: string;
+  retentionDays: number;
+  archived: boolean;
+  createdAt: string;
+  updatedAt: string;
+};

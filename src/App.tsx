@@ -16,6 +16,7 @@ import { PeopleUniverse } from "./features/people/PeopleUniverse";
 import { AIOperations } from "./features/ai/AIOperations";
 import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 import { SystemOperations } from "./features/operations/SystemOperations";
+import { DataVault } from "./features/storage/DataVault";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/ai" element={<AIOperations />} />
         <Route path="/bots" element={<BotCommandCenter />} />
         <Route path="/operations" element={<SystemOperations />} />
+        <Route path="/vault" element={<DataVault />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

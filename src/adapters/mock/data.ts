@@ -508,3 +508,16 @@ export const mockFeatureFlags: FeatureFlag[] = [
   { id: "ff-4", key: "document-watermark-v2", labelAr: "العلامة المائية v2", labelEn: "Document Watermark v2", descriptionAr: "نمط جديد للعلامة المائية", descriptionEn: "New watermark style", enabled: true, environment: "production", rolloutPct: 100, updatedAt: "2026-09-28" },
   { id: "ff-5", key: "bulk-approve", labelAr: "الاعتماد الجماعي", labelEn: "Bulk Approve", descriptionAr: "اعتماد عدة ملخصات معًا", descriptionEn: "Approve many summaries at once", enabled: false, environment: "development", rolloutPct: 25, updatedAt: "2026-10-04" },
 ];
+
+import type { VaultFile } from "../../domain/types";
+
+export const mockVaultFiles: VaultFile[] = [
+  { id: "vf-1", nameAr: "محاضرة هياكل البيانات 1.mp3", nameEn: "DS Lecture 1.mp3", kind: "audio", mimeType: "audio/mpeg", sizeKb: 28400, version: 1, ownerId: "user-2", linkedTo: "sum-1", tags: ["lecture", "audio"], checksum: "sha256:a1b2c3", retentionDays: 365, archived: false, createdAt: "2026-09-15", updatedAt: "2026-09-15" },
+  { id: "vf-2", nameAr: "محاضرة هياكل البيانات 1.docx", nameEn: "DS Lecture 1.docx", kind: "document", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", sizeKb: 420, version: 2, ownerId: "user-2", linkedTo: "sum-1", tags: ["summary", "docx"], checksum: "sha256:d4e5f6", retentionDays: 1825, archived: false, createdAt: "2026-09-16", updatedAt: "2026-10-02" },
+  { id: "vf-3", nameAr: "شرائح الفصل الثالث.pdf", nameEn: "Chapter 3 Slides.pdf", kind: "document", mimeType: "application/pdf", sizeKb: 3840, version: 1, ownerId: "user-3", linkedTo: "crs-med101", tags: ["slides"], checksum: "sha256:g7h8i9", retentionDays: 3650, archived: false, createdAt: "2026-08-20", updatedAt: "2026-08-20" },
+  { id: "vf-4", nameAr: "صورة السبورة.jpg", nameEn: "Whiteboard.jpg", kind: "image", mimeType: "image/jpeg", sizeKb: 1820, version: 1, ownerId: "user-2", tags: ["photo"], checksum: "sha256:j1k2l3", retentionDays: 365, archived: false, createdAt: "2026-09-10", updatedAt: "2026-09-10" },
+  { id: "vf-5", nameAr: "نسخة احتياطية أسبوعية.zip", nameEn: "Weekly backup.zip", kind: "archive", mimeType: "application/zip", sizeKb: 184000, version: 1, ownerId: "system", tags: ["backup"], checksum: "sha256:m4n5o6", retentionDays: 90, archived: true, createdAt: "2026-09-28", updatedAt: "2026-09-28" },
+  { id: "vf-6", nameAr: "فيديو تشريح 1.mp4", nameEn: "Anatomy Video 1.mp4", kind: "video", mimeType: "video/mp4", sizeKb: 128000, version: 1, ownerId: "user-3", linkedTo: "crs-med101", tags: ["lecture", "video"], checksum: "sha256:p7q8r9", retentionDays: 1095, archived: false, createdAt: "2026-09-05", updatedAt: "2026-09-05" },
+  { id: "vf-7", nameAr: "ملاحظات المراجعة.txt", nameEn: "Review notes.txt", kind: "document", mimeType: "text/plain", sizeKb: 8, version: 3, ownerId: "user-9", tags: ["notes"], checksum: "sha256:s1t2u3", retentionDays: 365, archived: false, createdAt: "2026-10-01", updatedAt: "2026-10-04" },
+  { id: "vf-8", nameAr: "الشعار الرسمي.svg", nameEn: "Official logo.svg", kind: "image", mimeType: "image/svg+xml", sizeKb: 3, version: 1, ownerId: "user-1", tags: ["brand"], checksum: "sha256:v4w5x6", retentionDays: 3650, archived: false, createdAt: "2025-01-01", updatedAt: "2025-01-01" },
+];

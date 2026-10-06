@@ -78,3 +78,11 @@ export const opsRepo = {
   async listWorkers(): Promise<Worker[]> { return mockWorkers; },
   async listFlags(): Promise<FeatureFlag[]> { return mockFeatureFlags; },
 };
+
+import { mockVaultFiles } from "./data";
+import type { VaultFile } from "../../domain/types";
+
+export const vaultRepo = {
+  async list(): Promise<VaultFile[]> { return mockVaultFiles; },
+  async get(id: string): Promise<VaultFile | undefined> { return mockVaultFiles.find((f) => f.id === id); },
+};
