@@ -120,3 +120,11 @@ export const transcriptRepo = {
     return mockTranscriptSegments.filter((s) => s.summaryId === summaryId);
   },
 };
+
+import { mockSystemMapNodes, mockSystemMapEdges } from "./data";
+import type { SystemMapNode, SystemMapEdge } from "../../domain/types";
+
+export const systemMapRepo = {
+  async nodes(): Promise<SystemMapNode[]> { return mockSystemMapNodes; },
+  async edges(): Promise<SystemMapEdge[]> { return mockSystemMapEdges; },
+};

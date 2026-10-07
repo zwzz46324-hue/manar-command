@@ -579,3 +579,37 @@ export const mockTranscriptSegments: TranscriptSegment[] = [
   { id: "ts-6", summaryId: "sum-2", startSec: 0, endSec: 60, textAr: "نتناول اليوم القوائم المترابطة.", textEn: "Today we cover linked lists.", speaker: "Dr. Ahmed", confidence: 95 },
   { id: "ts-7", summaryId: "sum-2", startSec: 60, endSec: 180, textAr: "القائمة المترابطة تربطها مؤشرات.", textEn: "A linked list connects nodes via pointers.", speaker: "Dr. Ahmed", confidence: 93 },
 ];
+
+import type { SystemMapNode, SystemMapEdge } from "../../domain/types";
+
+export const mockSystemMapNodes: SystemMapNode[] = [
+  { id: "core",        labelAr: "نواة منار",       labelEn: "MANAR Core",        x: 400, y: 60,  layer: "core",         state: "healthy" },
+  { id: "db",          labelAr: "قاعدة البيانات",  labelEn: "Database",          x: 200, y: 160, layer: "data",         state: "healthy" },
+  { id: "storage",     labelAr: "التخزين",         labelEn: "Storage",           x: 600, y: 160, layer: "data",         state: "healthy" },
+  { id: "backend",     labelAr: "الخادم",          labelEn: "Backend",           x: 400, y: 160, layer: "service",      state: "healthy" },
+  { id: "gemini",      labelAr: "Gemini",          labelEn: "Gemini",            x: 100, y: 400, layer: "ai",           state: "healthy" },
+  { id: "openai",      labelAr: "OpenAI",          labelEn: "OpenAI",            x: 250, y: 400, layer: "ai",           state: "healthy" },
+  { id: "anthropic",   labelAr: "Anthropic",       labelEn: "Anthropic",         x: 400, y: 400, layer: "ai",           state: "degraded" },
+  { id: "telegram",    labelAr: "تلجرام",          labelEn: "Telegram",          x: 550, y: 400, layer: "integration",  state: "healthy" },
+  { id: "whatsapp",    labelAr: "واتساب",          labelEn: "WhatsApp",          x: 700, y: 400, layer: "integration",  state: "down" },
+  { id: "site",        labelAr: "الموقع",          labelEn: "Site",              x: 400, y: 520, layer: "channel",      state: "healthy" },
+  { id: "students",    labelAr: "الطلاب",          labelEn: "Students",          x: 400, y: 620, layer: "user",         state: "healthy" },
+];
+
+export const mockSystemMapEdges: SystemMapEdge[] = [
+  { from: "core", to: "backend" },
+  { from: "core", to: "db" },
+  { from: "core", to: "storage" },
+  { from: "backend", to: "summarizer" },
+  { from: "backend", to: "docengine" },
+  { from: "backend", to: "botengine" },
+  { from: "summarizer", to: "gemini" },
+  { from: "summarizer", to: "openai" },
+  { from: "summarizer", to: "anthropic" },
+  { from: "botengine", to: "telegram" },
+  { from: "botengine", to: "whatsapp" },
+  { from: "docengine", to: "site" },
+  { from: "site", to: "students" },
+  { from: "telegram", to: "students" },
+  { from: "whatsapp", to: "students" },
+];

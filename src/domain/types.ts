@@ -424,3 +424,15 @@ export type TranscriptSegment = {
   editedBy?: string;
   editedAt?: string;
 };
+
+export type SystemMapNode = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  x: number;
+  y: number;
+  layer: "core" | "data" | "service" | "ai" | "integration" | "channel" | "user";
+  state: "healthy" | "degraded" | "down";
+};
+
+export type SystemMapEdge = { from: string; to: string; };

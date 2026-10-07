@@ -21,6 +21,7 @@ import { BackupCenter } from "./features/backup/BackupCenter";
 import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
 import { SummaryStudio } from "./features/summaries/SummaryStudio";
 import { TranscriptReview } from "./features/summaries/TranscriptReview";
+import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/permissions" element={<PermissionMatrix />} />
         <Route path="/summaries/:id" element={<SummaryStudio />} />
         <Route path="/transcripts/:id" element={<TranscriptReview />} />
+        <Route path="/system-map" element={<LiveSystemMap />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

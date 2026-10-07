@@ -1,0 +1,50 @@
+﻿.sm-page { max-width: 1400px; }
+.sm-layout { display: grid; grid-template-columns: 1fr 320px; gap: 16px; }
+.sm-canvas-wrap { background: radial-gradient(800px 700px at 50% 40%, rgba(139,92,246,0.06), transparent 70%), var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; }
+.sm-svg { display: block; width: 100%; height: auto; }
+.sm-node { cursor: pointer; transition: opacity 200ms; }
+.sm-node circle:first-child { fill: var(--manar-bg-2); stroke-width: 1.6; transition: all 200ms; }
+.sm-node.state-healthy circle:first-child { stroke: var(--manar-success); }
+.sm-node.state-degraded circle:first-child { stroke: var(--manar-warning); }
+.sm-node.state-down circle:first-child { stroke: var(--manar-danger); }
+.sm-node:hover circle:first-child { stroke-width: 2.4; }
+.sm-node.selected circle:first-child { fill: var(--manar-accent-soft); stroke: var(--manar-accent); stroke-width: 2.5; }
+.sm-node.neighbor circle:first-child { stroke-width: 2; }
+.sm-node.dim { opacity: 0.2; }
+.sm-pulse { fill: none; stroke: currentColor; opacity: 0; }
+.sm-node.state-healthy .sm-pulse { stroke: var(--manar-success); animation: smPulse 2.4s ease-out infinite; }
+.sm-node.state-degraded .sm-pulse { stroke: var(--manar-warning); animation: smPulse 1.6s ease-out infinite; }
+.sm-node.state-down .sm-pulse { stroke: var(--manar-danger); animation: smPulse 1.2s ease-out infinite; }
+@keyframes smPulse {
+  0%   { r: 10; opacity: 0.5; }
+  100% { r: 22; opacity: 0; }
+}
+.sm-label { font-family: var(--manar-font-ar); font-size: 11px; fill: var(--manar-text-dim); pointer-events: none; user-select: none; }
+.sm-node.selected .sm-label { fill: var(--manar-text); font-weight: 600; }
+.sm-rail { display: flex; flex-direction: column; gap: 12px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); padding: 16px; min-height: 400px; }
+.sm-rail-empty { display: flex; flex-direction: column; gap: 16px; }
+.sm-legend { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px dashed var(--manar-border); }
+.lg-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--manar-muted); }
+.lg-dot { width: 10px; height: 10px; border-radius: 50%; }
+.lg-healthy { background: var(--manar-success); box-shadow: 0 0 0 4px rgba(45,212,191,0.15); }
+.lg-degraded { background: var(--manar-warning); box-shadow: 0 0 0 4px rgba(245,158,11,0.15); }
+.lg-down { background: var(--manar-danger); box-shadow: 0 0 0 4px rgba(244,63,94,0.15); }
+.sm-detail-state { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--manar-border); align-self: flex-start; }
+.sm-detail-state.state-healthy { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.sm-detail-state.state-degraded { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.sm-detail-state.state-down { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.sm-dot { width: 8px; height: 8px; border-radius: 50%; }
+.sm-dot.state-healthy { background: var(--manar-success); }
+.sm-dot.state-degraded { background: var(--manar-warning); }
+.sm-dot.state-down { background: var(--manar-danger); }
+.sm-dot.small { width: 6px; height: 6px; }
+.sm-detail-title { font-size: 16px; font-weight: 600; margin: 4px 0; color: var(--manar-text); }
+.sm-detail-layer { font-size: 11px; letter-spacing: 1.4px; color: var(--manar-faint); margin: 0; text-transform: uppercase; }
+.sm-sub { font-size: 10px; letter-spacing: 2px; color: var(--manar-faint); margin: 16px 0 8px; font-weight: 600; }
+.sm-conn-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.sm-conn { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; background: rgba(255,255,255,0.02); font-size: 12px; color: var(--manar-text-dim); }
+.sm-clear { margin-top: auto; padding: 8px 12px; font-size: 11px; background: transparent; border: 1px solid var(--manar-border); border-radius: 6px; color: var(--manar-muted); cursor: pointer; font-family: inherit; }
+.sm-clear:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

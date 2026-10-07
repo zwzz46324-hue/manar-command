@@ -24,6 +24,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "تلجرام" || item === "Telegram") return "/bots";
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
   if (item === "صحة النظام" || item === "System Health") return "/operations";
+  if (item === "خريطة المنظومة" || item === "System Map") return "/system-map";
   if (item === "خزنة البيانات" || item === "Data Vault") return "/vault";
   if (item === "النسخ الاحتياطي" || item === "Backups") return "/backup";
   if (item === "الصلاحيات" || item === "Permissions") return "/permissions";
