@@ -436,3 +436,36 @@ export type SystemMapNode = {
 };
 
 export type SystemMapEdge = { from: string; to: string; };
+
+export type RepoFile = {
+  id: string;
+  path: string;
+  sizeKb: number;
+  language: string;
+  lastCommitAt: string;
+  lines: number;
+};
+
+export type Commit = {
+  id: string;
+  message: string;
+  authorId: string;
+  hash: string;
+  filesChanged: number;
+  insertions: number;
+  deletions: number;
+  at: string;
+};
+
+export type DiffLine = { type: "add" | "remove" | "context"; text: string; };
+
+export type BuildRun = {
+  id: string;
+  branch: string;
+  commitHash: string;
+  status: "success" | "running" | "failed";
+  durationSec: number;
+  testsPassed: number;
+  testsFailed: number;
+  at: string;
+};

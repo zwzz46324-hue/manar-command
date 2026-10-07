@@ -128,3 +128,13 @@ export const systemMapRepo = {
   async nodes(): Promise<SystemMapNode[]> { return mockSystemMapNodes; },
   async edges(): Promise<SystemMapEdge[]> { return mockSystemMapEdges; },
 };
+
+import { mockRepoFiles, mockCommits, mockDiff, mockBuilds } from "./data";
+import type { RepoFile, Commit, DiffLine, BuildRun } from "../../domain/types";
+
+export const codeRepo = {
+  async files(): Promise<RepoFile[]> { return mockRepoFiles; },
+  async commits(): Promise<Commit[]> { return mockCommits; },
+  async diff(): Promise<DiffLine[]> { return mockDiff; },
+  async builds(): Promise<BuildRun[]> { return mockBuilds; },
+};

@@ -613,3 +613,47 @@ export const mockSystemMapEdges: SystemMapEdge[] = [
   { from: "telegram", to: "students" },
   { from: "whatsapp", to: "students" },
 ];
+
+import type { RepoFile, Commit, DiffLine, BuildRun } from "../../domain/types";
+
+export const mockRepoFiles: RepoFile[] = [
+  { id: "f-1", path: "src/App.tsx", sizeKb: 1.2, language: "tsx", lastCommitAt: "2026-10-08", lines: 32 },
+  { id: "f-2", path: "src/layouts/CommandLayout.tsx", sizeKb: 5.2, language: "tsx", lastCommitAt: "2026-10-08", lines: 92 },
+  { id: "f-3", path: "src/features/command/CommandPage.tsx", sizeKb: 3.5, language: "tsx", lastCommitAt: "2026-10-04", lines: 78 },
+  { id: "f-4", path: "src/features/academic/AcademicUniverse.tsx", sizeKb: 4.1, language: "tsx", lastCommitAt: "2026-10-03", lines: 88 },
+  { id: "f-5", path: "src/features/academic/CoursesPage.tsx", sizeKb: 4.9, language: "tsx", lastCommitAt: "2026-10-03", lines: 118 },
+  { id: "f-6", path: "src/features/review/ReviewTheater.tsx", sizeKb: 6.1, language: "tsx", lastCommitAt: "2026-10-04", lines: 145 },
+  { id: "f-7", path: "src/features/documents/DocumentStudio.tsx", sizeKb: 4.6, language: "tsx", lastCommitAt: "2026-10-04", lines: 108 },
+  { id: "f-8", path: "src/features/audit/TruthLog.tsx", sizeKb: 5.5, language: "tsx", lastCommitAt: "2026-10-04", lines: 128 },
+  { id: "f-10", path: "src/features/operations/LiveSystemMap.tsx", sizeKb: 6.7, language: "tsx", lastCommitAt: "2026-10-08", lines: 148 },
+  { id: "f-11", path: "src/adapters/mock/data.ts", sizeKb: 58, language: "ts", lastCommitAt: "2026-10-08", lines: 620 },
+  { id: "f-12", path: "src/i18n/index.tsx", sizeKb: 7.2, language: "tsx", lastCommitAt: "2026-10-04", lines: 105 },
+];
+
+export const mockCommits: Commit[] = [
+  { id: "c-1", message: "MANAR COMMAND — Phase 14: Live System Map", authorId: "user-1", hash: "a3f9c21", filesChanged: 6, insertions: 342, deletions: 0, at: "2026-10-08" },
+  { id: "c-2", message: "MANAR COMMAND — Phase 13: Transcript Review", authorId: "user-1", hash: "f7e2a04", filesChanged: 5, insertions: 401, deletions: 2, at: "2026-10-08" },
+  { id: "c-3", message: "MANAR COMMAND — Phase 12: Summary Studio", authorId: "user-1", hash: "9b8c3e1", filesChanged: 5, insertions: 356, deletions: 0, at: "2026-10-08" },
+  { id: "c-4", message: "MANAR COMMAND — Phase 11: Permission Matrix", authorId: "user-1", hash: "1d5f8a2", filesChanged: 5, insertions: 289, deletions: 0, at: "2026-10-08" },
+  { id: "c-5", message: "MANAR COMMAND — Phase 10: Backup Center", authorId: "user-1", hash: "3e9b7c4", filesChanged: 6, insertions: 312, deletions: 3, at: "2026-10-07" },
+];
+
+export const mockDiff: DiffLine[] = [
+  { type: "context", text: "export function LiveSystemMap() {" },
+  { type: "context", text: "  const { lang, t } = useLang();" },
+  { type: "remove", text: "  const [selected, setSelected] = useState(null);" },
+  { type: "add", text: "  const [selected, setSelected] = useState<string | null>(null);" },
+  { type: "add", text: "  const [loading, setLoading] = useState(true);" },
+  { type: "context", text: "  useEffect(() => {" },
+  { type: "context", text: "    Promise.all([systemMapRepo.nodes(), systemMapRepo.edges()])" },
+  { type: "add", text: "      .then(([n, e]) => { setNodes(n); setEdges(e); setLoading(false); });" },
+  { type: "context", text: "  }, []);" },
+];
+
+export const mockBuilds: BuildRun[] = [
+  { id: "b-1", branch: "main", commitHash: "a3f9c21", status: "success", durationSec: 42, testsPassed: 89, testsFailed: 0, at: "2026-10-08T10:22:00" },
+  { id: "b-2", branch: "main", commitHash: "f7e2a04", status: "success", durationSec: 38, testsPassed: 89, testsFailed: 0, at: "2026-10-08T09:15:00" },
+  { id: "b-3", branch: "main", commitHash: "9b8c3e1", status: "success", durationSec: 45, testsPassed: 89, testsFailed: 0, at: "2026-10-08T08:30:00" },
+  { id: "b-4", branch: "feature/summary-editor", commitHash: "2a4d6f8", status: "failed", durationSec: 12, testsPassed: 82, testsFailed: 7, at: "2026-10-07T22:40:00" },
+  { id: "b-5", branch: "main", commitHash: "1d5f8a2", status: "success", durationSec: 40, testsPassed: 88, testsFailed: 0, at: "2026-10-07T18:00:00" },
+];
