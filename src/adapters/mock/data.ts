@@ -711,3 +711,22 @@ export const mockCommands: Command[] = [
   { id: "adm-sessions",     group: "admin",    labelAr: "إنهاء الجلسات النشطة",         labelEn: "Revoke active sessions",   route: "/security",      requiresAr: "OWNER",      requiresEn: "OWNER" },
   { id: "adm-flags",        group: "admin",    labelAr: "إدارة أعلام الميزات",          labelEn: "Manage feature flags",     route: "/operations",    requiresAr: "OWNER",      requiresEn: "OWNER" },
 ];
+
+import type { KPI, QuickAction } from "../../domain/types";
+
+export const mockKPIs: KPI[] = [
+  { id: "kpi-courses",   labelAr: "المقررات",       labelEn: "Courses",        value: "2346",  hintAr: "34 جامعة",           hintEn: "34 universities",   trend: "up",   state: "ok" },
+  { id: "kpi-summaries", labelAr: "الملخصات",       labelEn: "Summaries",      value: "3",     hintAr: "3 بانتظار قرار",      hintEn: "3 awaiting review",  trend: "flat", state: "warn" },
+  { id: "kpi-docs",      labelAr: "المستندات",      labelEn: "Documents",      value: "3",     hintAr: "2 جاهزة / 1 منشور",   hintEn: "2 ready / 1 published", trend: "up",   state: "ok" },
+  { id: "kpi-users",     labelAr: "المستخدمون",     labelEn: "Users",          value: "8",     hintAr: "5 نشطون",             hintEn: "5 active",           trend: "up",   state: "ok" },
+  { id: "kpi-health",    labelAr: "صحة النظام",     labelEn: "System health",  value: "7/9",   hintAr: "2 تحتاج انتباه",      hintEn: "2 need attention",   trend: "flat", state: "warn" },
+];
+
+export const mockQuickActions: QuickAction[] = [
+  { id: "qa-review",   labelAr: "مراجعة الملخصات",   labelEn: "Review summaries",  icon: "📝", route: "/review",      requiresAr: "SUPERVISOR", requiresEn: "SUPERVISOR" },
+  { id: "qa-generate", labelAr: "توليد مستند",       labelEn: "Generate document", icon: "📄", route: "/documents",   requiresAr: "SUPERVISOR", requiresEn: "SUPERVISOR" },
+  { id: "qa-search",   labelAr: "البحث الشامل",       labelEn: "Global search",     icon: "🔍", route: "/search" },
+  { id: "qa-vault",    labelAr: "خزنة البيانات",      labelEn: "Data Vault",        icon: "🗄️", route: "/vault" },
+  { id: "qa-backup",   labelAr: "نسخة احتياطية",     labelEn: "Run backup",        icon: "💾", route: "/backup",      requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "qa-map",      labelAr: "خريطة المنظومة",     labelEn: "System map",        icon: "🗺️", route: "/system-map" },
+];

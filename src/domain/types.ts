@@ -498,3 +498,24 @@ export type Command = {
   requiresAr?: string;
   requiresEn?: string;
 };
+
+export type KPI = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  value: string;
+  hintAr?: string;
+  hintEn?: string;
+  trend: "up" | "down" | "flat";
+  state: "ok" | "warn" | "danger" | "neutral";
+};
+
+export type QuickAction = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  icon: string;
+  route: string;
+  requiresAr?: string;
+  requiresEn?: string;
+};

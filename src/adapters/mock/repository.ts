@@ -1,5 +1,34 @@
-﻿import { mockActivity, mockAttention, mockCourses, mockUniversities, mockColleges, mockDepartments, mockSummaries, mockDecisions, mockDocuments, mockTruthEvents, mockSecurityEvents, mockSessions, mockUsers, mockRoles, mockPermissions, mockProviders, mockAIJobs, mockBots, mockBotMessages, mockServices, mockQueues, mockWorkers, mockFeatureFlags } from "./data";
-import type { ActivityEvent, AttentionItem, Course, University, College, Department, Summary, Decision, ManarDocument, TruthEvent, SecurityEvent, ActiveSession, ManarUser, RoleDefinition, Permission, AIProvider, AIJob, ManarBot, BotMessage, ServiceHealth, QueueState, Worker, FeatureFlag } from "../../domain/types";
+﻿import {
+  mockActivity, mockAttention, mockCourses,
+  mockUniversities, mockColleges, mockDepartments,
+  mockSummaries, mockDecisions,
+  mockDocuments,
+  mockTruthEvents, mockSecurityEvents, mockSessions,
+  mockUsers, mockRoles, mockPermissions,
+  mockProviders, mockAIJobs,
+  mockBots, mockBotMessages,
+  mockServices, mockQueues, mockWorkers, mockFeatureFlags,
+  mockVaultFiles,
+  mockBackups, mockRetentionPolicies,
+  mockGrants,
+  mockSummaryVersions, mockSummarySections,
+  mockTranscriptSegments,
+  mockSystemMapNodes, mockSystemMapEdges,
+  mockRepoFiles, mockCommits, mockDiff, mockBuilds,
+  mockSearchIndex,
+  mockCommands,
+  mockKPIs, mockQuickActions,
+} from "./data";
+import type {
+  ActivityEvent, AttentionItem, Course, University, College, Department,
+  Summary, Decision, ManarDocument, TruthEvent, SecurityEvent, ActiveSession,
+  ManarUser, RoleDefinition, Permission, AIProvider, AIJob, ManarBot, BotMessage,
+  ServiceHealth, QueueState, Worker, FeatureFlag,
+  VaultFile, Backup, RetentionPolicy, PermissionGrant,
+  SummaryVersion, SummarySection, TranscriptSegment,
+  SystemMapNode, SystemMapEdge, RepoFile, Commit, DiffLine, BuildRun,
+  SearchHit, Command, KPI, QuickAction,
+} from "../../domain/types";
 
 export interface ManarRepository {
   listAttention(): Promise<AttentionItem[]>;
@@ -79,31 +108,19 @@ export const opsRepo = {
   async listFlags(): Promise<FeatureFlag[]> { return mockFeatureFlags; },
 };
 
-import { mockVaultFiles } from "./data";
-import type { VaultFile } from "../../domain/types";
-
 export const vaultRepo = {
   async list(): Promise<VaultFile[]> { return mockVaultFiles; },
   async get(id: string): Promise<VaultFile | undefined> { return mockVaultFiles.find((f) => f.id === id); },
 };
-
-import { mockBackups, mockRetentionPolicies } from "./data";
-import type { Backup, RetentionPolicy } from "../../domain/types";
 
 export const backupRepo = {
   async list(): Promise<Backup[]> { return mockBackups; },
   async listPolicies(): Promise<RetentionPolicy[]> { return mockRetentionPolicies; },
 };
 
-import { mockGrants } from "./data";
-import type { PermissionGrant } from "../../domain/types";
-
 export const grantsRepo = {
   async list(): Promise<PermissionGrant[]> { return mockGrants; },
 };
-
-import { mockSummaryVersions, mockSummarySections } from "./data";
-import type { SummaryVersion, SummarySection } from "../../domain/types";
 
 export const summaryStudioRepo = {
   async listVersions(summaryId: string): Promise<SummaryVersion[]> {
@@ -112,25 +129,16 @@ export const summaryStudioRepo = {
   async listSections(): Promise<SummarySection[]> { return mockSummarySections; },
 };
 
-import { mockTranscriptSegments } from "./data";
-import type { TranscriptSegment } from "../../domain/types";
-
 export const transcriptRepo = {
   async list(summaryId: string): Promise<TranscriptSegment[]> {
     return mockTranscriptSegments.filter((s) => s.summaryId === summaryId);
   },
 };
 
-import { mockSystemMapNodes, mockSystemMapEdges } from "./data";
-import type { SystemMapNode, SystemMapEdge } from "../../domain/types";
-
 export const systemMapRepo = {
   async nodes(): Promise<SystemMapNode[]> { return mockSystemMapNodes; },
   async edges(): Promise<SystemMapEdge[]> { return mockSystemMapEdges; },
 };
-
-import { mockRepoFiles, mockCommits, mockDiff, mockBuilds } from "./data";
-import type { RepoFile, Commit, DiffLine, BuildRun } from "../../domain/types";
 
 export const codeRepo = {
   async files(): Promise<RepoFile[]> { return mockRepoFiles; },
@@ -139,16 +147,15 @@ export const codeRepo = {
   async builds(): Promise<BuildRun[]> { return mockBuilds; },
 };
 
-import { mockSearchIndex } from "./data";
-import type { SearchHit } from "../../domain/types";
-
 export const searchRepo = {
   async all(): Promise<SearchHit[]> { return mockSearchIndex; },
 };
 
-import { mockCommands } from "./data";
-import type { Command } from "../../domain/types";
-
 export const commandRepo = {
   async list(): Promise<Command[]> { return mockCommands; },
+};
+
+export const homeRepo = {
+  async kpis(): Promise<KPI[]> { return mockKPIs; },
+  async quickActions(): Promise<QuickAction[]> { return mockQuickActions; },
 };
