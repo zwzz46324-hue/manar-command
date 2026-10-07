@@ -392,3 +392,22 @@ export type PermissionGrant = {
   noteEn?: string;
   updatedAt: string;
 };
+
+export type SummaryVersion = {
+  id: string;
+  summaryId: string;
+  version: number;
+  contentAr: string;
+  editedBy: string;
+  noteAr?: string;
+  noteEn?: string;
+  createdAt: string;
+};
+
+export type SummarySection = {
+  id: string;
+  titleAr: string;
+  titleEn: string;
+  bodyAr: string;
+  bodyEn: string;
+};

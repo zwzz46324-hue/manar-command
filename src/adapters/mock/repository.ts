@@ -101,3 +101,13 @@ import type { PermissionGrant } from "../../domain/types";
 export const grantsRepo = {
   async list(): Promise<PermissionGrant[]> { return mockGrants; },
 };
+
+import { mockSummaryVersions, mockSummarySections } from "./data";
+import type { SummaryVersion, SummarySection } from "../../domain/types";
+
+export const summaryStudioRepo = {
+  async listVersions(summaryId: string): Promise<SummaryVersion[]> {
+    return mockSummaryVersions.filter((v) => v.summaryId === summaryId);
+  },
+  async listSections(): Promise<SummarySection[]> { return mockSummarySections; },
+};

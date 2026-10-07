@@ -19,6 +19,7 @@ import { SystemOperations } from "./features/operations/SystemOperations";
 import { DataVault } from "./features/storage/DataVault";
 import { BackupCenter } from "./features/backup/BackupCenter";
 import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
+import { SummaryStudio } from "./features/summaries/SummaryStudio";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/vault" element={<DataVault />} />
         <Route path="/backup" element={<BackupCenter />} />
         <Route path="/permissions" element={<PermissionMatrix />} />
+        <Route path="/summaries/:id" element={<SummaryStudio />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

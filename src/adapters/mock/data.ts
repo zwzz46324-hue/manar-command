@@ -552,3 +552,18 @@ export const mockGrants: PermissionGrant[] = [
   { id: "g-8", subjectType: "role", subjectId: "STUDENT", actionId: "summary.create", resourceId: "summary", scopeAr: "—", scopeEn: "—", effect: "deny", updatedAt: "2025-01-01" },
   { id: "g-9", subjectType: "user", subjectId: "user-15", actionId: "summary.create", resourceId: "summary", scopeAr: "—", scopeEn: "—", effect: "deny", noteAr: "الحساب معلّق", noteEn: "Account suspended", updatedAt: "2026-10-01" },
 ];
+
+import type { SummaryVersion, SummarySection } from "../../domain/types";
+
+export const mockSummaryVersions: SummaryVersion[] = [
+  { id: "sv-1a", summaryId: "sum-1", version: 1, contentAr: "النسخة الأولى: ملخص المحاضرة الأولى من مقدمة البرمجة.", editedBy: "ai-gemini", noteAr: "توليد تلقائي", noteEn: "Auto-generated", createdAt: "2026-10-01T07:30:00" },
+  { id: "sv-1b", summaryId: "sum-1", version: 2, contentAr: "النسخة الثانية: تم تحسين المقدمة وإضافة أمثلة عملية.", editedBy: "user-2", noteAr: "تحرير يدوي", noteEn: "Manual edit", createdAt: "2026-10-02T11:00:00" },
+  { id: "sv-2a", summaryId: "sum-2", version: 1, contentAr: "النسخة الأولى: القوائم المترابطة بأنواعها.", editedBy: "ai-gemini", createdAt: "2026-09-28T09:00:00" },
+  { id: "sv-2b", summaryId: "sum-2", version: 2, contentAr: "النسخة الثانية: إضافة قسم الحذف.", editedBy: "user-2", noteAr: "بناءً على طلب المراجع", noteEn: "Reviewer request", createdAt: "2026-10-02T15:30:00" },
+];
+
+export const mockSummarySections: SummarySection[] = [
+  { id: "sec-1", titleAr: "تعريف البرمجة", titleEn: "Definition of Programming", bodyAr: "البرمجة هي عملية كتابة تعليمات للجهاز لتنفيذ مهمة محددة.", bodyEn: "Programming is the process of writing instructions for a machine to perform a specific task." },
+  { id: "sec-2", titleAr: "لغات البرمجة", titleEn: "Programming Languages", bodyAr: "تنقسم إلى لغات عالية المستوى ومنخفضة المستوى.", bodyEn: "Divided into high-level and low-level languages." },
+  { id: "sec-3", titleAr: "أمثلة عملية", titleEn: "Practical examples", bodyAr: "أمثلة بلغة Python توضح المفهوم.", bodyEn: "Python examples illustrating the concept." },
+];
