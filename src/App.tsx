@@ -18,6 +18,7 @@ import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 import { SystemOperations } from "./features/operations/SystemOperations";
 import { DataVault } from "./features/storage/DataVault";
 import { BackupCenter } from "./features/backup/BackupCenter";
+import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/operations" element={<SystemOperations />} />
         <Route path="/vault" element={<DataVault />} />
         <Route path="/backup" element={<BackupCenter />} />
+        <Route path="/permissions" element={<PermissionMatrix />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

@@ -94,3 +94,10 @@ export const backupRepo = {
   async list(): Promise<Backup[]> { return mockBackups; },
   async listPolicies(): Promise<RetentionPolicy[]> { return mockRetentionPolicies; },
 };
+
+import { mockGrants } from "./data";
+import type { PermissionGrant } from "../../domain/types";
+
+export const grantsRepo = {
+  async list(): Promise<PermissionGrant[]> { return mockGrants; },
+};

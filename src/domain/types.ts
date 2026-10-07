@@ -374,3 +374,21 @@ export type RetentionPolicy = {
   keepWeekly: number;
   keepMonthly: number;
 };
+
+export type PolicyEffect = "allow" | "deny";
+
+export type PermissionGrant = {
+  id: string;
+  subjectType: "role" | "user";
+  subjectId: string;
+  actionId: string;
+  resourceId: string;
+  scopeAr: string;
+  scopeEn: string;
+  effect: PolicyEffect;
+  conditionsAr?: string;
+  conditionsEn?: string;
+  noteAr?: string;
+  noteEn?: string;
+  updatedAt: string;
+};

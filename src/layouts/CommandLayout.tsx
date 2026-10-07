@@ -26,6 +26,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "صحة النظام" || item === "System Health") return "/operations";
   if (item === "خزنة البيانات" || item === "Data Vault") return "/vault";
   if (item === "النسخ الاحتياطي" || item === "Backups") return "/backup";
+  if (item === "الصلاحيات" || item === "Permissions") return "/permissions";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;
   return "/section/" + globalIndex;
 };

@@ -538,3 +538,17 @@ export const mockRetentionPolicies: RetentionPolicy[] = [
   { id: "rp-weekly", kindAr: "نسخ أسبوعية", kindEn: "Weekly backups", retainDays: 90, keepDaily: 0, keepWeekly: 12, keepMonthly: 6 },
   { id: "rp-snapshots", kindAr: "اللقطات اليدوية", kindEn: "Manual snapshots", retainDays: 180, keepDaily: 0, keepWeekly: 0, keepMonthly: 24 },
 ];
+
+import type { PermissionGrant } from "../../domain/types";
+
+export const mockGrants: PermissionGrant[] = [
+  { id: "g-1", subjectType: "role", subjectId: "OWNER", actionId: "*", resourceId: "*", scopeAr: "الكل", scopeEn: "All", effect: "allow", updatedAt: "2025-01-01" },
+  { id: "g-2", subjectType: "role", subjectId: "SUPERVISOR", actionId: "summary.approve", resourceId: "summary", scopeAr: "الجامعة المعينة", scopeEn: "Assigned university", effect: "allow", conditionsAr: "فقط الملخصات المرسلة له", conditionsEn: "Only assigned summaries", updatedAt: "2025-06-10" },
+  { id: "g-3", subjectType: "role", subjectId: "SUPERVISOR", actionId: "summary.reject", resourceId: "summary", scopeAr: "الجامعة المعينة", scopeEn: "Assigned university", effect: "allow", updatedAt: "2025-06-10" },
+  { id: "g-4", subjectType: "role", subjectId: "SUMMARIZER", actionId: "summary.create", resourceId: "summary", scopeAr: "المقررات المعينة", scopeEn: "Assigned courses", effect: "allow", updatedAt: "2025-03-15" },
+  { id: "g-5", subjectType: "role", subjectId: "SUMMARIZER", actionId: "summary.approve", resourceId: "summary", scopeAr: "—", scopeEn: "—", effect: "deny", noteAr: "لا يُعتمد من نفسه", noteEn: "No self-approval", updatedAt: "2025-03-15" },
+  { id: "g-6", subjectType: "user", subjectId: "user-9", actionId: "security.read", resourceId: "security", scopeAr: "الكل", scopeEn: "All", effect: "allow", updatedAt: "2025-06-01" },
+  { id: "g-7", subjectType: "role", subjectId: "STUDENT", actionId: "content.read", resourceId: "content", scopeAr: "المحتوى المنشور فقط", scopeEn: "Published content only", effect: "allow", updatedAt: "2025-01-01" },
+  { id: "g-8", subjectType: "role", subjectId: "STUDENT", actionId: "summary.create", resourceId: "summary", scopeAr: "—", scopeEn: "—", effect: "deny", updatedAt: "2025-01-01" },
+  { id: "g-9", subjectType: "user", subjectId: "user-15", actionId: "summary.create", resourceId: "summary", scopeAr: "—", scopeEn: "—", effect: "deny", noteAr: "الحساب معلّق", noteEn: "Account suspended", updatedAt: "2026-10-01" },
+];
