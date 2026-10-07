@@ -678,3 +678,36 @@ export const mockSearchIndex: SearchHit[] = [
   { id: "s-bk-5", type: "backup", titleAr: "لقطة يدوية", titleEn: "Manual snapshot", subtitleAr: "850 MB · قيد التحقق", subtitleEn: "850 MB · verifying", route: "/backup", status: "verifying", at: "2026-10-08" },
   { id: "s-ff-3", type: "flag", titleAr: "قناة واتساب", titleEn: "WhatsApp Channel", subtitleAr: "feature flag · معطّل", subtitleEn: "feature flag · disabled", route: "/operations", status: "off", at: "2026-10-05" },
 ];
+
+import type { Command } from "../../domain/types";
+
+export const mockCommands: Command[] = [
+  { id: "nav-command",      group: "navigate", labelAr: "اذهب إلى القيادة",           labelEn: "Go to Command",           route: "/",              shortcut: "g c" },
+  { id: "nav-academic",     group: "navigate", labelAr: "افتح الكون الأكاديمي",        labelEn: "Open Academic Universe",  route: "/academic",      shortcut: "g a" },
+  { id: "nav-courses",      group: "navigate", labelAr: "افتح المقررات",              labelEn: "Open Courses",            route: "/courses",       shortcut: "g m" },
+  { id: "nav-review",       group: "navigate", labelAr: "افتح طابور المراجعة",        labelEn: "Open Review Queue",       route: "/review",        shortcut: "g r" },
+  { id: "nav-documents",    group: "navigate", labelAr: "افتح استوديو المستندات",     labelEn: "Open Document Studio",    route: "/documents",     shortcut: "g d" },
+  { id: "nav-people",       group: "navigate", labelAr: "افتح عالم الأشخاص",          labelEn: "Open People Universe",    route: "/people",        shortcut: "g p" },
+  { id: "nav-ai",           group: "navigate", labelAr: "افتح عمليات الذكاء",         labelEn: "Open AI Operations",      route: "/ai",            shortcut: "g i" },
+  { id: "nav-bots",         group: "navigate", labelAr: "افتح مركز البوتات",          labelEn: "Open Bot Center",         route: "/bots",          shortcut: "g b" },
+  { id: "nav-vault",        group: "navigate", labelAr: "افتح خزنة البيانات",          labelEn: "Open Data Vault",         route: "/vault",         shortcut: "g v" },
+  { id: "nav-backup",       group: "navigate", labelAr: "افتح النسخ الاحتياطي",        labelEn: "Open Backup Center",      route: "/backup" },
+  { id: "nav-security",     group: "navigate", labelAr: "افتح مركز الأمن",            labelEn: "Open Security Center",    route: "/security" },
+  { id: "nav-audit",        group: "navigate", labelAr: "افتح سجل الحقيقة",           labelEn: "Open Truth Log",          route: "/audit" },
+  { id: "nav-ops",          group: "navigate", labelAr: "افتح صحة النظام",            labelEn: "Open System Health",      route: "/operations" },
+  { id: "nav-map",          group: "navigate", labelAr: "افتح خريطة المنظومة",         labelEn: "Open Live System Map",    route: "/system-map" },
+  { id: "nav-code",         group: "navigate", labelAr: "افتح مركز الكود",            labelEn: "Open Code Center",        route: "/code" },
+  { id: "nav-search",       group: "navigate", labelAr: "افتح البحث الشامل",           labelEn: "Open Global Search",      route: "/search",        shortcut: "g s" },
+  { id: "nav-perms",        group: "navigate", labelAr: "افتح مصفوفة الصلاحيات",      labelEn: "Open Permission Matrix",  route: "/permissions" },
+  { id: "act-approve",      group: "action",   labelAr: "اعتماد الملخصات المعلقة",     labelEn: "Approve pending summaries", route: "/review",      requiresAr: "SUPERVISOR", requiresEn: "SUPERVISOR" },
+  { id: "act-generate",     group: "action",   labelAr: "توليد مستند جديد",            labelEn: "Generate new document",     route: "/documents",     requiresAr: "SUPERVISOR", requiresEn: "SUPERVISOR" },
+  { id: "act-publish",      group: "action",   labelAr: "نشر آخر مستند جاهز",          labelEn: "Publish latest ready doc",  route: "/documents",     requiresAr: "SUPERVISOR", requiresEn: "SUPERVISOR" },
+  { id: "act-backup",       group: "action",   labelAr: "إنشاء نسخة احتياطية الآن",     labelEn: "Run backup now",           route: "/backup",        requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "act-rotate-key",   group: "action",   labelAr: "تدوير مفتاح AI",              labelEn: "Rotate AI key",            route: "/ai",            requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "act-add-flag",     group: "action",   labelAr: "إنشاء ميزة جديدة",            labelEn: "Create feature flag",      route: "/operations",    requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "act-block-ip",     group: "action",   labelAr: "حجب عنوان IP",                labelEn: "Block an IP address",      route: "/security",      requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "adm-users",        group: "admin",    labelAr: "إدارة المستخدمين",            labelEn: "Manage users",             route: "/people",        requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "adm-roles",        group: "admin",    labelAr: "إدارة الأدوار",               labelEn: "Manage roles",             route: "/people",        requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "adm-sessions",     group: "admin",    labelAr: "إنهاء الجلسات النشطة",         labelEn: "Revoke active sessions",   route: "/security",      requiresAr: "OWNER",      requiresEn: "OWNER" },
+  { id: "adm-flags",        group: "admin",    labelAr: "إدارة أعلام الميزات",          labelEn: "Manage feature flags",     route: "/operations",    requiresAr: "OWNER",      requiresEn: "OWNER" },
+];

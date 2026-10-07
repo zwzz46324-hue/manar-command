@@ -145,3 +145,10 @@ import type { SearchHit } from "../../domain/types";
 export const searchRepo = {
   async all(): Promise<SearchHit[]> { return mockSearchIndex; },
 };
+
+import { mockCommands } from "./data";
+import type { Command } from "../../domain/types";
+
+export const commandRepo = {
+  async list(): Promise<Command[]> { return mockCommands; },
+};

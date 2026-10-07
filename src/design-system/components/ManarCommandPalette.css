@@ -13,3 +13,20 @@
 .palette-item.active .palette-label { color: var(--manar-text); }
 .palette-empty { padding: 20px; text-align: center; color: var(--manar-muted); font-size: 12px; }
 .palette-foot { display: flex; gap: 16px; padding: 10px 16px; border-top: 1px solid var(--manar-border); font-size: 10px; color: var(--manar-faint); letter-spacing: 1px; }
+
+.palette-groups { display: flex; gap: 4px; padding: 8px 12px; border-bottom: 1px solid var(--manar-border); }
+.palette-group-btn { padding: 4px 10px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 11px; cursor: pointer; }
+.palette-group-btn:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.palette-group-btn.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.palette-group-chip { font-size: 9px; letter-spacing: 1.2px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); min-width: 62px; text-align: center; }
+.pg-navigate { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.pg-action { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.pg-search { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.pg-admin { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.palette-item.disabled { opacity: 0.5; cursor: not-allowed; }
+.palette-req { font-size: 9px; letter-spacing: 1px; padding: 2px 6px; border-radius: 4px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35); color: var(--manar-warning); margin-inline-start: auto; }
+.palette-shortcut { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); padding: 2px 6px; border: 1px solid var(--manar-border); border-radius: 4px; }
+.palette-sub { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); margin-inline-start: auto; }
+.palette-count { margin-inline-start: auto; font-family: var(--manar-font-mono); }
+.palette-list { max-height: 55vh; }
+.palette-search-item { padding: 8px 12px; }

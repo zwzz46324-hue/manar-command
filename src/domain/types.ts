@@ -483,3 +483,18 @@ export type SearchHit = {
   status?: string;
   at: string;
 };
+
+export type CommandGroup = "navigate" | "action" | "search" | "admin";
+
+export type Command = {
+  id: string;
+  group: CommandGroup;
+  labelAr: string;
+  labelEn: string;
+  hintAr?: string;
+  hintEn?: string;
+  route?: string;
+  shortcut?: string;
+  requiresAr?: string;
+  requiresEn?: string;
+};
