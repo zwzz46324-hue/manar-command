@@ -469,3 +469,17 @@ export type BuildRun = {
   testsFailed: number;
   at: string;
 };
+
+export type SearchEntityType = "course" | "summary" | "document" | "user" | "audit" | "ai-job" | "bot" | "backup" | "flag";
+
+export type SearchHit = {
+  id: string;
+  type: SearchEntityType;
+  titleAr: string;
+  titleEn: string;
+  subtitleAr: string;
+  subtitleEn: string;
+  route: string;
+  status?: string;
+  at: string;
+};

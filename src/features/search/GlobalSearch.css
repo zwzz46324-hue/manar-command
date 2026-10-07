@@ -1,0 +1,35 @@
+﻿.gs-page { max-width: 1100px; }
+.gs-search-wrap { margin-bottom: 20px; }
+.gs-search { width: 100%; padding: 14px 18px; background: var(--manar-surface); border: 1px solid var(--manar-border-strong); border-radius: 12px; color: var(--manar-text); font-family: inherit; font-size: 15px; outline: none; }
+.gs-search:focus { border-color: var(--manar-accent-line); box-shadow: 0 0 0 3px var(--manar-accent-soft); }
+.gs-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.gs-filter { padding: 5px 12px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 11px; cursor: pointer; }
+.gs-filter:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.gs-filter.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.gs-results { display: flex; flex-direction: column; gap: 6px; }
+.gs-hit { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 10px; text-decoration: none; color: inherit; transition: all 150ms; }
+.gs-hit:hover { border-color: var(--manar-border-strong); background: var(--manar-surface-hover); transform: translateX(2px); }
+.gs-type-chip { font-size: 9px; letter-spacing: 1.2px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); flex-shrink: 0; color: var(--manar-muted); }
+.gst-course { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.gst-summary { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.gst-document { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.gst-user { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.gst-audit { color: var(--manar-accent); border-color: var(--manar-accent-line); }
+.gst-ai-job { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.gst-bot { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.gst-backup { color: var(--manar-muted); }
+.gst-flag { color: var(--manar-accent); border-color: var(--manar-accent-line); }
+.gs-hit-body { flex: 1; min-width: 0; }
+.gs-hit-title { font-size: 13px; color: var(--manar-text); font-weight: 500; }
+.gs-hit-sub { font-size: 11px; color: var(--manar-muted); font-family: var(--manar-font-mono); margin-top: 2px; }
+.gs-status { font-size: 9px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); color: var(--manar-muted); text-transform: uppercase; }
+.gs-status.gs-pending { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.gs-status.gs-in-review, .gs-status.gs-verifying, .gs-status.gs-connecting, .gs-status.gs-running { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.gs-status.gs-ready, .gs-status.gs-published, .gs-status.gs-success, .gs-status.gs-active, .gs-status.gs-connected { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.gs-status.gs-failure, .gs-status.gs-failed { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.gs-status.gs-off { color: var(--manar-faint); }
+.gs-hit-date { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); }
+.gs-open { font-size: 11px; color: var(--manar-accent); flex-shrink: 0; }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

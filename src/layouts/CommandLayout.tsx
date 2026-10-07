@@ -62,7 +62,7 @@ export function CommandLayout() {
           </div>
         </div>
         <div className="horizon-search">
-          <button className="search-trigger" type="button" onClick={() => setPaletteOpen(true)}>
+          <button className="search-trigger" type="button" onClick={() => setPaletteOpen(true)} style={{ cursor: "pointer" }}>
             <span>{t.searchPlaceholder}</span>
             <kbd>Ctrl K</kbd>
           </button>
@@ -122,7 +122,7 @@ export function CommandLayout() {
 
       <footer className="command-dock" aria-label="Command dock">
         <button className="dock-btn primary" type="button">{t.dockCreate}</button>
-        <button className="dock-btn" type="button" onClick={() => setPaletteOpen(true)}>{t.dockSearch}</button>
+        <button className="dock-btn" type="button" onClick={() => setPaletteOpen(true)} style={{ cursor: "pointer" }}>{t.dockSearch}</button>
         <button className="dock-btn accent" type="button">{t.dockAi}</button>
         <button className="dock-btn" type="button">{t.dockReview}</button>
         <div className="dock-spacer" />

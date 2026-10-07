@@ -657,3 +657,24 @@ export const mockBuilds: BuildRun[] = [
   { id: "b-4", branch: "feature/summary-editor", commitHash: "2a4d6f8", status: "failed", durationSec: 12, testsPassed: 82, testsFailed: 7, at: "2026-10-07T22:40:00" },
   { id: "b-5", branch: "main", commitHash: "1d5f8a2", status: "success", durationSec: 40, testsPassed: 88, testsFailed: 0, at: "2026-10-07T18:00:00" },
 ];
+
+import type { SearchHit } from "../../domain/types";
+
+export const mockSearchIndex: SearchHit[] = [
+  { id: "s-crs-1", type: "course", titleAr: "هياكل البيانات", titleEn: "Data Structures", subtitleAr: "CS202 · Sanaa University", subtitleEn: "CS202 · Sanaa University", route: "/courses/crs-cs202", status: "active", at: "2026-10-03" },
+  { id: "s-crs-2", type: "course", titleAr: "مقدمة في البرمجة", titleEn: "Intro to Programming", subtitleAr: "CS101 · Sanaa University", subtitleEn: "CS101 · Sanaa University", route: "/courses/crs-cs101", status: "active", at: "2026-10-01" },
+  { id: "s-sum-1", type: "summary", titleAr: "المحاضرة الأولى — مقدمة المفاهيم", titleEn: "Lecture 1 — Concepts Introduction", subtitleAr: "CS101 · ملخص", subtitleEn: "CS101 · summary", route: "/review/sum-1", status: "pending", at: "2026-10-01" },
+  { id: "s-sum-2", type: "summary", titleAr: "المحاضرة الرابعة — القوائم المترابطة", titleEn: "Lecture 4 — Linked Lists", subtitleAr: "CS202 · ملخص", subtitleEn: "CS202 · summary", route: "/review/sum-2", status: "in-review", at: "2026-10-02" },
+  { id: "s-doc-1", type: "document", titleAr: "هياكل البيانات — القوائم المترابطة", titleEn: "Data Structures — Linked Lists", subtitleAr: "PDF · v2 · 24 صفحة", subtitleEn: "PDF · v2 · 24 pages", route: "/documents/doc-1", status: "ready", at: "2026-10-03" },
+  { id: "s-doc-3", type: "document", titleAr: "علم التشريح — الهيكل العظمي", titleEn: "Anatomy — Skeletal System", subtitleAr: "PDF · v3 · منشور", subtitleEn: "PDF · v3 · published", route: "/documents/doc-3", status: "published", at: "2026-10-01" },
+  { id: "s-user-1", type: "user", titleAr: "مالك المنظومة", titleEn: "System Owner", subtitleAr: "owner · OWNER", subtitleEn: "owner · OWNER", route: "/people", status: "active", at: "2026-10-08" },
+  { id: "s-user-9", type: "user", titleAr: "منى الحكيمي", titleEn: "Mona Al-Hakimi", subtitleAr: "mona.supervisor · SUPERVISOR", subtitleEn: "mona.supervisor · SUPERVISOR", route: "/people", status: "active", at: "2026-10-08" },
+  { id: "s-audit-1", type: "audit", titleAr: "اعتمد الملخص", titleEn: "Approved summary", subtitleAr: "user-9 · review", subtitleEn: "user-9 · review", route: "/audit", status: "success", at: "2026-10-08" },
+  { id: "s-audit-2", type: "audit", titleAr: "فشل تسجيل الدخول", titleEn: "Failed sign in", subtitleAr: "user-7 · security", subtitleEn: "user-7 · security", route: "/audit", status: "failure", at: "2026-10-08" },
+  { id: "s-job-3", type: "ai-job", titleAr: "تلخيص — محاضرة 4", titleEn: "Summarization — Lecture 4", subtitleAr: "Gemini · قيد التشغيل", subtitleEn: "Gemini · running", route: "/ai", status: "running", at: "2026-10-08" },
+  { id: "s-job-5", type: "ai-job", titleAr: "ترجمة — محاضرة 2", titleEn: "Translation — Lecture 2", subtitleAr: "OpenAI · فشل", subtitleEn: "OpenAI · failed", route: "/ai", status: "failed", at: "2026-10-08" },
+  { id: "s-bot-1", type: "bot", titleAr: "بوت منار على تلجرام", titleEn: "MANAR Telegram Bot", subtitleAr: "@ManarDataBot · متصل", subtitleEn: "@ManarDataBot · connected", route: "/bots", status: "connected", at: "2026-10-08" },
+  { id: "s-bot-2", type: "bot", titleAr: "بوت منار على واتساب", titleEn: "MANAR WhatsApp Bot", subtitleAr: "واتساب · جارٍ الاتصال", subtitleEn: "WhatsApp · connecting", route: "/bots", status: "connecting", at: "2026-10-08" },
+  { id: "s-bk-5", type: "backup", titleAr: "لقطة يدوية", titleEn: "Manual snapshot", subtitleAr: "850 MB · قيد التحقق", subtitleEn: "850 MB · verifying", route: "/backup", status: "verifying", at: "2026-10-08" },
+  { id: "s-ff-3", type: "flag", titleAr: "قناة واتساب", titleEn: "WhatsApp Channel", subtitleAr: "feature flag · معطّل", subtitleEn: "feature flag · disabled", route: "/operations", status: "off", at: "2026-10-05" },
+];

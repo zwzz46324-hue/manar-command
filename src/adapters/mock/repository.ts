@@ -138,3 +138,10 @@ export const codeRepo = {
   async diff(): Promise<DiffLine[]> { return mockDiff; },
   async builds(): Promise<BuildRun[]> { return mockBuilds; },
 };
+
+import { mockSearchIndex } from "./data";
+import type { SearchHit } from "../../domain/types";
+
+export const searchRepo = {
+  async all(): Promise<SearchHit[]> { return mockSearchIndex; },
+};
