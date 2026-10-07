@@ -567,3 +567,15 @@ export const mockSummarySections: SummarySection[] = [
   { id: "sec-2", titleAr: "لغات البرمجة", titleEn: "Programming Languages", bodyAr: "تنقسم إلى لغات عالية المستوى ومنخفضة المستوى.", bodyEn: "Divided into high-level and low-level languages." },
   { id: "sec-3", titleAr: "أمثلة عملية", titleEn: "Practical examples", bodyAr: "أمثلة بلغة Python توضح المفهوم.", bodyEn: "Python examples illustrating the concept." },
 ];
+
+import type { TranscriptSegment } from "../../domain/types";
+
+export const mockTranscriptSegments: TranscriptSegment[] = [
+  { id: "ts-1", summaryId: "sum-1", startSec: 0, endSec: 42, textAr: "في محاضرة اليوم سنتناول مقدمة عن البرمجة.", textEn: "In today's lecture we cover an introduction to programming.", speaker: "Dr. Ahmed", confidence: 96 },
+  { id: "ts-2", summaryId: "sum-1", startSec: 42, endSec: 128, textAr: "أولًا: تعريف البرمجة. هي عملية كتابة تعليمات للجهاز لتنفيذ مهمة محددة.", textEn: "First: definition of programming.", speaker: "Dr. Ahmed", confidence: 94 },
+  { id: "ts-3", summaryId: "sum-1", startSec: 128, endSec: 240, textAr: "ثانيًا: لغات البرمجة. تنقسم إلى عالية المستوى ومنخفضة المستوى.", textEn: "Second: programming languages.", speaker: "Dr. Ahmed", confidence: 92 },
+  { id: "ts-4", summaryId: "sum-1", startSec: 240, endSec: 380, textAr: "مثال: لغة Python عالية المستوى.", textEn: "Example: Python is a high-level language.", speaker: "Dr. Ahmed", confidence: 90 },
+  { id: "ts-5", summaryId: "sum-1", startSec: 380, endSec: 520, textAr: "سؤال: ما الفرق بين المفسرات والمترجمات؟", textEn: "Question: difference between interpreters and compilers?", speaker: "Student", confidence: 85 },
+  { id: "ts-6", summaryId: "sum-2", startSec: 0, endSec: 60, textAr: "نتناول اليوم القوائم المترابطة.", textEn: "Today we cover linked lists.", speaker: "Dr. Ahmed", confidence: 95 },
+  { id: "ts-7", summaryId: "sum-2", startSec: 60, endSec: 180, textAr: "القائمة المترابطة تربطها مؤشرات.", textEn: "A linked list connects nodes via pointers.", speaker: "Dr. Ahmed", confidence: 93 },
+];

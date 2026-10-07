@@ -411,3 +411,16 @@ export type SummarySection = {
   bodyAr: string;
   bodyEn: string;
 };
+
+export type TranscriptSegment = {
+  id: string;
+  summaryId: string;
+  startSec: number;
+  endSec: number;
+  textAr: string;
+  textEn: string;
+  speaker: string;
+  confidence: number;
+  editedBy?: string;
+  editedAt?: string;
+};

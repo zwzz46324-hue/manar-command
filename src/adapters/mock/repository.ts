@@ -111,3 +111,12 @@ export const summaryStudioRepo = {
   },
   async listSections(): Promise<SummarySection[]> { return mockSummarySections; },
 };
+
+import { mockTranscriptSegments } from "./data";
+import type { TranscriptSegment } from "../../domain/types";
+
+export const transcriptRepo = {
+  async list(summaryId: string): Promise<TranscriptSegment[]> {
+    return mockTranscriptSegments.filter((s) => s.summaryId === summaryId);
+  },
+};
