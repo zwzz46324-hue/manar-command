@@ -23,6 +23,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "المهام" || item === "Jobs") return "/ai";
   if (item === "تلجرام" || item === "Telegram") return "/bots";
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
+  if (item === "الانتباه" || item === "Attention") return "/attention";
   if (item === "النشاط" || item === "Activity") return "/activity";
   if (item === "صحة النظام" || item === "System Health") return "/operations";
   if (item === "خريطة المنظومة" || item === "System Map") return "/system-map";

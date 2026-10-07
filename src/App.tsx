@@ -25,6 +25,7 @@ import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 import { CodeCenter } from "./features/code/CodeCenter";
 import { GlobalSearch } from "./features/search/GlobalSearch";
 import { ActivityRiver } from "./features/activity/ActivityRiver";
+import { AttentionCenter } from "./features/attention/AttentionCenter";
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="/code" element={<CodeCenter />} />
         <Route path="/search" element={<GlobalSearch />} />
         <Route path="/activity" element={<ActivityRiver />} />
+        <Route path="/attention" element={<AttentionCenter />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

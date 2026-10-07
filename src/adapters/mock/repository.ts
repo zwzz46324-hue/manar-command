@@ -166,3 +166,10 @@ import type { RiverEvent } from "../../domain/types";
 export const riverRepo = {
   async list(): Promise<RiverEvent[]> { return mockRiverEvents; },
 };
+
+import { mockAttentionEntries } from "./data";
+import type { AttentionEntry } from "../../domain/types";
+
+export const attentionRepo = {
+  async list(): Promise<AttentionEntry[]> { return mockAttentionEntries; },
+};

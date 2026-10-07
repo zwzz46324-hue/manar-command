@@ -535,3 +535,22 @@ export type RiverEvent = {
   at: string;
   traceId: string;
 };
+
+export type AttentionKind = "summary" | "ai-job" | "security" | "backup" | "service" | "user";
+
+export type AttentionSeverity = "critical" | "high" | "medium" | "low";
+
+export type AttentionEntry = {
+  id: string;
+  kind: AttentionKind;
+  severity: AttentionSeverity;
+  titleAr: string;
+  titleEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  targetId: string;
+  route: string;
+  actionAr: string;
+  actionEn: string;
+  at: string;
+};
