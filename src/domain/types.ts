@@ -519,3 +519,19 @@ export type QuickAction = {
   requiresAr?: string;
   requiresEn?: string;
 };
+
+export type RiverGranularity = "hour" | "day" | "week" | "all";
+
+export type RiverEvent = {
+  id: string;
+  kind: "summary" | "document" | "publish" | "auth" | "security" | "ai" | "backup" | "config" | "course";
+  titleAr: string;
+  titleEn: string;
+  actorId: string;
+  actorRole: string;
+  target: string;
+  result: "success" | "warning" | "failure" | "info";
+  source: "ui" | "bot" | "api" | "system" | "ai";
+  at: string;
+  traceId: string;
+};

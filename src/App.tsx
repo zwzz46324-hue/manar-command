@@ -24,6 +24,7 @@ import { TranscriptReview } from "./features/summaries/TranscriptReview";
 import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 import { CodeCenter } from "./features/code/CodeCenter";
 import { GlobalSearch } from "./features/search/GlobalSearch";
+import { ActivityRiver } from "./features/activity/ActivityRiver";
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/system-map" element={<LiveSystemMap />} />
         <Route path="/code" element={<CodeCenter />} />
         <Route path="/search" element={<GlobalSearch />} />
+        <Route path="/activity" element={<ActivityRiver />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>

@@ -1,0 +1,47 @@
+﻿.ar-page { max-width: 1200px; }
+.ar-toolbar { margin-bottom: 14px; }
+.ar-search { width: 100%; padding: 10px 14px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 10px; color: var(--manar-text); font-family: inherit; font-size: 13px; outline: none; }
+.ar-search:focus { border-color: var(--manar-accent-line); }
+.ar-filters, .ar-granularity { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.ar-filter, .ar-grain { padding: 5px 12px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 11px; cursor: pointer; }
+.ar-filter:hover, .ar-grain:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.ar-filter.active, .ar-grain.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.ar-granularity { border-bottom: 1px dashed var(--manar-border); padding-bottom: 14px; }
+.ar-stream { display: flex; flex-direction: column; gap: 22px; }
+.ar-day-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--manar-border); }
+.ar-day-label { font-family: var(--manar-font-mono); font-size: 12px; color: var(--manar-text); letter-spacing: 1px; }
+.ar-day-count { font-size: 10px; color: var(--manar-faint); }
+.ar-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid var(--manar-border); padding-right: 16px; }
+.ar-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 8px; transition: background 150ms; }
+.ar-item:hover { background: var(--manar-surface); }
+.ar-time { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-muted); min-width: 40px; }
+.ar-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--manar-accent); flex-shrink: 0; }
+.dot-summary { background: var(--manar-info); }
+.dot-document { background: var(--manar-purple); }
+.dot-publish { background: var(--manar-success); }
+.dot-ai { background: var(--manar-purple); }
+.dot-auth { background: var(--manar-accent); }
+.dot-security { background: var(--manar-danger); }
+.dot-config { background: var(--manar-accent); }
+.dot-backup { background: var(--manar-info); }
+.dot-course { background: var(--manar-success); }
+.ar-body { flex: 1; }
+.ar-title { font-size: 13px; color: var(--manar-text); margin-bottom: 3px; }
+.ar-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 10px; }
+.ar-actor { font-family: var(--manar-font-mono); color: var(--manar-text-dim); }
+.ar-role { font-size: 9px; letter-spacing: 1px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--manar-border); color: var(--manar-faint); }
+.ar-target { font-family: var(--manar-font-mono); color: var(--manar-faint); }
+.ar-source { font-size: 9px; letter-spacing: 1px; padding: 1px 6px; border-radius: 4px; background: var(--manar-surface-hover); color: var(--manar-muted); text-transform: uppercase; }
+.src-ui { color: var(--manar-info); }
+.src-bot { color: var(--manar-success); }
+.src-ai { color: var(--manar-purple); }
+.src-system { color: var(--manar-accent); }
+.ar-trace { font-family: var(--manar-font-mono); font-size: 9px; color: var(--manar-faint); }
+.ar-result { font-size: 10px; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--manar-border); }
+.res-chip-success { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.res-chip-warning { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.res-chip-failure { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.res-chip-info { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

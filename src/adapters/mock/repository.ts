@@ -159,3 +159,10 @@ export const homeRepo = {
   async kpis(): Promise<KPI[]> { return mockKPIs; },
   async quickActions(): Promise<QuickAction[]> { return mockQuickActions; },
 };
+
+import { mockRiverEvents } from "./data";
+import type { RiverEvent } from "../../domain/types";
+
+export const riverRepo = {
+  async list(): Promise<RiverEvent[]> { return mockRiverEvents; },
+};
