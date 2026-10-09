@@ -11,6 +11,8 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "القيادة" || item === "Command") return "/";
   if (item === "الكون الأكاديمي" || item === "Academic Universe") return "/academic";
   if (item === "الكون المحتوى" || item === "Content Universe") return "/content";
+  if (item === "خط أنابيب المحتوى" || item === "Pipeline") return "/pipeline";
+  if (item === "الكون المحتوى" || item === "Content Universe") return "/content";
   if (item === "المقررات" || item === "Courses") return "/courses";
   if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
   if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";

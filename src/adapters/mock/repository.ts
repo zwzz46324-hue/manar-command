@@ -195,3 +195,10 @@ export const contentRepo = {
     return mockContentItems.find((c) => c.id === id);
   },
 };
+
+import { mockPipeline } from "./data";
+import type { PipelineEntry } from "../../domain/types";
+
+export const pipelineRepo = {
+  async list(): Promise<PipelineEntry[]> { return mockPipeline; },
+};

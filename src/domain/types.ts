@@ -592,3 +592,21 @@ export type ContentItem = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type PipelineStage = "ingest" | "extract" | "normalize" | "enrich" | "review" | "approve" | "publish";
+
+export type PipelineEntry = {
+  id: string;
+  contentId: string;
+  contentTitleAr: string;
+  contentTitleEn: string;
+  courseCode: string;
+  kind: "audio" | "video" | "slides" | "pdf" | "image" | "other";
+  currentStage: PipelineStage;
+  ownerId: string;
+  processor: string;
+  errorAr?: string;
+  errorEn?: string;
+  startedAt: string;
+  lastUpdateAt: string;
+};

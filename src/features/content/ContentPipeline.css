@@ -1,0 +1,39 @@
+﻿.cp-page { max-width: 1200px; }
+.cp-stages { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 6px; }
+.cp-stage { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: 10px; color: var(--manar-muted); font-family: inherit; font-size: 12px; cursor: pointer; transition: all 150ms; white-space: nowrap; }
+.cp-stage:hover { border-color: var(--manar-border-strong); color: var(--manar-text); }
+.cp-stage.active { border-color: var(--manar-accent-line); background: var(--manar-accent-soft); color: var(--manar-text); }
+.cp-stage-name { font-weight: 500; }
+.cp-stage-count { font-family: var(--manar-font-mono); font-size: 11px; padding: 1px 7px; border-radius: 999px; background: rgba(255,255,255,0.06); color: var(--manar-faint); }
+.cp-stage.active .cp-stage-count { background: var(--manar-accent); color: white; }
+.cp-clear { margin-bottom: 14px; padding: 4px 12px; font-size: 11px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); cursor: pointer; font-family: inherit; }
+.cp-clear:hover { color: var(--manar-text); }
+.cp-list { display: flex; flex-direction: column; gap: 12px; }
+.cp-card { padding: 14px 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 12px; transition: border-color 150ms; }
+.cp-card:hover { border-color: var(--manar-border-strong); }
+.cp-card.has-error { border-color: rgba(244,63,94,0.45); background: rgba(244,63,94,0.03); }
+.cp-card-head { display: flex; justify-content: space-between; align-items: center; }
+.cp-kind { font-size: 9px; letter-spacing: 1.2px; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--manar-border); color: var(--manar-muted); margin-inline-end: 8px; }
+.kind-audio { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.kind-video { color: var(--manar-purple); border-color: rgba(168,85,247,0.35); }
+.kind-slides { color: var(--manar-accent); border-color: var(--manar-accent-line); }
+.kind-pdf { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.kind-image { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.cp-code { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); letter-spacing: 1.2px; }
+.cp-processor { font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); }
+.cp-title { font-size: 14px; font-weight: 600; margin: 0; color: var(--manar-text); }
+.cp-flow { display: flex; gap: 0; padding: 10px 0; overflow-x: auto; }
+.cp-step { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; position: relative; min-width: 70px; }
+.cp-step:not(:last-child)::after { content: ''; position: absolute; top: 4px; inset-inline-start: 50%; width: 100%; height: 1px; background: var(--manar-border); }
+.cp-step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--manar-bg-0); border: 1.5px solid var(--manar-border); position: relative; z-index: 1; }
+.cp-step.done .cp-step-dot { background: var(--manar-success); border-color: var(--manar-success); }
+.cp-step.current .cp-step-dot { background: var(--manar-warning); border-color: var(--manar-warning); box-shadow: 0 0 0 3px rgba(245,158,11,0.2); }
+.cp-step-label { font-size: 9px; color: var(--manar-faint); text-align: center; letter-spacing: 0.3px; }
+.cp-step.current .cp-step-label { color: var(--manar-warning); font-weight: 600; }
+.cp-step.done .cp-step-label { color: var(--manar-success); }
+.cp-error { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: rgba(244,63,94,0.08); border: 1px solid rgba(244,63,94,0.35); border-radius: 8px; font-size: 12px; color: var(--manar-danger); }
+.cp-error-icon { width: 16px; height: 16px; border-radius: 50%; background: var(--manar-danger); color: white; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+.cp-card-foot { display: flex; justify-content: space-between; font-size: 10px; font-family: var(--manar-font-mono); color: var(--manar-faint); padding-top: 8px; border-top: 1px dashed var(--manar-border); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }
