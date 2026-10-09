@@ -10,6 +10,7 @@ import { ReviewQueue } from "./features/review/ReviewQueue";
 import { ReviewTheater } from "./features/review/ReviewTheater";
 import { DocumentStudio } from "./features/documents/DocumentStudio";
 import { DocumentDetail } from "./features/documents/DocumentDetail";
+import { TemplateCenter } from "./features/documents/TemplateCenter";
 import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/review/:id" element={<ReviewTheater />} />
         <Route path="/documents" element={<DocumentStudio />} />
         <Route path="/documents/:id" element={<DocumentDetail />} />
+        <Route path="/templates" element={<TemplateCenter />} />
         <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />

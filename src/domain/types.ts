@@ -610,3 +610,22 @@ export type PipelineEntry = {
   startedAt: string;
   lastUpdateAt: string;
 };
+
+export type TemplateKind = "cover" | "content" | "footer" | "watermark" | "publish";
+
+export type TemplateStatus = "draft" | "active" | "archived";
+
+export type DocumentTemplate = {
+  id: string;
+  kind: TemplateKind;
+  nameAr: string;
+  nameEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  status: TemplateStatus;
+  version: number;
+  usedBy: number;
+  componentsAr: string[];
+  componentsEn: string[];
+  updatedAt: string;
+};

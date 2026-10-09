@@ -202,3 +202,10 @@ import type { PipelineEntry } from "../../domain/types";
 export const pipelineRepo = {
   async list(): Promise<PipelineEntry[]> { return mockPipeline; },
 };
+
+import { mockTemplates } from "./data";
+import type { DocumentTemplate } from "../../domain/types";
+
+export const templateRepo = {
+  async list(): Promise<DocumentTemplate[]> { return mockTemplates; },
+};
