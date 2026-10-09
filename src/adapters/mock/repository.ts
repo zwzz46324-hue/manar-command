@@ -173,3 +173,15 @@ import type { AttentionEntry } from "../../domain/types";
 export const attentionRepo = {
   async list(): Promise<AttentionEntry[]> { return mockAttentionEntries; },
 };
+
+
+
+import { mockUniversityMeta } from "./data";
+import type { UniversityMeta } from "../../domain/types";
+
+export const universityMetaRepo = {
+  async list(): Promise<UniversityMeta[]> { return mockUniversityMeta; },
+  async get(id: string): Promise<UniversityMeta | undefined> {
+    return mockUniversityMeta.find((m) => m.id === id);
+  },
+};

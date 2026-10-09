@@ -1,5 +1,6 @@
 ﻿
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLang } from "../../i18n";
 import { mockRepository } from "../../adapters/mock/repository";
 import type { College, Department, University } from "../../domain/types";
@@ -9,6 +10,7 @@ type Uni = University & { sector?: "public" | "private"; city?: string };
 
 export function AcademicUniverse() {
   const { lang, t } = useLang();
+  const navigate = useNavigate();
   const [unis, setUnis] = useState<Uni[]>([]);
   const [cols, setCols] = useState<College[]>([]);
   const [deps, setDeps] = useState<Department[]>([]);
@@ -50,7 +52,7 @@ export function AcademicUniverse() {
       <section className="tree">
         {filtered.map((u) => (
           <div key={u.id} className="tree-node">
-            <button className="tree-row" type="button" onClick={() => setOpenUni(openUni === u.id ? null : u.id)}>
+            <button className="tree-row" type="button" onClick={() => navigate("/academic/entity/" + u.id)}>
               <span className="tree-caret">{openUni === u.id ? "v" : ">"}</span>
               <span className="tree-code">{u.code}</span>
               <span className="tree-label">{lang === "ar" ? u.nameAr : u.nameEn}</span>
@@ -61,7 +63,7 @@ export function AcademicUniverse() {
               <div className="tree-children">
                 {cols.filter((c) => c.universityId === u.id).map((c) => (
                   <div key={c.id} className="tree-node">
-                    <button className="tree-row" type="button" onClick={() => setOpenCol(openCol === c.id ? null : c.id)}>
+                    <button className="tree-row" type="button" onClick={() => navigate("/academic/entity/" + c.id)}>
                       <span className="tree-caret">{openCol === c.id ? "v" : ">"}</span>
                       <span className="tree-code">{c.code}</span>
                       <span className="tree-label">{lang === "ar" ? c.nameAr : c.nameEn}</span>

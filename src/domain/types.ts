@@ -554,3 +554,18 @@ export type AttentionEntry = {
   actionEn: string;
   at: string;
 };
+
+
+  courseIds: string[];
+  lastActivityAt: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type UniversitySector = "public" | "private";
+
+export type UniversityMeta = {
+  id: string;
+  sector: UniversitySector;
+  city: string;
+};
