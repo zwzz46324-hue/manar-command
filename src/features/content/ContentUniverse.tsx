@@ -95,7 +95,7 @@ export function ContentUniverse() {
 
       <div className="cu-grid">
         {filtered.map((i) => (
-          <article key={i.id} className={"cu-card status-" + i.status}>
+          <Link key={i.id} to={"/content/" + i.id} className={"cu-card status-" + i.status}>
             <div className="cu-head">
               <span className={"cu-kind kind-" + i.kind}>{kindLabels[i.kind]}</span>
               <span className={"cu-status st-" + i.status}>{statusLabels[i.status]}</span>
@@ -111,7 +111,7 @@ export function ContentUniverse() {
             <div className="cu-tags">
               {i.tags.map((tag) => <span key={tag} className="cu-tag">#{tag}</span>)}
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 

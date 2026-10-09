@@ -28,6 +28,7 @@ import { ActivityRiver } from "./features/activity/ActivityRiver";
 import { AcademicEntityDetail } from "./features/academic/AcademicEntityDetail";
 import { ContentUniverse } from "./features/content/ContentUniverse";
 import { ContentPipeline } from "./features/content/ContentPipeline";
+import { ContentDetail } from "./features/content/ContentDetail";
 import { AttentionCenter } from "./features/attention/AttentionCenter";
 
 export default function App() {
@@ -60,6 +61,7 @@ export default function App() {
         <Route path="/academic/entity/:id" element={<AcademicEntityDetail />} />
         <Route path="/content" element={<ContentUniverse />} />
         <Route path="/pipeline" element={<ContentPipeline />} />
+        <Route path="/content/:id" element={<ContentDetail />} />
         <Route path="/attention" element={<AttentionCenter />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
