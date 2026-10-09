@@ -569,3 +569,26 @@ export type UniversityMeta = {
   sector: UniversitySector;
   city: string;
 };
+
+export type ContentKind = "audio" | "video" | "transcript" | "summary" | "slides" | "flashcards" | "quiz" | "ocr" | "lecture-file" | "reference" | "exam-model" | "course-link" | "video-link" | "other";
+
+export type ContentStatus = "draft" | "processing" | "review" | "approved" | "published" | "failed";
+
+export type ContentItem = {
+  id: string;
+  kind: ContentKind;
+  status: ContentStatus;
+  titleAr: string;
+  titleEn: string;
+  courseId: string;
+  courseCode: string;
+  courseTitleAr: string;
+  courseTitleEn: string;
+  sizeKb: number;
+  durationMin: number;
+  language: "ar" | "en" | "mixed";
+  tags: string[];
+  authorId: string;
+  createdAt: string;
+  updatedAt: string;
+};

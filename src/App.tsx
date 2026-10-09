@@ -26,6 +26,7 @@ import { CodeCenter } from "./features/code/CodeCenter";
 import { GlobalSearch } from "./features/search/GlobalSearch";
 import { ActivityRiver } from "./features/activity/ActivityRiver";
 import { AcademicEntityDetail } from "./features/academic/AcademicEntityDetail";
+import { ContentUniverse } from "./features/content/ContentUniverse";
 import { AttentionCenter } from "./features/attention/AttentionCenter";
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/search" element={<GlobalSearch />} />
         <Route path="/activity" element={<ActivityRiver />} />
         <Route path="/academic/entity/:id" element={<AcademicEntityDetail />} />
+        <Route path="/content" element={<ContentUniverse />} />
         <Route path="/attention" element={<AttentionCenter />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>

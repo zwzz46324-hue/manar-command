@@ -185,3 +185,13 @@ export const universityMetaRepo = {
     return mockUniversityMeta.find((m) => m.id === id);
   },
 };
+
+import { mockContentItems } from "./data";
+import type { ContentItem } from "../../domain/types";
+
+export const contentRepo = {
+  async list(): Promise<ContentItem[]> { return mockContentItems; },
+  async get(id: string): Promise<ContentItem | undefined> {
+    return mockContentItems.find((c) => c.id === id);
+  },
+};
