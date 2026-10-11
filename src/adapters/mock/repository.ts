@@ -223,3 +223,10 @@ import type { AIKey } from "../../domain/types";
 export const aiKeysRepo = {
   async list(): Promise<AIKey[]> { return mockAIKeys; },
 };
+
+import { mockJobControl } from "./data";
+import type { JobControlItem } from "../../domain/types";
+
+export const jobControlRepo = {
+  async list(): Promise<JobControlItem[]> { return mockJobControl; },
+};

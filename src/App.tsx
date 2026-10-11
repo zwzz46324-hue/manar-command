@@ -20,6 +20,7 @@ import { AIOperations } from "./features/ai/AIOperations";
 import { AIKeyCenter } from "./features/ai/AIKeyCenter";
 import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 import { SystemOperations } from "./features/operations/SystemOperations";
+import { JobControl } from "./features/operations/JobControl";
 import { DataVault } from "./features/storage/DataVault";
 import { BackupCenter } from "./features/backup/BackupCenter";
 import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/ai/keys" element={<AIKeyCenter />} />
         <Route path="/bots" element={<BotCommandCenter />} />
         <Route path="/operations" element={<SystemOperations />} />
+        <Route path="/jobs" element={<JobControl />} />
         <Route path="/vault" element={<DataVault />} />
         <Route path="/backup" element={<BackupCenter />} />
         <Route path="/permissions" element={<PermissionMatrix />} />

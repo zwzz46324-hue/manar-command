@@ -660,3 +660,24 @@ export type AIKey = {
   noteAr?: string;
   noteEn?: string;
 };
+
+export type JobControlState = "active" | "queued" | "failed" | "dead-letter";
+
+export type JobControlItem = {
+  id: string;
+  state: JobControlState;
+  typeAr: string;
+  typeEn: string;
+  provider: string;
+  model: string;
+  targetId: string;
+  attempt: number;
+  maxAttempts: number;
+  progress: number;
+  createdAt: string;
+  startedAt?: string;
+  errorAr?: string;
+  errorEn?: string;
+  queue: string;
+  traceId: string;
+};

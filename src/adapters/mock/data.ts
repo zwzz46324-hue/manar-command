@@ -884,3 +884,16 @@ export const mockAIKeys: AIKey[] = [
   { id: "k-5", provider: "Whisper",   alias: "whisper-prod-01",   masked: "sk-••••••••••••2Mn8", status: "active",   lastVerifiedAt: "2026-10-04T06:00:00", createdAt: "2025-07-01", jobsUsed: 1240, costUsd: 48.20 },
   { id: "k-6", provider: "Local",     alias: "local-no-key",      masked: "—",                   status: "disabled", lastVerifiedAt: "2026-09-28T12:00:00", createdAt: "2026-01-15", jobsUsed: 0,    costUsd: 0,    noteAr: "معطّل حاليًا", noteEn: "Currently disabled" },
 ];
+
+import type { JobControlItem } from "../../domain/types";
+
+export const mockJobControl: JobControlItem[] = [
+  { id: "jc-1",  state: "active",      typeAr: "تلخيص",       typeEn: "Summarization",       provider: "Gemini",    model: "gemini-1.5-pro",     targetId: "sum-2", attempt: 1, maxAttempts: 3, progress: 62, createdAt: "2026-10-11T09:50:00", startedAt: "2026-10-11T09:50:04", queue: "summarization", traceId: "tr-jc1" },
+  { id: "jc-2",  state: "active",      typeAr: "تفريغ صوتي",  typeEn: "Transcription",       provider: "Whisper",   model: "whisper-large-v3",   targetId: "sum-1", attempt: 1, maxAttempts: 3, progress: 34, createdAt: "2026-10-11T09:55:00", startedAt: "2026-10-11T09:55:02", queue: "transcription", traceId: "tr-jc2" },
+  { id: "jc-3",  state: "queued",      typeAr: "توليد مستند", typeEn: "Document generation", provider: "Local",     model: "manar-docgen-v2",    targetId: "doc-2", attempt: 0, maxAttempts: 3, progress: 0,  createdAt: "2026-10-11T10:00:00", queue: "docgen",        traceId: "tr-jc3" },
+  { id: "jc-4",  state: "queued",      typeAr: "تصنيف",       typeEn: "Classification",      provider: "Gemini",    model: "gemini-1.5-flash",   targetId: "sum-3", attempt: 0, maxAttempts: 3, progress: 0,  createdAt: "2026-10-11T10:02:00", queue: "summarization", traceId: "tr-jc4" },
+  { id: "jc-5",  state: "failed",      typeAr: "ترجمة",       typeEn: "Translation",         provider: "OpenAI",    model: "gpt-4o",             targetId: "sum-3", attempt: 3, maxAttempts: 3, progress: 0,  createdAt: "2026-10-11T06:00:00", startedAt: "2026-10-11T06:01:00", errorAr: "انتهت المهلة من المزوّد", errorEn: "Provider timeout", queue: "summarization", traceId: "tr-jc5" },
+  { id: "jc-6",  state: "failed",      typeAr: "تلخيص",       typeEn: "Summarization",       provider: "Anthropic", model: "claude-3-5-sonnet",  targetId: "sum-1", attempt: 2, maxAttempts: 3, progress: 0,  createdAt: "2026-10-11T05:30:00", startedAt: "2026-10-11T05:30:00", errorAr: "المفتاح قيد التدوير",   errorEn: "Key rotating",     queue: "summarization", traceId: "tr-jc6" },
+  { id: "jc-7",  state: "dead-letter", typeAr: "توليد مستند", typeEn: "Document generation", provider: "Local",     model: "manar-docgen-v2",    targetId: "doc-1", attempt: 3, maxAttempts: 3, progress: 0,  createdAt: "2026-10-10T22:00:00", startedAt: "2026-10-10T22:00:00", errorAr: "خطأ داخلي متكرر",   errorEn: "Repeated internal error", queue: "docgen", traceId: "tr-jc7" },
+  { id: "jc-8",  state: "active",      typeAr: "إثراء",       typeEn: "Enrichment",          provider: "OpenAI",    model: "gpt-4o-mini",        targetId: "sum-2", attempt: 1, maxAttempts: 3, progress: 18, createdAt: "2026-10-11T10:05:00", startedAt: "2026-10-11T10:05:02", queue: "summarization", traceId: "tr-jc8" },
+];
