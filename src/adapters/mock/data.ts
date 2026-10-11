@@ -863,3 +863,13 @@ export const mockTemplates: DocumentTemplate[] = [
 ];
 
 
+
+import type { PublishedDocument } from "../../domain/types";
+
+export const mockPublishedDocs: PublishedDocument[] = [
+  { id: "pub-1", documentId: "doc-3", courseCode: "MED101", titleAr: "علم التشريح — الهيكل العظمي", titleEn: "Anatomy — Skeletal System",  channels: ["telegram", "site"],           downloads: 1240, publishedBy: "user-1", publishedAt: "2026-10-01", lastChannelAt: "2026-10-01" },
+  { id: "pub-2", documentId: "doc-1", courseCode: "CS202",  titleAr: "هياكل البيانات — القوائم المترابطة", titleEn: "Data Structures — Linked Lists", channels: ["telegram"],                    downloads: 890,  publishedBy: "user-9", publishedAt: "2026-10-03", lastChannelAt: "2026-10-03" },
+  { id: "pub-3", documentId: "doc-4", courseCode: "CS101",  titleAr: "مقدمة في البرمجة — المفاهيم",     titleEn: "Intro to Programming — Concepts", channels: ["telegram", "whatsapp", "site"], downloads: 3420, publishedBy: "user-1", publishedAt: "2026-09-28", lastChannelAt: "2026-10-02" },
+  { id: "pub-4", documentId: "doc-5", courseCode: "ENG201", titleAr: "مقاومة المواد — الفصل 2",         titleEn: "Mechanics of Materials — Ch 2",  channels: ["site"],                        downloads: 210,  publishedBy: "user-9", publishedAt: "2026-09-20", lastChannelAt: "2026-09-20" },
+  { id: "pub-5", documentId: "doc-6", courseCode: "LAW101", titleAr: "القانون الدستوري — الفصل 1",      titleEn: "Constitutional Law — Ch 1",      channels: ["telegram", "whatsapp"],         downloads: 1560, publishedBy: "user-1", publishedAt: "2026-09-15", lastChannelAt: "2026-09-22" },
+];

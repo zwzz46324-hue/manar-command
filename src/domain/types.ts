@@ -629,3 +629,18 @@ export type DocumentTemplate = {
   componentsEn: string[];
   updatedAt: string;
 };
+
+export type PublishChannel = "telegram" | "whatsapp" | "site";
+
+export type PublishedDocument = {
+  id: string;
+  documentId: string;
+  courseCode: string;
+  titleAr: string;
+  titleEn: string;
+  channels: PublishChannel[];
+  downloads: number;
+  publishedBy: string;
+  publishedAt: string;
+  lastChannelAt: string;
+};

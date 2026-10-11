@@ -209,3 +209,10 @@ import type { DocumentTemplate } from "../../domain/types";
 export const templateRepo = {
   async list(): Promise<DocumentTemplate[]> { return mockTemplates; },
 };
+
+import { mockPublishedDocs } from "./data";
+import type { PublishedDocument } from "../../domain/types";
+
+export const publishedRepo = {
+  async list(): Promise<PublishedDocument[]> { return mockPublishedDocs; },
+};
