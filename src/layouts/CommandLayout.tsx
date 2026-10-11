@@ -9,6 +9,7 @@ import "./CommandLayout.css";
 const targetFor = (gi: number, ii: number, nav: { label: string; items: string[] }[]) => {
   const item = nav[gi].items[ii];
   if (item === "القيادة" || item === "Command") return "/";
+  if (item === "نظرة عامة" || item === "Overview") return "/overview";
   if (item === "الكون الأكاديمي" || item === "Academic Universe") return "/academic";
   if (item === "الكون المحتوى" || item === "Content Universe") return "/content";
   if (item === "خط أنابيب المحتوى" || item === "Pipeline") return "/pipeline";

@@ -20,7 +20,7 @@ type Dict = {
 const reviewLabelsAr = { queue: "طابور المراجعة", theater: "مسرح المراجعة", pending: "معلق", inReview: "قيد المراجعة", needsChanges: "يحتاج تعديل", approved: "معتمد", rejected: "مرفوض", approve: "اعتماد", reject: "رفض", requestChanges: "طلب تعديل", returnToEditing: "إرجاع للتحرير", priority: "الأولوية", normal: "عادية", high: "عالية", urgent: "عاجلة", source: "المصدر", transcript: "النص الأصلي", summary: "الملخص", versions: "الإصدارات", decisions: "القرارات", reason: "السبب", empty: "لا توجد ملخصات معلقة.", emptyDecisions: "لا توجد قرارات سابقة." };
 
 const navAr: NavGroup[] = [
-  { label: "القيادة", items: ["القيادة", "الانتباه", "النشاط"] },
+  { label: "القيادة", items: ["القيادة", "نظرة عامة", "الانتباه", "النشاط"] },
   { label: "الأكاديمي", items: ["الكون الأكاديمي", "المقررات"] },
   { label: "المحتوى", items: ["الكون المحتوى", "خط أنابيب المحتوى", "الملخصات"] },
   { label: "المراجعة", items: ["طابور المراجعة", "مسرح المراجعة"] },
@@ -37,7 +37,7 @@ const navAr: NavGroup[] = [
 ];
 
 const navEn: NavGroup[] = [
-  { label: "COMMAND", items: ["Command", "Attention", "Activity"] },
+  { label: "COMMAND", items: ["Command", "Overview", "Attention", "Activity"] },
   { label: "ACADEMIC", items: ["Academic Universe", "Courses"] },
   { label: "CONTENT", items: ["Content Universe", "Pipeline", "Summaries"] },
   { label: "REVIEW", items: ["Review Queue", "Review Theater"] },

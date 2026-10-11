@@ -2,6 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import { CommandLayout } from "./layouts/CommandLayout";
 import { CommandPage } from "./features/command/CommandPage";
+import { SystemOverview } from "./features/command/SystemOverview";
 import { SectionPage } from "./features/command/SectionPage";
 import { AcademicUniverse } from "./features/academic/AcademicUniverse";
 import { CoursesPage } from "./features/academic/CoursesPage";
@@ -44,6 +45,7 @@ export default function App() {
     <Routes>
       <Route element={<CommandLayout />}>
         <Route path="/" element={<CommandPage />} />
+        <Route path="/overview" element={<SystemOverview />} />
         <Route path="/academic" element={<AcademicUniverse />} />
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/courses/:id" element={<CourseCommandView />} />

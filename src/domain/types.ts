@@ -752,3 +752,13 @@ export type FlagDetail = {
   updatedBy: string;
   updatedAt: string;
 };
+
+export type OverviewKPI = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  value: number;
+  suffix?: string;
+  state: "ok" | "warn" | "danger" | "neutral";
+  sparkline: number[];
+};

@@ -964,3 +964,16 @@ export const mockFlagDetails: FlagDetail[] = [
   { id: "fd-7", key: "live-system-map",      nameAr: "خريطة المنظومة الحية",    nameEn: "Live System Map",       descriptionAr: "خريطة تفاعلية",     descriptionEn: "Interactive map", enabled: true,  environment: "production",  rolloutPct: 100, dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-08" },
   { id: "fd-8", key: "bot-flow-visualizer",  nameAr: "مخطط تدفق البوت",          nameEn: "Bot Flow Visualizer",   descriptionAr: "مخطط بصري",         descriptionEn: "Visual flow", enabled: false, environment: "development", rolloutPct: 0,   dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-12" },
 ];
+
+import type { OverviewKPI } from "../../domain/types";
+
+export const mockOverviewKPIs: OverviewKPI[] = [
+  { id: "ok-1", labelAr: "مقررات",     labelEn: "Courses",     value: 2346, state: "ok",      sparkline: [2100, 2150, 2210, 2280, 2346] },
+  { id: "ok-2", labelAr: "ملخصات",     labelEn: "Summaries",   value: 42,   state: "warn",    sparkline: [30, 34, 38, 40, 42] },
+  { id: "ok-3", labelAr: "مستندات",    labelEn: "Documents",   value: 78,   state: "ok",      sparkline: [55, 60, 68, 74, 78] },
+  { id: "ok-4", labelAr: "مستخدمون",   labelEn: "Users",       value: 8,    state: "neutral", sparkline: [6, 6, 7, 7, 8] },
+  { id: "ok-5", labelAr: "مهام AI",    labelEn: "AI Jobs",     value: 230,  state: "warn",    sparkline: [180, 195, 210, 220, 230] },
+  { id: "ok-6", labelAr: "نسخ احتياطي",labelEn: "Backups",     value: 6,    state: "danger",  sparkline: [7, 7, 6, 6, 6] },
+  { id: "ok-7", labelAr: "طوابير",     labelEn: "Queues",      value: 95,   state: "warn",    sparkline: [60, 70, 80, 88, 95] },
+  { id: "ok-8", labelAr: "عمال",       labelEn: "Workers",     value: 4,    state: "neutral", sparkline: [4, 4, 4, 4, 4] },
+];

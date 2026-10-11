@@ -253,3 +253,10 @@ import type { FlagDetail } from "../../domain/types";
 export const flagDetailRepo = {
   async list(): Promise<FlagDetail[]> { return mockFlagDetails; },
 };
+
+import { mockOverviewKPIs } from "./data";
+import type { OverviewKPI } from "../../domain/types";
+
+export const overviewRepo = {
+  async kpis(): Promise<OverviewKPI[]> { return mockOverviewKPIs; },
+};
