@@ -681,3 +681,16 @@ export type JobControlItem = {
   queue: string;
   traceId: string;
 };
+
+export type BotFlowNode = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  x: number;
+  y: number;
+  taps: number;
+  conversionPct: number;
+  isAction?: boolean;
+};
+
+export type BotFlowEdge = { from: string; to: string; };

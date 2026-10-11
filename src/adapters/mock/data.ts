@@ -897,3 +897,38 @@ export const mockJobControl: JobControlItem[] = [
   { id: "jc-7",  state: "dead-letter", typeAr: "توليد مستند", typeEn: "Document generation", provider: "Local",     model: "manar-docgen-v2",    targetId: "doc-1", attempt: 3, maxAttempts: 3, progress: 0,  createdAt: "2026-10-10T22:00:00", startedAt: "2026-10-10T22:00:00", errorAr: "خطأ داخلي متكرر",   errorEn: "Repeated internal error", queue: "docgen", traceId: "tr-jc7" },
   { id: "jc-8",  state: "active",      typeAr: "إثراء",       typeEn: "Enrichment",          provider: "OpenAI",    model: "gpt-4o-mini",        targetId: "sum-2", attempt: 1, maxAttempts: 3, progress: 18, createdAt: "2026-10-11T10:05:00", startedAt: "2026-10-11T10:05:02", queue: "summarization", traceId: "tr-jc8" },
 ];
+
+import type { BotFlowNode, BotFlowEdge } from "../../domain/types";
+
+export const mockBotFlowNodes: BotFlowNode[] = [
+  { id: "start",     labelAr: "البداية",     labelEn: "START",      x: 400, y: 40,  taps: 12400, conversionPct: 100 },  
+  { id: "menu",      labelAr: "القائمة",     labelEn: "Menu",       x: 400, y: 120, taps: 12200, conversionPct: 98.4 },
+  { id: "university",labelAr: "الجامعة",     labelEn: "University", x: 400, y: 200, taps: 8400,  conversionPct: 68.8 },
+  { id: "college",   labelAr: "الكلية",      labelEn: "College",    x: 250, y: 280, taps: 7200,  conversionPct: 85.7 },
+  { id: "department",labelAr: "القسم",       labelEn: "Department", x: 550, y: 280, taps: 3600,  conversionPct: 42.9 },
+  { id: "level",     labelAr: "المستوى",     labelEn: "Level",      x: 250, y: 360, taps: 6800,  conversionPct: 94.4 },
+  { id: "semester",  labelAr: "الفصل",       labelEn: "Semester",   x: 250, y: 440, taps: 6400,  conversionPct: 94.1 },
+  { id: "course",    labelAr: "المقرر",      labelEn: "Course",     x: 250, y: 520, taps: 5900,  conversionPct: 92.2 },
+  { id: "content",   labelAr: "المحتوى",     labelEn: "Content",    x: 250, y: 600, taps: 4200,  conversionPct: 71.2 },
+  { id: "download",  labelAr: "تنزيل",        labelEn: "Download",   x: 250, y: 680, taps: 3800,  conversionPct: 90.5, isAction: true },
+  { id: "search",    labelAr: "بحث",          labelEn: "Search",     x: 650, y: 200, taps: 2800,  conversionPct: 22.6, isAction: true },
+  { id: "help",      labelAr: "مساعدة",       labelEn: "Help",       x: 550, y: 200, taps: 900,   conversionPct: 7.3,  isAction: true },
+  { id: "sub",       labelAr: "اشتراك",       labelEn: "Subscribe",  x: 400, y: 280, taps: 1200,  conversionPct: 14.3, isAction: true },
+];
+
+
+export const mockBotFlowEdges: BotFlowEdge[] = [
+  { from: "start", to: "menu" },
+  { from: "menu", to: "university" },
+  { from: "menu", to: "search" },
+  { from: "menu", to: "help" },
+  { from: "menu", to: "sub" },
+  { from: "university", to: "college" },
+  { from: "university", to: "department" },
+  { from: "college", to: "level" },
+  { from: "level", to: "semester" },
+  { from: "semester", to: "course" },
+  { from: "course", to: "content" },
+  { from: "content", to: "download" },
+];
+

@@ -1,0 +1,35 @@
+﻿.bfv-page { max-width: 1400px; }
+.bfv-layout { display: grid; grid-template-columns: 1fr 320px; gap: 16px; }
+.bfv-canvas-wrap { background: radial-gradient(900px 800px at 50% 50%, rgba(139,92,246,0.05), transparent 70%), var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; }
+.bfv-svg { display: block; width: 100%; height: auto; }
+.bfv-node { cursor: pointer; transition: opacity 200ms; }
+.bfv-node rect { fill: var(--manar-bg-2); stroke: var(--manar-accent-line); stroke-width: 1.4; transition: all 200ms; }
+.bfv-node.action rect { stroke: var(--manar-warning); }
+.bfv-node:hover rect { stroke-width: 2; stroke: var(--manar-accent); }
+.bfv-node.selected rect { fill: var(--manar-accent-soft); stroke: var(--manar-accent); stroke-width: 2.4; }
+.bfv-node.neighbor rect { stroke-width: 1.8; }
+.bfv-node.dim { opacity: 0.2; }
+.bfv-label { font-family: var(--manar-font-ar); font-size: 12px; fill: var(--manar-text); font-weight: 600; pointer-events: none; user-select: none; }
+.bfv-taps { font-family: var(--manar-font-mono); font-size: 9px; fill: var(--manar-faint); pointer-events: none; user-select: none; }
+.bfv-node.selected .bfv-label { fill: var(--manar-text); }
+.bfv-rail { background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); padding: 16px; display: flex; flex-direction: column; gap: 12px; min-height: 400px; }
+.bfv-empty { display: flex; flex-direction: column; gap: 16px; }
+.bfv-legend { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px dashed var(--manar-border); }
+.lg-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--manar-muted); }
+.lg-box { width: 20px; height: 12px; border-radius: 4px; border: 1.4px solid var(--manar-accent-line); background: var(--manar-bg-2); }
+.lg-box.action { border-color: var(--manar-warning); }
+.bfv-detail-title { font-size: 16px; font-weight: 600; margin: 0; color: var(--manar-text); }
+.bfv-action-chip { font-size: 9px; letter-spacing: 1.2px; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--manar-warning); color: var(--manar-warning); align-self: flex-start; }
+.bfv-stats { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+.bfv-stats > div { display: flex; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.02); border-radius: 6px; }
+.bfv-stats dt { font-size: 10px; color: var(--manar-faint); }
+.bfv-stats dd { font-family: var(--manar-font-mono); font-size: 12px; color: var(--manar-text); margin: 0; }
+.bfv-sub { font-size: 10px; letter-spacing: 2px; color: var(--manar-faint); margin: 8px 0 0; font-weight: 600; }
+.bfv-conn-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.bfv-conn { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; background: rgba(255,255,255,0.02); font-size: 12px; color: var(--manar-text-dim); }
+.bfv-conn-dir { font-family: var(--manar-font-mono); color: var(--manar-accent); }
+.bfv-clear { margin-top: auto; padding: 8px 12px; font-size: 11px; background: transparent; border: 1px solid var(--manar-border); border-radius: 6px; color: var(--manar-muted); cursor: pointer; font-family: inherit; }
+.bfv-clear:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

@@ -230,3 +230,11 @@ import type { JobControlItem } from "../../domain/types";
 export const jobControlRepo = {
   async list(): Promise<JobControlItem[]> { return mockJobControl; },
 };
+
+import { mockBotFlowNodes, mockBotFlowEdges } from "./data";
+import type { BotFlowNode, BotFlowEdge } from "../../domain/types";
+
+export const botFlowRepo = {
+  async nodes(): Promise<BotFlowNode[]> { return mockBotFlowNodes; },
+  async edges(): Promise<BotFlowEdge[]> { return mockBotFlowEdges; },
+};
