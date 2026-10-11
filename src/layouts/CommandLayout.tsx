@@ -1,7 +1,7 @@
 ﻿
 import React, { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock } from "../design-system/components";
+import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock, ManarNotifications } from "../design-system/components";
 import { useLang } from "../i18n";
 import { useSelection } from "../state/selection";
 import "./CommandLayout.css";
@@ -82,7 +82,7 @@ export function CommandLayout() {
           </button>
           <span className="state-pill state-online">{t.stateOnline}</span>
           <span className="state-pill state-secure">{t.stateSecure}</span>
-          <button className="icon-btn" type="button" aria-label="Notifications">◇</button>
+          <ManarNotifications />
           <div className="user-chip" title={t.owner}>
             <span className="user-dot" />
             <span>{t.owner}</span>
