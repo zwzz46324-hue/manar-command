@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../../i18n";
 import { useCommandData } from "../../hooks/useCommandData";
-import { ManarConstellation } from "../../design-system/components";
+import { ManarConstellation, ManarCounter } from "../../design-system/components";
 import { constellationNodes, constellationEdges } from "../../adapters/mock/constellation";
 import { useSelection } from "../../state/selection";
 import { homeRepo } from "../../adapters/mock/repository";
@@ -52,7 +52,7 @@ export function CommandPage() {
               <span className="kpi-label">{lang === "ar" ? k.labelAr : k.labelEn}</span>
               <span className={"kpi-trend tr-" + k.trend}>{k.trend === "up" ? "↑" : k.trend === "down" ? "↓" : "→"}</span>
             </div>
-            <div className="kpi-value">{k.value}</div>
+            <div className="kpi-value"><ManarCounter value={k.value} /></div>
             <div className="kpi-hint">{lang === "ar" ? k.hintAr : k.hintEn}</div>
           </article>
         ))}

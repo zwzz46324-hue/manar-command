@@ -1,0 +1,6 @@
+﻿.manar-counter {
+  display: inline-flex;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+.counter-suffix { font-size: 0.6em; color: var(--manar-muted); margin-inline-start: 3px; }
