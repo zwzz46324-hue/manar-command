@@ -26,6 +26,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "مشغّل الذكاء" || item === "AI Operator") return "/ai";
   if (item === "المزوّدون" || item === "Providers") return "/ai";
   if (item === "المهام" || item === "Jobs") return "/ai";
+  if (item === "المفاتيح" || item === "Keys") return "/ai/keys";
   if (item === "تلجرام" || item === "Telegram") return "/bots";
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
   if (item === "الانتباه" || item === "Attention") return "/attention";

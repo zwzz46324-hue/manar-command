@@ -216,3 +216,10 @@ import type { PublishedDocument } from "../../domain/types";
 export const publishedRepo = {
   async list(): Promise<PublishedDocument[]> { return mockPublishedDocs; },
 };
+
+import { mockAIKeys } from "./data";
+import type { AIKey } from "../../domain/types";
+
+export const aiKeysRepo = {
+  async list(): Promise<AIKey[]> { return mockAIKeys; },
+};

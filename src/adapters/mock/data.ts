@@ -873,3 +873,14 @@ export const mockPublishedDocs: PublishedDocument[] = [
   { id: "pub-4", documentId: "doc-5", courseCode: "ENG201", titleAr: "مقاومة المواد — الفصل 2",         titleEn: "Mechanics of Materials — Ch 2",  channels: ["site"],                        downloads: 210,  publishedBy: "user-9", publishedAt: "2026-09-20", lastChannelAt: "2026-09-20" },
   { id: "pub-5", documentId: "doc-6", courseCode: "LAW101", titleAr: "القانون الدستوري — الفصل 1",      titleEn: "Constitutional Law — Ch 1",      channels: ["telegram", "whatsapp"],         downloads: 1560, publishedBy: "user-1", publishedAt: "2026-09-15", lastChannelAt: "2026-09-22" },
 ];
+
+import type { AIKey } from "../../domain/types";
+
+export const mockAIKeys: AIKey[] = [
+  { id: "k-1", provider: "Gemini",    alias: "gemini-prod-01",    masked: "AIza••••••3Xf7", status: "active",   lastVerifiedAt: "2026-10-04T06:00:00", createdAt: "2025-06-01", jobsUsed: 8420, costUsd: 128.42, noteAr: "المفتاح الأساسي للإنتاج", noteEn: "Primary production key" },
+  { id: "k-2", provider: "Gemini",    alias: "gemini-dev-01",     masked: "AIza••••••9Bq2", status: "active",   lastVerifiedAt: "2026-10-04T06:00:00", createdAt: "2025-08-15", jobsUsed: 210,  costUsd: 3.18 },
+  { id: "k-3", provider: "OpenAI",    alias: "openai-prod-01",    masked: "sk-••••••••••••7QrK", status: "active",   lastVerifiedAt: "2026-10-04T06:00:00", createdAt: "2025-05-10", jobsUsed: 5210, costUsd: 214.80 },
+  { id: "k-4", provider: "Anthropic", alias: "anthropic-prod-01", masked: "sk-ant-••••••••xM4d", status: "rotating", lastVerifiedAt: "2026-10-03T22:00:00", createdAt: "2025-03-20", jobsUsed: 180,  costUsd: 22.50, noteAr: "قيد التدوير — ينتهي قريبًا", noteEn: "Rotating — expires soon" },
+  { id: "k-5", provider: "Whisper",   alias: "whisper-prod-01",   masked: "sk-••••••••••••2Mn8", status: "active",   lastVerifiedAt: "2026-10-04T06:00:00", createdAt: "2025-07-01", jobsUsed: 1240, costUsd: 48.20 },
+  { id: "k-6", provider: "Local",     alias: "local-no-key",      masked: "—",                   status: "disabled", lastVerifiedAt: "2026-09-28T12:00:00", createdAt: "2026-01-15", jobsUsed: 0,    costUsd: 0,    noteAr: "معطّل حاليًا", noteEn: "Currently disabled" },
+];

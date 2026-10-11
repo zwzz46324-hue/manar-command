@@ -644,3 +644,19 @@ export type PublishedDocument = {
   publishedAt: string;
   lastChannelAt: string;
 };
+
+export type AIKeyStatus = "active" | "rotating" | "disabled" | "invalid";
+
+export type AIKey = {
+  id: string;
+  provider: AIProviderName;
+  alias: string;
+  masked: string;
+  status: AIKeyStatus;
+  lastVerifiedAt: string;
+  createdAt: string;
+  jobsUsed: number;
+  costUsd: number;
+  noteAr?: string;
+  noteEn?: string;
+};
