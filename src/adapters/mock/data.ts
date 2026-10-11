@@ -951,3 +951,16 @@ export const mockTemplates2: MessageTemplate[] = [
   { id: "tpl2-4", nameAr: "إعادة تفعيل",       nameEn: "Reactivation",     bodyAr: "حسابك بانتظار التفعيل. اضغط للتحقق.", bodyEn: "Your account is pending activation. Tap to verify.", channels: ["telegram"], usage: 42, updatedAt: "2026-10-05" },
   { id: "tpl2-5", nameAr: "تنبيه أمني",         nameEn: "Security alert",   bodyAr: "تم اكتشاف محاولة دخول جديدة.", bodyEn: "A new login attempt was detected.", channels: ["telegram", "whatsapp", "site"], usage: 8, updatedAt: "2026-10-08" },
 ];
+
+import type { FlagDetail } from "../../domain/types";
+
+export const mockFlagDetails: FlagDetail[] = [
+  { id: "fd-1", key: "new-summary-editor",    nameAr: "محرّر الملخصات الجديد",  nameEn: "New Summary Editor",    descriptionAr: "تفعيل المحرر الجديد", descriptionEn: "Enable the new editor", enabled: true,  environment: "production",  rolloutPct: 100, dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-03" },
+  { id: "fd-2", key: "ai-auto-translate",     nameAr: "الترجمة التلقائية",        nameEn: "AI Auto Translate",     descriptionAr: "ترجمة الملخصات",    descriptionEn: "Auto-translate", enabled: true,  environment: "production",  rolloutPct: 60,  dependencies: ["new-summary-editor"], updatedBy: "user-1", updatedAt: "2026-10-02" },
+  { id: "fd-3", key: "whatsapp-channel",     nameAr: "قناة واتساب",             nameEn: "WhatsApp Channel",      descriptionAr: "تفعيل بوت واتساب", descriptionEn: "Enable WhatsApp bot", enabled: false, environment: "staging",     rolloutPct: 0,   dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-05" },
+  { id: "fd-4", key: "document-watermark-v2",nameAr: "العلامة المائية v2",       nameEn: "Document Watermark v2", descriptionAr: "نمط جديد",          descriptionEn: "New style", enabled: true,  environment: "production",  rolloutPct: 100, dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-09-28" },
+  { id: "fd-5", key: "bulk-approve",         nameAr: "الاعتماد الجماعي",        nameEn: "Bulk Approve",          descriptionAr: "اعتماد عدة ملخصات",  descriptionEn: "Approve many at once", enabled: false, environment: "development", rolloutPct: 25,  dependencies: ["new-summary-editor"], updatedBy: "user-1", updatedAt: "2026-10-04" },
+  { id: "fd-6", key: "ai-key-rotation",      nameAr: "تدوير مفاتيح AI",         nameEn: "AI Key Rotation",       descriptionAr: "تدوير تلقائي",       descriptionEn: "Automatic rotation", enabled: true,  environment: "staging",     rolloutPct: 50,  dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-08" },
+  { id: "fd-7", key: "live-system-map",      nameAr: "خريطة المنظومة الحية",    nameEn: "Live System Map",       descriptionAr: "خريطة تفاعلية",     descriptionEn: "Interactive map", enabled: true,  environment: "production",  rolloutPct: 100, dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-08" },
+  { id: "fd-8", key: "bot-flow-visualizer",  nameAr: "مخطط تدفق البوت",          nameEn: "Bot Flow Visualizer",   descriptionAr: "مخطط بصري",         descriptionEn: "Visual flow", enabled: false, environment: "development", rolloutPct: 0,   dependencies: [],                     updatedBy: "user-1", updatedAt: "2026-10-12" },
+];

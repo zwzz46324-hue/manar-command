@@ -721,3 +721,34 @@ export type MessageTemplate = {
   usage: number;
   updatedAt: string;
 };
+
+export type FlagEnv = "production" | "staging" | "development";
+
+export type FlagDetail = {
+  id: string;
+  key: string;
+  nameAr: string;
+  nameEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  enabled: boolean;
+  environment: FlagEnv;
+  rolloutPct: number;
+  dependencies: string[];
+  updatedBy: string;
+  updatedAt: string;
+};
+
+
+  id: string;
+  key: string;
+  nameAr: string;
+  nameEn: string;
+  descriptionAr: string;
+  descriptionEn: string;
+  enabled: boolean;
+  rolloutPct: number;
+  dependencies: string[];
+  updatedBy: string;
+  updatedAt: string;
+};

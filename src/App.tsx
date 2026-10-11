@@ -23,6 +23,7 @@ import { BotFlowVisualizer } from "./features/bots/BotFlowVisualizer";
 import { CommunicationCenter } from "./features/bots/CommunicationCenter";
 import { SystemOperations } from "./features/operations/SystemOperations";
 import { JobControl } from "./features/operations/JobControl";
+import { FeatureFlags } from "./features/operations/FeatureFlags";
 import { DataVault } from "./features/storage/DataVault";
 import { BackupCenter } from "./features/backup/BackupCenter";
 import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/communication" element={<CommunicationCenter />} />
         <Route path="/operations" element={<SystemOperations />} />
         <Route path="/jobs" element={<JobControl />} />
+        <Route path="/flags" element={<FeatureFlags />} />
         <Route path="/vault" element={<DataVault />} />
         <Route path="/backup" element={<BackupCenter />} />
         <Route path="/permissions" element={<PermissionMatrix />} />

@@ -246,3 +246,10 @@ export const commRepo = {
   async broadcasts(): Promise<Broadcast[]> { return mockBroadcasts; },
   async templates(): Promise<MessageTemplate[]> { return mockTemplates2; },
 };
+
+import { mockFlagDetails } from "./data";
+import type { FlagDetail } from "../../domain/types";
+
+export const flagDetailRepo = {
+  async list(): Promise<FlagDetail[]> { return mockFlagDetails; },
+};

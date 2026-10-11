@@ -1,0 +1,43 @@
+﻿.ff-page { max-width: 1300px; }
+.ff-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.ff-stat { padding: 16px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); display: flex; flex-direction: column; gap: 4px; }
+.ffs-v { font-size: 20px; font-weight: 600; font-family: var(--manar-font-mono); color: var(--manar-text); }
+.ffs-v.success { color: var(--manar-success); }
+.ffs-v.warn { color: var(--manar-warning); }
+.ffs-k { font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); }
+.ff-toolbar { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+.ff-add { padding: 8px 16px; background: var(--manar-accent-soft); border: 1px solid var(--manar-accent-line); border-radius: 8px; color: var(--manar-text); font-family: inherit; font-size: 12px; cursor: pointer; }
+.ff-add:hover { background: var(--manar-accent); color: white; }
+.ff-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; align-items: center; }
+.ff-filter { padding: 5px 12px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 11px; cursor: pointer; }
+.ff-filter:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.ff-filter.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.ff-filter.env-production.active { border-color: rgba(45,212,191,0.5); background: rgba(45,212,191,0.08); color: var(--manar-success); }
+.ff-filter.env-staging.active { border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.08); color: var(--manar-warning); }
+.ff-filter.env-development.active { border-color: rgba(96,165,250,0.5); background: rgba(96,165,250,0.08); color: var(--manar-info); }
+.ff-divider { width: 1px; height: 20px; background: var(--manar-border); margin: 0 4px; }
+.ff-table-wrap { border: 1px solid var(--manar-border); border-radius: var(--manar-radius); overflow: hidden; background: var(--manar-surface); }
+.ff-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.ff-table thead th { padding: 10px 12px; text-align: start; font-size: 10px; letter-spacing: 1.4px; color: var(--manar-faint); font-weight: 600; border-bottom: 1px solid var(--manar-border); background: rgba(255,255,255,0.015); }
+.ff-table tbody td { padding: 12px; color: var(--manar-text-dim); border-bottom: 1px solid var(--manar-border); vertical-align: middle; }
+.ff-table tbody tr:last-child td { border-bottom: none; }
+.ff-table tbody tr:hover { background: var(--manar-surface-hover); }
+.ff-table tbody tr.row-off { opacity: 0.7; }
+.ff-toggle { display: inline-block; width: 32px; height: 18px; border-radius: 999px; position: relative; transition: background 200ms; }
+.ff-toggle.on { background: var(--manar-success); }
+.ff-toggle.off { background: rgba(255,255,255,0.1); }
+.ff-toggle-dot { position: absolute; top: 2px; width: 14px; height: 14px; border-radius: 50%; background: white; transition: all 200ms; }
+.ff-toggle.on .ff-toggle-dot { inset-inline-end: 2px; }
+.ff-toggle.off .ff-toggle-dot { inset-inline-start: 2px; }
+.ff-name { font-size: 13px; color: var(--manar-text); }
+.ff-desc { font-size: 11px; color: var(--manar-muted); margin-top: 2px; }
+.ff-env { font-size: 9px; letter-spacing: 1.2px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); }
+.ff-env.env-production { color: var(--manar-success); border-color: rgba(45,212,191,0.35); }
+.ff-env.env-staging { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.ff-env.env-development { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.mono { font-family: var(--manar-font-mono); font-size: 11px; color: var(--manar-faint); }
+.muted { color: var(--manar-faint); }
+.ff-dep { font-size: 9px; padding: 2px 6px; border-radius: 4px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35); color: var(--manar-warning); margin-inline-end: 4px; font-family: var(--manar-font-mono); }
+.muted-line { color: var(--manar-muted); font-size: 13px; }
+.page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
+.demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }

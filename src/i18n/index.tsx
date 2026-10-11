@@ -31,7 +31,7 @@ const navAr: NavGroup[] = [
   { label: "التخزين", items: ["خزنة البيانات", "النسخ الاحتياطي"] },
   { label: "الأمن", items: ["مركز الأمن"] },
   { label: "التدقيق", items: ["سجل الحقيقة"] },
-  { label: "التشغيل", items: ["صحة النظام", "المهام"] },
+  { label: "التشغيل", items: ["صحة النظام", "المهام", "أعلام الميزات"] },
   { label: "الكود", items: ["مركز الكود"] },
   { label: "الإعدادات", items: ["الإعدادات"] },
 ];
@@ -48,7 +48,7 @@ const navEn: NavGroup[] = [
   { label: "STORAGE", items: ["Data Vault", "Backups"] },
   { label: "SECURITY", items: ["Security Center"] },
   { label: "AUDIT", items: ["Truth Log"] },
-  { label: "OPERATIONS", items: ["System Health", "Jobs"] },
+  { label: "OPERATIONS", items: ["System Health", "Jobs", "Feature Flags"] },
   { label: "CODE", items: ["Code Center"] },
   { label: "SETTINGS", items: ["Settings"] },
 ];
