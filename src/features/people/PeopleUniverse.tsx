@@ -1,6 +1,7 @@
 ﻿
 import { useEffect, useMemo, useState } from "react";
 import { useLang } from "../../i18n";
+import { Link } from "react-router-dom";
 import { peopleRepo } from "../../adapters/mock/repository";
 import type { ManarUser, RoleDefinition, UserStatus } from "../../domain/types";
 import "./PeopleUniverse.css";
@@ -87,7 +88,7 @@ export function PeopleUniverse() {
             </thead>
             <tbody>
               {filteredUsers.map((u) => (
-                <tr key={u.id}>
+                <tr key={u.id} className="user-row">
                   <td>
                     <div className="user-cell">
                       <span className="user-avatar">{u.username.slice(0, 2).toUpperCase()}</span>
@@ -102,6 +103,7 @@ export function PeopleUniverse() {
                   <td><span className={"ustatus-pill ustatus-" + u.status}>{statusLabels[u.status]}</span></td>
                   <td className="mono">{u.lastSeenAt.slice(0, 10)}</td>
                   <td className="mono">{u.assignedCourses > 0 ? u.assignedCourses : "—"}</td>
+                  <td><Link to={"/people/" + u.id} className="row-link">{lang === "ar" ? "افتح" : "Open"} →</Link></td>
                 </tr>
               ))}
             </tbody>

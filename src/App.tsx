@@ -15,6 +15,7 @@ import { PublishedDocuments } from "./features/documents/PublishedDocuments";
 import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
+import { UserDetail } from "./features/people/UserDetail";
 import { AIOperations } from "./features/ai/AIOperations";
 import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 import { SystemOperations } from "./features/operations/SystemOperations";
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />
+        <Route path="/people/:id" element={<UserDetail />} />
         <Route path="/ai" element={<AIOperations />} />
         <Route path="/bots" element={<BotCommandCenter />} />
         <Route path="/operations" element={<SystemOperations />} />

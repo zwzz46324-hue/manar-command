@@ -46,3 +46,6 @@
 .muted-line { color: var(--manar-muted); font-size: 13px; }
 .page-foot { display: flex; justify-content: flex-end; margin-top: 32px; }
 .demo-badge { font-size: 10px; letter-spacing: 2px; color: var(--manar-warning); padding: 4px 10px; border: 1px dashed rgba(245, 158, 11, 0.35); border-radius: 4px; }
+
+.row-link { font-size: 11px; color: var(--manar-accent); text-decoration: none; }
+.row-link:hover { text-decoration: underline; }
