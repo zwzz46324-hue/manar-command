@@ -932,3 +932,22 @@ export const mockBotFlowEdges: BotFlowEdge[] = [
   { from: "content", to: "download" },
 ];
 
+
+import type { Broadcast, MessageTemplate } from "../../domain/types";
+
+export const mockBroadcasts: Broadcast[] = [
+  { id: "br-1", titleAr: "نشر ملخص هياكل البيانات", titleEn: "Publish DS summary", channel: "telegram", status: "completed", recipients: 3820, delivered: 3802, failed: 18, createdAt: "2026-10-01T10:00:00", finishedAt: "2026-10-01T10:12:00" },
+  { id: "br-2", titleAr: "إعلان اختبار نصف الفصل", titleEn: "Midterm exam announcement", channel: "telegram", status: "completed", recipients: 1240, delivered: 1238, failed: 2, createdAt: "2026-09-28T15:00:00", finishedAt: "2026-09-28T15:05:00" },
+  { id: "br-3", titleAr: "حملة تحديث المستندات", titleEn: "Documents update campaign", channel: "whatsapp", status: "sending", recipients: 890, delivered: 342, failed: 0, createdAt: "2026-10-12T08:00:00" },
+  { id: "br-4", titleAr: "تذكير بدء التسجيل", titleEn: "Registration reminder", channel: "telegram", status: "scheduled", recipients: 5000, delivered: 0, failed: 0, createdAt: "2026-10-11T20:00:00", scheduledAt: "2026-10-15T09:00:00" },
+  { id: "br-5", titleAr: "نشر ورقة مراجعة", titleEn: "Publish revision sheet", channel: "site", status: "failed", recipients: 100, delivered: 0, failed: 100, createdAt: "2026-10-10T16:00:00", finishedAt: "2026-10-10T16:01:00" },
+  { id: "br-6", titleAr: "مسودة حملة", titleEn: "Campaign draft", channel: "telegram", status: "draft", recipients: 0, delivered: 0, failed: 0, createdAt: "2026-10-12T09:00:00" },
+];
+
+export const mockTemplates2: MessageTemplate[] = [
+  { id: "tpl2-1", nameAr: "ترحيب",           nameEn: "Welcome",          bodyAr: "أهلًا بك في منار البيانات. اختر جامعتك للبدء.", bodyEn: "Welcome to MANAR DATA. Choose your university to start.", channels: ["telegram", "whatsapp"], usage: 12400, updatedAt: "2026-09-15" },
+  { id: "tpl2-2", nameAr: "ملخص معتمد",       nameEn: "Approved summary", bodyAr: "ملخص جديد متاح: {title}", bodyEn: "New summary available: {title}", channels: ["telegram"], usage: 3820, updatedAt: "2026-10-01" },
+  { id: "tpl2-3", nameAr: "إشعار اختبار",      nameEn: "Exam notice",      bodyAr: "تذكير: اختبار {course} يوم {date}", bodyEn: "Reminder: {course} exam on {date}", channels: ["telegram", "whatsapp"], usage: 1240, updatedAt: "2026-09-28" },
+  { id: "tpl2-4", nameAr: "إعادة تفعيل",       nameEn: "Reactivation",     bodyAr: "حسابك بانتظار التفعيل. اضغط للتحقق.", bodyEn: "Your account is pending activation. Tap to verify.", channels: ["telegram"], usage: 42, updatedAt: "2026-10-05" },
+  { id: "tpl2-5", nameAr: "تنبيه أمني",         nameEn: "Security alert",   bodyAr: "تم اكتشاف محاولة دخول جديدة.", bodyEn: "A new login attempt was detected.", channels: ["telegram", "whatsapp", "site"], usage: 8, updatedAt: "2026-10-08" },
+];

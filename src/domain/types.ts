@@ -694,3 +694,30 @@ export type BotFlowNode = {
 };
 
 export type BotFlowEdge = { from: string; to: string; };
+
+export type BroadcastStatus = "draft" | "scheduled" | "sending" | "completed" | "failed";
+
+export type Broadcast = {
+  id: string;
+  titleAr: string;
+  titleEn: string;
+  channel: "telegram" | "whatsapp" | "site";
+  status: BroadcastStatus;
+  recipients: number;
+  delivered: number;
+  failed: number;
+  createdAt: string;
+  scheduledAt?: string;
+  finishedAt?: string;
+};
+
+export type MessageTemplate = {
+  id: string;
+  nameAr: string;
+  nameEn: string;
+  bodyAr: string;
+  bodyEn: string;
+  channels: ("telegram" | "whatsapp" | "site")[];
+  usage: number;
+  updatedAt: string;
+};

@@ -238,3 +238,11 @@ export const botFlowRepo = {
   async nodes(): Promise<BotFlowNode[]> { return mockBotFlowNodes; },
   async edges(): Promise<BotFlowEdge[]> { return mockBotFlowEdges; },
 };
+
+import { mockBroadcasts, mockTemplates2 } from "./data";
+import type { Broadcast, MessageTemplate } from "../../domain/types";
+
+export const commRepo = {
+  async broadcasts(): Promise<Broadcast[]> { return mockBroadcasts; },
+  async templates(): Promise<MessageTemplate[]> { return mockTemplates2; },
+};

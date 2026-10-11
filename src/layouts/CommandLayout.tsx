@@ -30,6 +30,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "تلجرام" || item === "Telegram") return "/bots";
   if (item === "واتساب" || item === "WhatsApp") return "/bots";
   if (item === "مخطط التدفق" || item === "Bot Flow") return "/bot-flow";
+  if (item === "مركز الاتصالات" || item === "Communications") return "/communication";
   if (item === "الانتباه" || item === "Attention") return "/attention";
   if (item === "النشاط" || item === "Activity") return "/activity";
   if (item === "صحة النظام" || item === "System Health") return "/operations";
