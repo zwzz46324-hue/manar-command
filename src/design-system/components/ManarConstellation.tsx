@@ -71,6 +71,7 @@ export function ManarConstellation({ nodes, edges, lang, onSelect }: Props) {
               stroke={active ? "rgba(139,92,246,0.65)" : "url(#edge-grad)"}
               strokeWidth={active ? 1.6 : 1}
               strokeDasharray={active ? "0" : "3 3"}
+              className={active ? "const-edge active" : "const-edge"}
             />
           );
         })}

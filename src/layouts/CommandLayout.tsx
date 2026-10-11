@@ -135,6 +135,8 @@ export function CommandLayout() {
         <button className="dock-btn accent" type="button">{t.dockAi}</button>
         <button className="dock-btn" type="button">{t.dockReview}</button>
         <div className="dock-spacer" />
+        <ManarPulse label="AI" state="healthy" />
+        <ManarPulse label={lang === "ar" ? "بوتات" : "Bots"} state="healthy" />
         <span className="dock-hint">{t.demoBadge}</span>
       </footer>
 
