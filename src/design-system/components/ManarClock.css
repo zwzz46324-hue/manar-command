@@ -1,0 +1,23 @@
+﻿.manar-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-family: var(--manar-font-mono);
+  line-height: 1.1;
+}
+.clock-time {
+  font-size: 13px;
+  color: var(--manar-text);
+  letter-spacing: 0.5px;
+}
+.clock-dates {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: var(--manar-faint);
+  letter-spacing: 0.3px;
+}
+.clock-sep { color: var(--manar-border-strong); }
+.clock-gregorian { color: var(--manar-muted); }

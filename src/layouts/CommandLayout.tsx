@@ -1,7 +1,7 @@
 ﻿
 import React, { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { ManarLogo, ManarCommandPalette } from "../design-system/components";
+import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock } from "../design-system/components";
 import { useLang } from "../i18n";
 import { useSelection } from "../state/selection";
 import "./CommandLayout.css";
@@ -75,6 +75,8 @@ export function CommandLayout() {
           </button>
         </div>
         <div className="horizon-actions">
+          <ManarPulse label={lang === "ar" ? "نشاط" : "Activity"} state="healthy" hint="42/min" />
+          <ManarClock />
           <button className="lang-toggle" type="button" onClick={toggle} aria-label="Switch language">
             {t.langButton}
           </button>
