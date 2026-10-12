@@ -4,6 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock, ManarNotifications } from "../design-system/components";
 import { useLang } from "../i18n";
 import { useTheme } from "../design-system/useTheme";
+import { useKeyboardShortcuts } from "../design-system/useKeyboardShortcuts";
 import { useSelection } from "../state/selection";
 import "./CommandLayout.css";
 
@@ -55,19 +56,15 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
 export function CommandLayout() {
   const { dir, t, lang, toggle } = useLang();
   const { theme, toggle: toggleTheme } = useTheme();
+  
+  useKeyboardShortcuts({
+    onToggleLang: toggle,
+    onToggleTheme: toggleTheme,
+    onOpenPalette: () => setPaletteOpen((v) => !v),
+    onEscape: () => setPaletteOpen(false),
+  });
   const { id, kind, labelAr, labelEn, clear } = useSelection();
   const [paletteOpen, setPaletteOpen] = useState(false);
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        setPaletteOpen((v) => !v);
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, []);
 
   const railLabel = lang === "ar" ? labelAr : labelEn;
   const hasSelection = !!id;
