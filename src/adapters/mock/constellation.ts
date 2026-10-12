@@ -1,4 +1,4 @@
-﻿import type { ConstellationEdge, ConstellationNode } from "../design-system/components";
+﻿import type { ConstellationEdge, ConstellationNode } from "../../design-system/components/ManarConstellation";
 
 export const constellationNodes: ConstellationNode[] = [
   { id: "uni", labelAr: "الجامعة", labelEn: "University", x: 80, y: 200, kind: "academic" },

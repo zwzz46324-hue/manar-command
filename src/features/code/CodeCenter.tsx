@@ -40,8 +40,6 @@ export function CodeCenter() {
   const totalLines = files.reduce((a, f) => a + f.lines, 0);
   const totalKb = files.reduce((a, f) => a + f.sizeKb, 0);
   const lastBuild = builds[0];
-  const successfulBuilds = builds.filter((b) => b.status === "success").length;
-
   return (
     <div className="code-page">
       <header className="page-header">

@@ -93,7 +93,6 @@ export function ManarCommandPalette({ open, onClose }: Props) {
 
   const placeholder = lang === "ar" ? "ابحث أو نفّذ أمرًا..." : "Search or run a command...";
   const emptyMsg = lang === "ar" ? "لا توجد نتائج" : "No results";
-  const cmdTitle = lang === "ar" ? "أوامر" : "Commands";
   const searchTitle = lang === "ar" ? "نتائج البحث" : "Search results";
 
   return (

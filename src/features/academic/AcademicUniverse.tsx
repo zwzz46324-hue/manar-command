@@ -14,8 +14,8 @@ export function AcademicUniverse() {
   const [unis, setUnis] = useState<Uni[]>([]);
   const [cols, setCols] = useState<College[]>([]);
   const [deps, setDeps] = useState<Department[]>([]);
-  const [openUni, setOpenUni] = useState<string | null>(null);
-  const [openCol, setOpenCol] = useState<string | null>(null);
+  const [openUni] = useState<string | null>(null);
+  const [openCol] = useState<string | null>(null);
   const [filter, setFilter] = useState<"all" | "public" | "private">("all");
 
   useEffect(() => {

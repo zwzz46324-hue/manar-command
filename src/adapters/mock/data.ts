@@ -980,7 +980,6 @@ export const mockOverviewKPIs: OverviewKPI[] = [
 
 import type { PublishFlow } from "../../domain/types";
 
-const stageTpl = (id: string, ar: string, en: string): { id: string; labelAr: string; labelEn: string; state: "pending"; } => ({ id, labelAr: ar, labelEn: en, state: "pending" });
 
 export const mockPublishFlows: PublishFlow[] = [
   {

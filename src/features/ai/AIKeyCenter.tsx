@@ -36,8 +36,6 @@ export function AIKeyCenter() {
   const allProvidersLabel = lang === "ar" ? "كل المزوّدين" : "All providers";
 
   const totalCost = items.reduce((a, k) => a + k.costUsd, 0);
-  const totalJobs = items.reduce((a, k) => a + k.jobsUsed, 0);
-
   const toggleReveal = (id: string) => {
     setRevealed((prev) => {
       const next = new Set(prev);

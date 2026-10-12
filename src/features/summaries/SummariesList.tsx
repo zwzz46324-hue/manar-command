@@ -7,9 +7,9 @@ import "./SummariesList.css";
 
 const STATUSES: { id: SummaryStatus | "all"; ar: string; en: string }[] = [
   { id: "all", ar: "الكل", en: "All" },
-  { id: "draft", ar: "مسودة", en: "Draft" },
-  { id: "in_review", ar: "قيد المراجعة", en: "In review" },
-  { id: "needs_changes", ar: "يحتاج تعديل", en: "Needs changes" },
+  { id: "pending", ar: "مسودة", en: "Draft" },
+  { id: "in-review", ar: "قيد المراجعة", en: "In review" },
+  { id: "needs-changes", ar: "يحتاج تعديل", en: "Needs changes" },
   { id: "approved", ar: "معتمد", en: "Approved" },
   { id: "rejected", ar: "مرفوض", en: "Rejected" },
 ];

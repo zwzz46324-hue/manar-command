@@ -7,7 +7,7 @@
 };
 
 export type Course = {
-  departmentCode?: string;\n  departmentCode?: string;
+  departmentCode?: string;
   id: string;
   code: string;
   titleAr: string;
@@ -48,6 +48,8 @@ export type University = {
   nameEn: string;
   code: string;
   archived: boolean;
+  sector?: UniversitySector;
+  city?: string;
 };
 
 export type College = {
@@ -88,7 +90,7 @@ export type Summary = {
   version: number;
   createdAt: string;
   updatedAt: string;
-  priority: "normal" | "high" | "urgent";
+  priority?: "normal" | "high" | "urgent";
 };
 
 export type Decision = {
@@ -555,7 +557,7 @@ export type AttentionEntry = {
   at: string;
 };
 
-
+export type UserProfile = {
   courseIds: string[];
   lastActivityAt: string;
   createdAt: string;
@@ -739,7 +741,7 @@ export type FlagDetail = {
   updatedAt: string;
 };
 
-
+export type FeatureFlagDetail = {
   id: string;
   key: string;
   nameAr: string;

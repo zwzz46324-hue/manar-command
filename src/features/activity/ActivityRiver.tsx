@@ -1,5 +1,4 @@
 ﻿import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { useLang } from "../../i18n";
 import { riverRepo } from "../../adapters/mock/repository";
 import type { RiverEvent, RiverGranularity } from "../../domain/types";

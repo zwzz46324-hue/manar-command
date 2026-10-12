@@ -1,5 +1,5 @@
 ﻿
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock, ManarNotifications } from "../design-system/components";
 import { useLang } from "../i18n";

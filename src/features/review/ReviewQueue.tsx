@@ -74,7 +74,7 @@ export function ReviewQueue() {
             <h3 className="review-title">{lang === "ar" ? s.titleAr : s.titleEn}</h3>
             <p className="review-course">{lang === "ar" ? s.courseTitleAr : s.courseTitleEn}</p>
             <div className="review-card-foot">
-              <span className={"review-priority prio-" + s.priority}>{priorityLabels[s.priority]}</span>
+              <span className={"review-priority prio-" + s.priority}>{priorityLabels[s.priority ?? "normal"]}</span>
               <span className="review-meta">v{s.version} · {s.updatedAt}</span>
               <span className="review-open">{openLabel} →</span>
             </div>
