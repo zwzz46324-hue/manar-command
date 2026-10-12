@@ -22,6 +22,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "قوالب المستندات" || item === "Templates") return "/templates";
   if (item === "المستندات المنشورة" || item === "Published") return "/published";
   if (item === "سجل الحقيقة" || item === "Truth Log") return "/audit";
+  if (item === "صحة النظام" || item === "System Health") return "/health";
   if (item === "مركز الأمن" || item === "Security Center") return "/security";
   if (item === "المستخدمون" || item === "Users") return "/people";
   if (item === "الصلاحيات" || item === "Permissions") return "/people";

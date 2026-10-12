@@ -14,7 +14,6 @@ import { DocumentDetail } from "./features/documents/DocumentDetail";
 import { TemplateCenter } from "./features/documents/TemplateCenter";
 import { PublishedDocuments } from "./features/documents/PublishedDocuments";
 import { PublishCenter } from "./features/documents/PublishCenter";
-import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
 import { UserDetail } from "./features/people/UserDetail";
@@ -61,7 +60,6 @@ export default function App() {
         <Route path="/templates" element={<TemplateCenter />} />
         <Route path="/published" element={<PublishedDocuments />} />
         <Route path="/publish-center" element={<PublishCenter />} />
-        <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />
         <Route path="/people/:id" element={<UserDetail />} />
@@ -72,6 +70,7 @@ export default function App() {
         <Route path="/bot-flow" element={<BotFlowVisualizer />} />
         <Route path="/communication" element={<CommunicationCenter />} />
         <Route path="/operations" element={<SystemOperations />} />
+        <Route path="/health" element={<SystemOperations />} />
         <Route path="/jobs" element={<JobControl />} />
         <Route path="/flags" element={<FeatureFlags />} />
         <Route path="/vault" element={<DataVault />} />
