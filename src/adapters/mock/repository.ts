@@ -1,7 +1,7 @@
 ﻿import {
   mockActivity, mockAttention, mockCourses,
   mockUniversities, mockColleges, mockDepartments,
-  mockSummaries, mockDecisions,
+  mockSummaries, mockSummariesExtra, mockDecisions,
   mockDocuments,
   mockTruthEvents, mockSecurityEvents, mockSessions,
   mockUsers, mockRoles, mockPermissions,
@@ -45,7 +45,7 @@ export interface ManarRepository {
 }
 
 const store = {
-  summaries: mockSummaries.map((s) => ({ ...s })),
+  summaries: [...mockSummaries, ...mockSummariesExtra].map((s) => ({ ...s })),
   decisions: [...mockDecisions],
 };
 
