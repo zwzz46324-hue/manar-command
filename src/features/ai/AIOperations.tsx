@@ -1,5 +1,6 @@
 ﻿
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useLang } from "../../i18n";
 import { aiRepo } from "../../adapters/mock/repository";
 import type { AIJob, AIProvider } from "../../domain/types";
@@ -60,7 +61,7 @@ export function AIOperations() {
       {!loading && tab === "providers" && (
         <div className="providers-grid">
           {providers.map((p) => (
-            <article key={p.id} className={"provider-card status-" + p.status}>
+            <Link key={p.id} to={"/ai/providers/" + p.id} className={"provider-card status-" + p.status}>
               <div className="provider-head">
                 <span className="provider-name">{p.name}</span>
                 <span className={"provider-status ps-" + p.status}>{statusLabels[p.status]}</span>
@@ -80,7 +81,7 @@ export function AIOperations() {
                 <span className="key-alias">{p.keyAlias}</span>
                 <span className={"key-status ks-" + p.keyStatus}>{p.keyStatus}</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       )}

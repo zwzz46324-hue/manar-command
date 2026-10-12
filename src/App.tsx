@@ -20,6 +20,7 @@ import { PeopleUniverse } from "./features/people/PeopleUniverse";
 import { UserDetail } from "./features/people/UserDetail";
 import { AIOperations } from "./features/ai/AIOperations";
 import { AIKeyCenter } from "./features/ai/AIKeyCenter";
+import { AIProviderDetail } from "./features/ai/AIProviderDetail";
 import { BotCommandCenter } from "./features/bots/BotCommandCenter";
 import { BotFlowVisualizer } from "./features/bots/BotFlowVisualizer";
 import { CommunicationCenter } from "./features/bots/CommunicationCenter";
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/people/:id" element={<UserDetail />} />
         <Route path="/ai" element={<AIOperations />} />
         <Route path="/ai/keys" element={<AIKeyCenter />} />
+        <Route path="/ai/providers/:id" element={<AIProviderDetail />} />
         <Route path="/bots" element={<BotCommandCenter />} />
         <Route path="/bot-flow" element={<BotFlowVisualizer />} />
         <Route path="/communication" element={<CommunicationCenter />} />
