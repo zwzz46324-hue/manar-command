@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock, ManarNotifications } from "../design-system/components";
 import { useLang } from "../i18n";
+import { useTheme } from "../design-system/useTheme";
 import { useSelection } from "../state/selection";
 import "./CommandLayout.css";
 
@@ -53,6 +54,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
 
 export function CommandLayout() {
   const { dir, t, lang, toggle } = useLang();
+  const { theme, toggle: toggleTheme } = useTheme();
   const { id, kind, labelAr, labelEn, clear } = useSelection();
   const [paletteOpen, setPaletteOpen] = useState(false);
 
@@ -89,7 +91,10 @@ export function CommandLayout() {
         <div className="horizon-actions">
           <ManarPulse label={lang === "ar" ? "نشاط" : "Activity"} state="healthy" hint="42/min" />
           <ManarClock />
-          <button className="lang-toggle" type="button" onClick={toggle} aria-label="Switch language">
+          <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label="Switch theme" title={theme === "dark" ? (lang === "ar" ? "الوضع الفاتح" : "Light mode") : (lang === "ar" ? "الوضع الداكن" : "Dark mode")}>
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+            <button className="lang-toggle" type="button" onClick={toggle} aria-label="Switch language">
             {t.langButton}
           </button>
           <span className="state-pill state-online">{t.stateOnline}</span>

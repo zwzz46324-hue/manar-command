@@ -103,3 +103,30 @@ pre {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.12);
 }
+/* === Light Theme (Phase 47) === */
+[data-theme="light"] {
+  --manar-bg-0: #f7f5fb;
+  --manar-bg-1: #ffffff;
+  --manar-bg-2: #f1eef8;
+  --manar-bg-3: #e8e3f2;
+  --manar-surface: rgba(0, 0, 0, 0.025);
+  --manar-surface-hover: rgba(0, 0, 0, 0.05);
+  --manar-border: rgba(0, 0, 0, 0.08);
+  --manar-border-strong: rgba(0, 0, 0, 0.16);
+
+  --manar-text: #1a1626;
+  --manar-text-dim: #3d3654;
+  --manar-muted: #6b6382;
+  --manar-faint: #9a93ab;
+
+  --manar-accent-soft: rgba(139, 92, 246, 0.1);
+  --manar-accent-line: rgba(139, 92, 246, 0.4);
+
+  --manar-success: #0d9488;
+  --manar-warning: #d97706;
+  --manar-danger: #e11d48;
+  --manar-info: #2563eb;
+
+  --manar-shadow-soft: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
+  --manar-shadow-panel: 0 12px 40px -20px rgba(0, 0, 0, 0.15);
+}
