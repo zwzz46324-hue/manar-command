@@ -30,6 +30,7 @@ import { DataVault } from "./features/storage/DataVault";
 import { BackupCenter } from "./features/backup/BackupCenter";
 import { PermissionMatrix } from "./features/permissions/PermissionMatrix";
 import { SummaryStudio } from "./features/summaries/SummaryStudio";
+import { SummariesList } from "./features/summaries/SummariesList";
 import { TranscriptReview } from "./features/summaries/TranscriptReview";
 import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 import { CodeCenter } from "./features/code/CodeCenter";
@@ -77,6 +78,7 @@ export default function App() {
         <Route path="/vault" element={<DataVault />} />
         <Route path="/backup" element={<BackupCenter />} />
         <Route path="/permissions" element={<PermissionMatrix />} />
+        <Route path="/summaries" element={<SummariesList />} />
         <Route path="/summaries/:id" element={<SummaryStudio />} />
         <Route path="/transcripts/:id" element={<TranscriptReview />} />
         <Route path="/system-map" element={<LiveSystemMap />} />
