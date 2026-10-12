@@ -267,3 +267,10 @@ import type { PublishFlow } from "../../domain/types";
 export const publishFlowRepo = {
   async list(): Promise<PublishFlow[]> { return mockPublishFlows; },
 };
+
+import { mockBuildDetails } from "./data";
+import type { BuildDetail } from "../../domain/types";
+
+export const buildRepo = {
+  async list(): Promise<BuildDetail[]> { return mockBuildDetails; },
+};

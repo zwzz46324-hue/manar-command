@@ -34,6 +34,7 @@ import { SummaryStudio } from "./features/summaries/SummaryStudio";
 import { TranscriptReview } from "./features/summaries/TranscriptReview";
 import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 import { CodeCenter } from "./features/code/CodeCenter";
+import { BuildView } from "./features/code/BuildView";
 import { GlobalSearch } from "./features/search/GlobalSearch";
 import { ActivityRiver } from "./features/activity/ActivityRiver";
 import { AcademicEntityDetail } from "./features/academic/AcademicEntityDetail";
@@ -78,6 +79,7 @@ export default function App() {
         <Route path="/transcripts/:id" element={<TranscriptReview />} />
         <Route path="/system-map" element={<LiveSystemMap />} />
         <Route path="/code" element={<CodeCenter />} />
+        <Route path="/builds" element={<BuildView />} />
         <Route path="/search" element={<GlobalSearch />} />
         <Route path="/activity" element={<ActivityRiver />} />
         <Route path="/academic/entity/:id" element={<AcademicEntityDetail />} />

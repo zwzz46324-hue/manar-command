@@ -32,7 +32,7 @@ const navAr: NavGroup[] = [
   { label: "الأمن", items: ["مركز الأمن"] },
   { label: "التدقيق", items: ["سجل الحقيقة"] },
   { label: "التشغيل", items: ["صحة النظام", "المهام", "أعلام الميزات"] },
-  { label: "الكود", items: ["مركز الكود"] },
+  { label: "الكود", items: ["مركز الكود", "البناء والاختبارات"] },
   { label: "الإعدادات", items: ["الإعدادات"] },
 ];
 
@@ -49,7 +49,7 @@ const navEn: NavGroup[] = [
   { label: "SECURITY", items: ["Security Center"] },
   { label: "AUDIT", items: ["Truth Log"] },
   { label: "OPERATIONS", items: ["System Health", "Jobs", "Feature Flags"] },
-  { label: "CODE", items: ["Code Center"] },
+  { label: "CODE", items: ["Code Center", "Build & Tests"] },
   { label: "SETTINGS", items: ["Settings"] },
 ];
 

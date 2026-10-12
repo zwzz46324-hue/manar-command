@@ -1064,3 +1064,14 @@ export const mockPublishFlows: PublishFlow[] = [
     updatedAt: "2026-10-11T09:30:00",
   },
 ];
+
+import type { BuildDetail } from "../../domain/types";
+
+export const mockBuildDetails: BuildDetail[] = [
+  { id: "b-101", number: 101, branch: "main",              commit: "a3f9c21", message: "Phase 40 — Live System Map",         status: "success", durationSec: 42, testsPassed: 89, testsFailed: 0, coveragePct: 87, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-12T10:22:00", finishedAt: "2026-10-12T10:23:02" },
+  { id: "b-100", number: 100, branch: "main",              commit: "f7e2a04", message: "Phase 39 — AI Provider Detail",     status: "success", durationSec: 38, testsPassed: 89, testsFailed: 0, coveragePct: 87, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-12T09:15:00", finishedAt: "2026-10-12T09:15:38" },
+  { id: "b-99",  number: 99,  branch: "feature/publish-center", commit: "2a4d6f8", message: "Add Publish Center",               status: "failed",  durationSec: 12, testsPassed: 82, testsFailed: 7, coveragePct: 74, artifacts: 0, triggeredBy: "user-9", startedAt: "2026-10-11T22:40:00", finishedAt: "2026-10-11T22:40:12", logs: ["FAIL src/features/documents/PublishCenter.tsx", "  ● should render 7 stages", "    Expected: 7", "    Received: 6"] },
+  { id: "b-98",  number: 98,  branch: "main",              commit: "9b8c3e1", message: "Phase 38 — Publish Center",        status: "success", durationSec: 45, testsPassed: 89, testsFailed: 0, coveragePct: 87, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-11T18:00:00", finishedAt: "2026-10-11T18:00:45" },
+  { id: "b-97",  number: 97,  branch: "main",              commit: "1d5f8a2", message: "Phase 37 — System Overview",       status: "success", durationSec: 40, testsPassed: 88, testsFailed: 0, coveragePct: 86, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-10T18:00:00", finishedAt: "2026-10-10T18:00:40" },
+  { id: "b-96",  number: 96,  branch: "main",              commit: "3e9b7c4", message: "Phase 36 — Feature Flags",         status: "success", durationSec: 43, testsPassed: 88, testsFailed: 0, coveragePct: 86, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-09T14:00:00", finishedAt: "2026-10-09T14:00:43" },
+];

@@ -787,3 +787,23 @@ export type PublishFlow = {
   startedAt: string;
   updatedAt: string;
 };
+
+export type BuildStatus = "success" | "failed" | "running" | "queued";
+
+export type BuildDetail = {
+  id: string;
+  number: number;
+  branch: string;
+  commit: string;
+  message: string;
+  status: BuildStatus;
+  durationSec: number;
+  testsPassed: number;
+  testsFailed: number;
+  coveragePct: number;
+  artifacts: number;
+  triggeredBy: string;
+  startedAt: string;
+  finishedAt?: string;
+  logs?: string[];
+};
