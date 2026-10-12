@@ -1075,3 +1075,19 @@ export const mockBuildDetails: BuildDetail[] = [
   { id: "b-97",  number: 97,  branch: "main",              commit: "1d5f8a2", message: "Phase 37 — System Overview",       status: "success", durationSec: 40, testsPassed: 88, testsFailed: 0, coveragePct: 86, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-10T18:00:00", finishedAt: "2026-10-10T18:00:40" },
   { id: "b-96",  number: 96,  branch: "main",              commit: "3e9b7c4", message: "Phase 36 — Feature Flags",         status: "success", durationSec: 43, testsPassed: 88, testsFailed: 0, coveragePct: 86, artifacts: 3, triggeredBy: "user-1", startedAt: "2026-10-09T14:00:00", finishedAt: "2026-10-09T14:00:43" },
 ];
+
+import type { RestoreSnapshot, RestoreHistoryEntry } from "../../domain/types";
+
+export const mockRestoreSnapshots: RestoreSnapshot[] = [
+  { id: "rs-1", backupId: "bk-1", labelAr: "نسخة 6 أكتوبر",     labelEn: "Oct 6 backup",       sizeMb: 842, integrityOk: true,  affectedTables: 42, affectedFiles: 12800, estimatedSec: 240, createdAt: "2026-10-06T03:00:00" },
+  { id: "rs-2", backupId: "bk-2", labelAr: "نسخة 5 أكتوبر",     labelEn: "Oct 5 backup",       sizeMb: 838, integrityOk: true,  affectedTables: 42, affectedFiles: 12780, estimatedSec: 240, createdAt: "2026-10-05T03:00:00" },
+  { id: "rs-3", backupId: "bk-3", labelAr: "لقطة يدوية — 4 أكتوبر", labelEn: "Manual snapshot Oct 4", sizeMb: 845, integrityOk: true, affectedTables: 42, affectedFiles: 12820, estimatedSec: 245, createdAt: "2026-10-04T22:15:00" },
+  { id: "rs-4", backupId: "bk-5", labelAr: "لقطة قيد التحقق",    labelEn: "Snapshot verifying", sizeMb: 850, integrityOk: false, affectedTables: 42, affectedFiles: 12840, estimatedSec: 250, createdAt: "2026-10-12T08:30:00" },
+];
+
+export const mockRestoreHistory: RestoreHistoryEntry[] = [
+  { id: "rh-1", backupId: "bk-3", status: "completed",   actorId: "user-1", reasonAr: "تراجع عن خطأ إداري", reasonEn: "Rolled back admin error",   durationSec: 238, at: "2026-10-04T23:00:00" },
+  { id: "rh-2", backupId: "bk-2", status: "completed",   actorId: "user-1", reasonAr: "قبل تحديث قاعدة البيانات", reasonEn: "Before DB migration",  durationSec: 240, at: "2026-09-28T14:00:00" },
+  { id: "rh-3", backupId: "bk-1", status: "failed",      actorId: "user-1", reasonAr: "فشل في المنتصف",     reasonEn: "Failed halfway",         durationSec: 42,  at: "2026-09-15T10:00:00" },
+  { id: "rh-4", backupId: "bk-4", status: "rolled-back", actorId: "user-9", reasonAr: "فحص فقط",            reasonEn: "Testing only",            durationSec: 12,  at: "2026-09-10T16:00:00" },
+];

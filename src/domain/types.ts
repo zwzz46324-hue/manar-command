@@ -807,3 +807,29 @@ export type BuildDetail = {
   finishedAt?: string;
   logs?: string[];
 };
+
+export type RestoreStatus = "idle" | "preview" | "awaiting-confirm" | "restoring" | "completed" | "failed";
+
+export type RestoreSnapshot = {
+  id: string;
+  backupId: string;
+  labelAr: string;
+  labelEn: string;
+  sizeMb: number;
+  integrityOk: boolean;
+  affectedTables: number;
+  affectedFiles: number;
+  estimatedSec: number;
+  createdAt: string;
+};
+
+export type RestoreHistoryEntry = {
+  id: string;
+  backupId: string;
+  status: "completed" | "failed" | "rolled-back";
+  actorId: string;
+  reasonAr: string;
+  reasonEn: string;
+  durationSec: number;
+  at: string;
+};

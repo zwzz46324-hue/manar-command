@@ -41,6 +41,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "خزنة البيانات" || item === "Data Vault") return "/vault";
   if (item === "النسخ الاحتياطي" || item === "Backups") return "/backup";
   if (item === "الصلاحيات" || item === "Permissions") return "/permissions";
+  if (item === "مركز الاستعادة" || item === "Recovery Center") return "/recovery";
   if (item === "مركز الكود" || item === "Code Center") return "/code";
   if (item === "البناء والاختبارات" || item === "Build & Tests") return "/builds";
   const globalIndex = nav.slice(0, gi).reduce((acc, g) => acc + g.items.length, 0) + ii;

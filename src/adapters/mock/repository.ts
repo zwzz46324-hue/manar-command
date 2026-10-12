@@ -274,3 +274,11 @@ import type { BuildDetail } from "../../domain/types";
 export const buildRepo = {
   async list(): Promise<BuildDetail[]> { return mockBuildDetails; },
 };
+
+import { mockRestoreSnapshots, mockRestoreHistory } from "./data";
+import type { RestoreSnapshot, RestoreHistoryEntry } from "../../domain/types";
+
+export const restoreRepo = {
+  async snapshots(): Promise<RestoreSnapshot[]> { return mockRestoreSnapshots; },
+  async history(): Promise<RestoreHistoryEntry[]> { return mockRestoreHistory; },
+};
