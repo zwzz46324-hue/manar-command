@@ -13,6 +13,7 @@ import { DocumentStudio } from "./features/documents/DocumentStudio";
 import { DocumentDetail } from "./features/documents/DocumentDetail";
 import { TemplateCenter } from "./features/documents/TemplateCenter";
 import { PublishedDocuments } from "./features/documents/PublishedDocuments";
+import { PublishCenter } from "./features/documents/PublishCenter";
 import { TruthLog } from "./features/audit/TruthLog";
 import { SecurityCenter } from "./features/security/SecurityCenter";
 import { PeopleUniverse } from "./features/people/PeopleUniverse";
@@ -55,6 +56,7 @@ export default function App() {
         <Route path="/documents/:id" element={<DocumentDetail />} />
         <Route path="/templates" element={<TemplateCenter />} />
         <Route path="/published" element={<PublishedDocuments />} />
+        <Route path="/publish-center" element={<PublishCenter />} />
         <Route path="/audit" element={<TruthLog />} />
         <Route path="/security" element={<SecurityCenter />} />
         <Route path="/people" element={<PeopleUniverse />} />

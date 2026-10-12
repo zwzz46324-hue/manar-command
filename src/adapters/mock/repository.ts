@@ -260,3 +260,10 @@ import type { OverviewKPI } from "../../domain/types";
 export const overviewRepo = {
   async kpis(): Promise<OverviewKPI[]> { return mockOverviewKPIs; },
 };
+
+import { mockPublishFlows } from "./data";
+import type { PublishFlow } from "../../domain/types";
+
+export const publishFlowRepo = {
+  async list(): Promise<PublishFlow[]> { return mockPublishFlows; },
+};

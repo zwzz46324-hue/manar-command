@@ -762,3 +762,28 @@ export type OverviewKPI = {
   state: "ok" | "warn" | "danger" | "neutral";
   sparkline: number[];
 };
+
+export type PublishStageState = "done" | "active" | "pending" | "failed";
+
+export type PublishStage = {
+  id: string;
+  labelAr: string;
+  labelEn: string;
+  state: PublishStageState;
+  at?: string;
+  noteAr?: string;
+  noteEn?: string;
+};
+
+export type PublishFlow = {
+  id: string;
+  courseCode: string;
+  titleAr: string;
+  titleEn: string;
+  channels: ("telegram" | "whatsapp" | "site")[];
+  recipients: number;
+  delivered: number;
+  stages: PublishStage[];
+  startedAt: string;
+  updatedAt: string;
+};

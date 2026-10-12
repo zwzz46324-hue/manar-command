@@ -18,6 +18,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "طابور المراجعة" || item === "Review Queue") return "/review";
   if (item === "مسرح المراجعة" || item === "Review Theater") return "/review";
   if (item === "استوديو المستندات" || item === "Document Studio") return "/documents";
+  if (item === "مركز النشر" || item === "Publish Center") return "/publish-center";
   if (item === "قوالب المستندات" || item === "Templates") return "/templates";
   if (item === "المستندات المنشورة" || item === "Published") return "/published";
   if (item === "سجل الحقيقة" || item === "Truth Log") return "/audit";
