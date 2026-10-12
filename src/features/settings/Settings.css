@@ -1,0 +1,21 @@
+﻿.st-page { max-width: 800px; }
+.st-section { background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); padding: 20px; margin-bottom: 16px; }
+.st-title { font-size: 11px; letter-spacing: 1.4px; color: var(--manar-faint); margin-bottom: 16px; }
+.st-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--manar-border); gap: 16px; }
+.st-row:last-child { border-bottom: none; }
+.st-label { font-size: 13px; color: var(--manar-text); }
+.st-desc { font-size: 11px; color: var(--manar-muted); margin-top: 2px; line-height: 1.5; }
+.st-value { display: flex; gap: 8px; align-items: center; }
+.st-input { padding: 8px 12px; background: var(--manar-bg-2); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); color: var(--manar-text); font-family: var(--manar-font-mono); font-size: 12px; min-width: 220px; }
+.st-input:focus { outline: none; border-color: var(--manar-accent-line); }
+.st-select { padding: 8px 12px; background: var(--manar-bg-2); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); color: var(--manar-text); font-family: inherit; font-size: 12px; cursor: pointer; }
+.st-toggle { position: relative; width: 44px; height: 24px; background: var(--manar-border); border-radius: 999px; cursor: pointer; border: none; transition: background 150ms; }
+.st-toggle.on { background: var(--manar-accent); }
+.st-toggle::after { content: ""; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; background: var(--manar-text); border-radius: 50%; transition: transform 150ms; }
+.st-toggle.on::after { transform: translateX(20px); background: var(--manar-bg); }
+.st-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 20px; }
+.st-btn { padding: 10px 20px; background: transparent; border: 1px solid var(--manar-border-strong); border-radius: var(--manar-radius); color: var(--manar-text); font-family: inherit; font-size: 12px; cursor: pointer; }
+.st-btn:hover { background: var(--manar-surface-hover); }
+.st-btn.primary { background: var(--manar-accent-soft); border-color: var(--manar-accent-line); color: var(--manar-accent); }
+.st-btn.danger { background: rgba(244,63,94,0.1); border-color: rgba(244,63,94,0.5); color: var(--manar-danger); }
+.st-hint { font-size: 11px; color: var(--manar-faint); margin-top: 8px; text-align: right; }

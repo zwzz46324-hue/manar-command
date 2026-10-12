@@ -43,6 +43,7 @@ import { ContentUniverse } from "./features/content/ContentUniverse";
 import { ContentPipeline } from "./features/content/ContentPipeline";
 import { ContentDetail } from "./features/content/ContentDetail";
 import { AttentionCenter } from "./features/attention/AttentionCenter";
+import { Settings } from "./features/settings/Settings";
 
 export default function App() {
   return (
@@ -90,6 +91,7 @@ export default function App() {
         <Route path="/pipeline" element={<ContentPipeline />} />
         <Route path="/content/:id" element={<ContentDetail />} />
         <Route path="/attention" element={<AttentionCenter />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="/section/:slug" element={<SectionPage />} />
       </Route>
     </Routes>
