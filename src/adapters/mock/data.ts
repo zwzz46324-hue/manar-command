@@ -1091,3 +1091,18 @@ export const mockRestoreHistory: RestoreHistoryEntry[] = [
   { id: "rh-3", backupId: "bk-1", status: "failed",      actorId: "user-1", reasonAr: "فشل في المنتصف",     reasonEn: "Failed halfway",         durationSec: 42,  at: "2026-09-15T10:00:00" },
   { id: "rh-4", backupId: "bk-4", status: "rolled-back", actorId: "user-9", reasonAr: "فحص فقط",            reasonEn: "Testing only",            durationSec: 12,  at: "2026-09-10T16:00:00" },
 ];
+
+import type { AuditEvent } from "../../domain/types";
+
+export const mockAuditEvents: AuditEvent[] = [
+  { id: "au-1",  actorId: "user-1", category: "restore", severity: "critical", actionAr: "استعادة نسخة احتياطية", actionEn: "Restored backup", target: "bk-3", detailsAr: "تراجع عن خطأ إداري — تم بنجاح", detailsEn: "Rolled back admin error — success", hash: "a1f9", prevHash: "9e2d", at: "2026-10-12T10:45:00" },
+  { id: "au-2",  actorId: "user-9", category: "auth", severity: "warn", actionAr: "محاولة دخول فاشلة", actionEn: "Failed login attempt", target: "user-9", detailsAr: "3 محاولات فاشلة متتالية من IP غريب", detailsEn: "3 consecutive failures from unknown IP", hash: "b7e2", prevHash: "a1f9", at: "2026-10-12T10:30:00" },
+  { id: "au-3",  actorId: "user-1", category: "admin", severity: "info", actionAr: "تغيير صلاحيات", actionEn: "Changed permissions", target: "user-9", detailsAr: "تمت ترقية user-9 إلى مشرف", detailsEn: "Promoted user-9 to moderator", hash: "c3a1", prevHash: "b7e2", at: "2026-10-12T09:15:00" },
+  { id: "au-4",  actorId: "user-1", category: "ai", severity: "info", actionAr: "تشغيل مزود AI", actionEn: "Started AI provider", target: "openai-gpt4", detailsAr: "استعلام 1.2k tokens", detailsEn: "Query 1.2k tokens", hash: "d8b4", prevHash: "c3a1", at: "2026-10-12T08:50:00" },
+  { id: "au-5",  actorId: "system", category: "system", severity: "critical", actionAr: "فشل اختبار", actionEn: "Build failed", target: "build-99", detailsAr: "7 اختبارات فاشلة في feature/publish-center", detailsEn: "7 failed tests in feature/publish-center", hash: "e5c7", prevHash: "d8b4", at: "2026-10-11T22:40:00" },
+  { id: "au-6",  actorId: "user-1", category: "data", severity: "info", actionAr: "تحديث سجل بيانات", actionEn: "Updated data record", target: "course-204", detailsAr: "تم تعديل المقرر 204", detailsEn: "Edited course 204", hash: "f2d9", prevHash: "e5c7", at: "2026-10-11T18:20:00" },
+  { id: "au-7",  actorId: "user-1", category: "admin", severity: "warn", actionAr: "تعطيل علم ميزة", actionEn: "Disabled feature flag", target: "beta-search", detailsAr: "تم إيقاف بحث تجريبي", detailsEn: "Disabled experimental search", hash: "a8e3", prevHash: "f2d9", at: "2026-10-11T14:00:00" },
+  { id: "au-8",  actorId: "user-3", category: "data", severity: "info", actionAr: "نشر محتوى", actionEn: "Published content", target: "doc-881", detailsAr: "نشر مستند إلى مركز النشر", detailsEn: "Published doc to Publish Center", hash: "b1c4", prevHash: "a8e3", at: "2026-10-10T16:30:00" },
+  { id: "au-9",  actorId: "user-1", category: "auth", severity: "info", actionAr: "دخول ناجح", actionEn: "Successful login", target: "user-1", detailsAr: "دخول من جهاز موثوق", detailsEn: "Login from trusted device", hash: "c9f2", prevHash: "b1c4", at: "2026-10-10T08:00:00" },
+  { id: "au-10", actorId: "system", category: "system", severity: "info", actionAr: "بدء النظام", actionEn: "System boot", target: "manar-command", detailsAr: "تشغيل النظام بعد تحديث", detailsEn: "System started after update", hash: "d4a7", prevHash: "c9f2", at: "2026-10-09T00:00:00" },
+];

@@ -833,3 +833,21 @@ export type RestoreHistoryEntry = {
   durationSec: number;
   at: string;
 };
+
+export type AuditSeverity = "info" | "warn" | "critical";
+export type AuditCategory = "auth" | "data" | "restore" | "ai" | "admin" | "system";
+
+export type AuditEvent = {
+  id: string;
+  actorId: string;
+  category: AuditCategory;
+  severity: AuditSeverity;
+  actionAr: string;
+  actionEn: string;
+  target: string;
+  detailsAr: string;
+  detailsEn: string;
+  hash: string;
+  prevHash: string;
+  at: string;
+};

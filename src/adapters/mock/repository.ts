@@ -282,3 +282,10 @@ export const restoreRepo = {
   async snapshots(): Promise<RestoreSnapshot[]> { return mockRestoreSnapshots; },
   async history(): Promise<RestoreHistoryEntry[]> { return mockRestoreHistory; },
 };
+
+import { mockAuditEvents } from "./data";
+import type { AuditEvent } from "../../domain/types";
+
+export const auditRepo = {
+  async events(): Promise<AuditEvent[]> { return mockAuditEvents; },
+};

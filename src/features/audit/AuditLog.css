@@ -1,0 +1,41 @@
+﻿.al-page { max-width: 1200px; }
+.al-banner { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.3); border-radius: var(--manar-radius); color: var(--manar-info); font-size: 11px; margin-bottom: 16px; }
+.al-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.al-filter { padding: 5px 12px; background: transparent; border: 1px solid var(--manar-border); border-radius: 999px; color: var(--manar-muted); font-family: inherit; font-size: 11px; cursor: pointer; }
+.al-filter:hover { color: var(--manar-text); border-color: var(--manar-border-strong); }
+.al-filter.active { color: var(--manar-text); border-color: var(--manar-accent-line); background: var(--manar-accent-soft); }
+.al-filter.c-critical.active { border-color: rgba(244,63,94,0.5); background: rgba(244,63,94,0.08); color: var(--manar-danger); }
+.al-filter.c-warn.active { border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.08); color: var(--manar-warning); }
+.al-search { width: 100%; padding: 10px 14px; background: var(--manar-surface); border: 1px solid var(--manar-border); border-radius: var(--manar-radius); color: var(--manar-text); font-family: var(--manar-font-mono); font-size: 12px; margin-bottom: 16px; }
+.al-search:focus { outline: none; border-color: var(--manar-accent-line); }
+.al-list { display: flex; flex-direction: column; }
+.al-row { display: grid; grid-template-columns: 40px 90px 110px 100px 1fr 90px 140px; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--manar-border); font-size: 12px; cursor: pointer; align-items: center; transition: background 100ms; }
+.al-row:hover { background: var(--manar-surface-hover); }
+.al-row.head { cursor: default; font-size: 10px; letter-spacing: 1.2px; color: var(--manar-faint); border-bottom: 1px solid var(--manar-border-strong); }
+.al-row.head:hover { background: transparent; }
+.al-row.c-critical { border-left: 3px solid var(--manar-danger); }
+.al-row.c-warn { border-left: 3px solid var(--manar-warning); }
+.al-dot { width: 8px; height: 8px; border-radius: 50%; }
+.al-dot.info { background: var(--manar-info); }
+.al-dot.warn { background: var(--manar-warning); }
+.al-dot.critical { background: var(--manar-danger); }
+.al-cat { font-size: 9px; letter-spacing: 1.4px; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--manar-border); text-align: center; }
+.al-cat.auth { color: var(--manar-info); border-color: rgba(96,165,250,0.35); }
+.al-cat.data { color: var(--manar-accent); border-color: var(--manar-accent-line); }
+.al-cat.restore { color: var(--manar-danger); border-color: rgba(244,63,94,0.35); }
+.al-cat.ai { color: #a78bfa; border-color: rgba(167,139,250,0.35); }
+.al-cat.admin { color: var(--manar-warning); border-color: rgba(245,158,11,0.35); }
+.al-cat.system { color: var(--manar-muted); }
+.al-actor { font-family: var(--manar-font-mono); color: var(--manar-accent); font-size: 11px; }
+.al-target { font-family: var(--manar-font-mono); color: var(--manar-text-dim); font-size: 11px; }
+.al-action { color: var(--manar-text); }
+.al-at { font-family: var(--manar-font-mono); color: var(--manar-faint); font-size: 10px; }
+.al-detail { grid-column: 1 / -1; padding: 14px 16px; background: var(--manar-bg-2); border-top: 1px solid var(--manar-border); font-size: 12px; }
+.al-detail p { margin: 0 0 10px; color: var(--manar-text-dim); line-height: 1.6; }
+.al-hashes { display: flex; gap: 16px; font-family: var(--manar-font-mono); font-size: 10px; color: var(--manar-faint); }
+.al-hashes span { color: var(--manar-accent); }
+.al-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.al-count { font-size: 11px; color: var(--manar-faint); }
+.al-export { padding: 8px 16px; background: transparent; border: 1px solid var(--manar-border-strong); border-radius: var(--manar-radius); color: var(--manar-text); font-family: inherit; font-size: 11px; cursor: pointer; }
+.al-export:hover { background: var(--manar-surface-hover); }
+.al-empty { padding: 40px; text-align: center; color: var(--manar-muted); font-size: 13px; }

@@ -36,6 +36,7 @@ import { LiveSystemMap } from "./features/operations/LiveSystemMap";
 import { CodeCenter } from "./features/code/CodeCenter";
 import { BuildView } from "./features/code/BuildView";
 import { RecoveryCenter } from "./features/recovery/RecoveryCenter";
+import { AuditLog } from "./features/audit/AuditLog";
 import { GlobalSearch } from "./features/search/GlobalSearch";
 import { ActivityRiver } from "./features/activity/ActivityRiver";
 import { AcademicEntityDetail } from "./features/academic/AcademicEntityDetail";
@@ -82,6 +83,7 @@ export default function App() {
         <Route path="/code" element={<CodeCenter />} />
         <Route path="/builds" element={<BuildView />} />
         <Route path="/recovery" element={<RecoveryCenter />} />
+        <Route path="/audit" element={<AuditLog />} />
         <Route path="/search" element={<GlobalSearch />} />
         <Route path="/activity" element={<ActivityRiver />} />
         <Route path="/academic/entity/:id" element={<AcademicEntityDetail />} />
