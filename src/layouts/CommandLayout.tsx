@@ -1,5 +1,5 @@
 ﻿
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { ManarLogo, ManarCommandPalette, ManarPulse, ManarClock, ManarNotifications } from "../design-system/components";
 import { useLang } from "../i18n";
@@ -65,6 +65,16 @@ export function CommandLayout() {
   });
   const { id, kind, labelAr, labelEn, clear } = useSelection();
   const [paletteOpen, setPaletteOpen] = useState(false);
+  const [spineOpen, setSpineOpen] = useState(false);
+
+  useEffect(() => {
+    if (!spineOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSpineOpen(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [spineOpen]);
 
   const railLabel = lang === "ar" ? labelAr : labelEn;
   const hasSelection = !!id;
@@ -72,7 +82,10 @@ export function CommandLayout() {
   return (
     <div className="manar-shell" dir={dir}>
       <header className="system-horizon">
-        <div className="horizon-brand">
+        <button className="spine-toggle" type="button" onClick={() => setSpineOpen(true)} aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+          <div className="horizon-brand">
           <ManarLogo size={28} />
           <div className="brand-text">
             <span className="brand-ar">{t.brandAr}</span>
@@ -104,13 +117,14 @@ export function CommandLayout() {
         </div>
       </header>
 
-      <aside className="navigation-spine" aria-label="Main navigation">
+      <div className={"spine-overlay" + (spineOpen ? " open" : "")} onClick={() => setSpineOpen(false)} />
+      <aside className={"navigation-spine" + (spineOpen ? " open" : "")} aria-label="Main navigation">
         <nav className="spine-inner">
           {t.nav.map((group, gi) => (
             <React.Fragment key={gi}>
               <p className="nav-group">{group.label}</p>
               {group.items.map((item, ii) => (
-                <NavLink key={ii} to={targetFor(gi, ii, t.nav)} end className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                <NavLink key={ii} to={targetFor(gi, ii, t.nav)} end className={({ isActive }) => "nav-item" + (isActive ? " active" : "")} onClick={() => setSpineOpen(false)}>
                   {item}
                 </NavLink>
               ))}

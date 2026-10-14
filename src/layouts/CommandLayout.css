@@ -160,3 +160,30 @@
   border-color: var(--manar-border-strong);
   transform: rotate(15deg);
 }
+
+/* === Menu Toggle (Phase 51) === */
+.spine-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--manar-border);
+  border-radius: var(--manar-radius);
+  cursor: pointer;
+  margin-inline-end: 8px;
+  flex-shrink: 0;
+}
+.spine-toggle span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--manar-text);
+  border-radius: 2px;
+}
+@media (max-width: 767px) {
+  .spine-toggle { display: flex !important; }
+}

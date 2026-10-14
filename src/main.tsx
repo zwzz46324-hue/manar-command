@@ -5,6 +5,7 @@ import { registerSW } from "virtual:pwa-register";
 import App from "./App";
 import { LanguageProvider } from "./i18n";
 import "./design-system/tokens/tokens.css";
+import "./design-system/tokens/mobile.css";
 
 registerSW({ immediate: true });
 

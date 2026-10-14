@@ -1,0 +1,195 @@
+﻿/* ============================================
+   MANAR COMMAND — Mobile Responsive (Phase 51)
+   ============================================ */
+
+/* Tablet — 768px إلى 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navigation-spine {
+    width: 220px !important;
+  }
+  main {
+    margin-inline-start: 220px !important;
+  }
+}
+
+/* Mobile — أقل من 768px */
+@media (max-width: 767px) {
+  /* ---------- Shell ---------- */
+  .manar-shell {
+    padding: 0 !important;
+  }
+
+  /* ---------- الترويسة ---------- */
+  .system-horizon {
+    padding: 8px 12px !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+    min-height: 48px !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .system-horizon::-webkit-scrollbar { display: none; }
+
+  .horizon-brand .brand-text,
+  .horizon-brand .brand-sub {
+    display: none !important;
+  }
+
+  .horizon-search { display: none !important; }
+
+  .horizon-actions {
+    gap: 6px !important;
+    margin-inline-start: auto;
+  }
+
+  /* أخفِ: نشاط، نبضات، المالك، التاريخ على الجوال */
+  .horizon-actions .pulse,
+  .horizon-actions .manar-pulse,
+  .horizon-actions .state-pill,
+  .horizon-actions .owner-chip,
+  .horizon-actions .manar-clock,
+  .horizon-actions .horizon-date {
+    display: none !important;
+  }
+
+  .lang-toggle,
+  .theme-toggle {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    min-width: 40px !important;
+  }
+
+  /* ---------- القائمة الجانبية = Drawer ---------- */
+  .navigation-spine {
+    position: fixed !important;
+    top: 48px;
+    bottom: 0;
+    inset-inline-start: -100% !important;
+    width: 82% !important;
+    max-width: 300px;
+    z-index: 150;
+    transition: inset-inline-start 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow-y: auto;
+    background: var(--manar-bg-1) !important;
+    border-inline-end: 1px solid var(--manar-border);
+    padding: 12px 0 !important;
+  }
+  .navigation-spine.open {
+    inset-inline-start: 0 !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  /* خلفية معتمة عند فتح القائمة */
+  .spine-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 149;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms;
+  }
+  .spine-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* نصوص القائمة أكبر للمس */
+  .nav-item {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+  .nav-group {
+    font-size: 10px !important;
+    padding: 12px 16px 6px !important;
+  }
+
+  /* ---------- المحتوى الرئيسي ---------- */
+  main {
+    margin-inline-start: 0 !important;
+    padding: 12px !important;
+    padding-bottom: 80px !important; /* مساحة للـ dock */
+  }
+
+  /* ---------- الـ Dock السفلي ---------- */
+  .command-dock {
+    position: fixed !important;
+    bottom: 0;
+    inset-inline: 0;
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    z-index: 100;
+    background: var(--manar-bg-1) !important;
+    border-top: 1px solid var(--manar-border);
+    scrollbar-width: none;
+  }
+  .command-dock::-webkit-scrollbar { display: none; }
+
+  .dock-btn {
+    flex-shrink: 0;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+  .dock-hint, .dock-spacer + .manar-pulse, .command-dock .manar-pulse {
+    display: none !important;
+  }
+
+  /* ---------- Intelligence Rail ---------- */
+  .intelligence-rail {
+    display: none !important;
+  }
+
+  /* ---------- الشبكات ---------- */
+  .bv-stats,
+  .al-stats,
+  .sh-stats,
+  .st-stats,
+  .sl-stats {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* ---------- الجداول → بطاقات ---------- */
+  .al-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    font-size: 11px;
+  }
+  .al-row.head { display: none !important; }
+
+  /* ---------- العناوين ---------- */
+  h1 { font-size: 18px !important; }
+  h2 { font-size: 16px !important; }
+  h3 { font-size: 14px !important; }
+
+  /* ---------- الأزرار ---------- */
+  button, .rc-btn, .st-btn, .al-filter, .bv-filter, .sl-filter {
+    min-height: 36px;
+    font-size: 12px;
+  }
+
+  /* ---------- المودالات ---------- */
+  .rc-modal, .sh-panel {
+    max-width: 95% !important;
+    max-height: 90vh !important;
+    padding: 16px !important;
+  }
+}
+
+/* Mobile صغير جدًا — أقل من 400px */
+@media (max-width: 400px) {
+  .bv-stats,
+  .al-stats,
+  .sh-stats,
+  .st-stats,
+  .sl-stats {
+    grid-template-columns: 1fr !important;
+  }
+  .al-row {
+    grid-template-columns: 1fr !important;
+  }
+}
