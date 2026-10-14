@@ -31,7 +31,7 @@ const navAr: NavGroup[] = [
   { label: "التدقيق", items: ["سجل الحقيقة"] },
   { label: "التشغيل", items: ["صحة النظام", "المهام", "أعلام الميزات", "خريطة المنظومة"] },
   { label: "الكود", items: ["مركز الكود", "البناء والاختبارات"] },
-  { label: "الإعدادات", items: ["الإعدادات"] },
+  { label: "الإعدادات", items: ["الإعدادات", "حول"] },
 ];
 
 const navEn: NavGroup[] = [
@@ -48,7 +48,7 @@ const navEn: NavGroup[] = [
   { label: "AUDIT", items: ["Truth Log"] },
   { label: "OPERATIONS", items: ["System Health", "Jobs", "Feature Flags", "System Map"] },
   { label: "CODE", items: ["Code Center", "Build & Tests"] },
-  { label: "SETTINGS", items: ["Settings"] },
+  { label: "SETTINGS", items: ["Settings", "About"] },
 ];
 
 const ar: Dict = {

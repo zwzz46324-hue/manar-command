@@ -42,6 +42,7 @@ const targetFor = (gi: number, ii: number, nav: { label: string; items: string[]
   if (item === "صحة النظام" || item === "System Health") return "/operations";
   if (item === "خريطة المنظومة" || item === "System Map") return "/system-map";
   if (item === "الإعدادات" || item === "Settings") return "/settings";
+  if (item === "حول" || item === "About") return "/about";
   if (item === "الملخصات" || item === "Summaries") return "/summaries";
   if (item === "خزنة البيانات" || item === "Data Vault") return "/vault";
   if (item === "النسخ الاحتياطي" || item === "Backups") return "/backup";
