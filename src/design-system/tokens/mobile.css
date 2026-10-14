@@ -247,3 +247,46 @@
     display: none !important;
   }
 }
+
+/* ============================================
+   Phase 51j — الاسمين بدون شعار
+   ============================================ */
+@media (max-width: 767px) {
+  /* إخفاء الشعار البنفسجي */
+  .horizon-brand svg,
+  .horizon-brand > svg,
+  .horizon-brand img {
+    display: none !important;
+  }
+
+  /* الحاوية */
+  .horizon-brand {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 0 !important;
+  }
+
+  /* الاسم العربي */
+  .horizon-brand .brand-text {
+    display: inline !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    color: var(--manar-text) !important;
+    line-height: 1 !important;
+  }
+
+  /* الاسم الإنجليزي */
+  .horizon-brand .brand-sub {
+    display: inline !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    color: var(--manar-muted) !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1 !important;
+    margin-inline-start: 4px !important;
+  }
+}
