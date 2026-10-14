@@ -30,10 +30,7 @@
   }
   .system-horizon::-webkit-scrollbar { display: none; }
 
-  .horizon-brand .brand-text,
-  .horizon-brand .brand-sub {
-    display: none !important;
-  }
+
 
   .horizon-search { display: none !important; }
 
