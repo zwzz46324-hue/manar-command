@@ -43,12 +43,7 @@
   }
 
   /* أخفِ: نشاط، نبضات، المالك، التاريخ على الجوال */
-  .horizon-actions .pulse,
-  .horizon-actions .manar-pulse,
-  .horizon-actions .state-pill,
-  .horizon-actions .owner-chip,
-  .horizon-actions .manar-clock,
-  .horizon-actions .horizon-date {
+  .horizon-actions .nonexistent-class {
     display: none !important;
   }
 
