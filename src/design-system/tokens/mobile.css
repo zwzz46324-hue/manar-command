@@ -290,3 +290,20 @@
     margin-inline-start: 4px !important;
   }
 }
+
+/* ============================================
+   Phase 51k — إخفاء الشعار + الاسمين على الجوال
+   ============================================ */
+@media (max-width: 767px) {
+  /* إخفاء كل ما في .horizon-brand */
+  .horizon-brand {
+    display: none !important;
+  }
+
+  /* احتياطاً — إخفاء العناصر منفردة */
+  .horizon-brand svg,
+  .horizon-brand .brand-text,
+  .horizon-brand .brand-sub {
+    display: none !important;
+  }
+}
